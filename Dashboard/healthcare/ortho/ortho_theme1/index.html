@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>SmileCraft Orthodontics | Braces, Clear Aligners &amp; Pediatric Orthodontics</title>
+   <meta name="description"
+      content="SmileCraft Orthodontics offers braces, clear aligners, Invisalign, retainers and pediatric orthodontics with experienced specialists and modern technology.">
+   <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+      tailwind.config = { theme: { extend: { colors: { brand: { 50: '#f0fdfa', 100: '#ccfbf1', 200: '#99f6e4', 300: '#5eead4', 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488', 700: '#0f766e', 800: '#115e59', 900: '#134e4a' } }, fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], display: ['Poppins', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } };
+   </script>
+   <style>
+      /* ============================================================
+   FOCUS RING
+   ============================================================ */
+      :focus-visible {
+         outline: 3px solid #14b8a6;
+         outline-offset: 2px
+      }
+
+      /* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+      .faq-panel {
+         display: grid;
+         grid-template-rows: 0fr;
+         visibility: hidden;
+         transition: grid-template-rows .3s ease, visibility 0s linear .3s
+      }
+
+      .faq-panel[data-open="true"] {
+         grid-template-rows: 1fr;
+         visibility: visible;
+         transition-delay: 0s
+      }
+
+      .faq-panel>div {
+         overflow: hidden
+      }
+
+      .faq-trigger[aria-expanded="true"] .faq-icon {
+         transform: rotate(180deg)
+      }
+
+      /* ============================================================
+   ACTIVE NAV LINK
+   ============================================================ */
+      .nav-link {
+         position: relative;
+         transition: color .25s ease, background-color .25s ease, transform .25s ease
+      }
+
+      .nav-link.is-active {
+         color: #0f766e;
+         background-color: #f0fdfa
+      }
+
+      .nav-link.is-active::after {
+         content: '';
+         position: absolute;
+         left: 50%;
+         bottom: 4px;
+         transform: translateX(-50%);
+         width: 60%;
+         height: 2px;
+         background: #14b8a6;
+         border-radius: 2px
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .nav-link:hover {
+            transform: translateY(-1px)
+         }
+      }
+
+      /* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+      .js-enabled .reveal {
+         opacity: 0;
+         transform: translateY(18px);
+         transition: opacity .6s ease, transform .6s ease
+      }
+
+      .js-enabled .reveal.is-visible {
+         opacity: 1;
+         transform: none
+      }
+
+      /* ============================================================
+   KEYFRAMES — buttons, CTA pulse, floating, shimmer
+   ============================================================ */
+      @keyframes cta-pop {
+         0% {
+            transform: scale(1)
+         }
+
+         35% {
+            transform: scale(1.1)
+         }
+
+         65% {
+            transform: scale(.96)
+         }
+
+         100% {
+            transform: scale(1)
+         }
+      }
+
+      @keyframes cta-icon-bounce {
+
+         0%,
+         100% {
+            transform: translateY(0) rotate(0)
+         }
+
+         30% {
+            transform: translateY(-4px) rotate(-12deg)
+         }
+
+         60% {
+            transform: translateY(1px) rotate(8deg)
+         }
+      }
+
+      @keyframes cta-ring {
+         0% {
+            box-shadow: 0 0 0 0 rgba(20, 184, 166, .55)
+         }
+
+         100% {
+            box-shadow: 0 0 0 12px rgba(20, 184, 166, 0)
+         }
+      }
+
+      @keyframes float-soft {
+
+         0%,
+         100% {
+            transform: translateY(0)
+         }
+
+         50% {
+            transform: translateY(-8px)
+         }
+      }
+
+      @keyframes pulse-ring {
+         0% {
+            box-shadow: 0 0 0 0 rgba(20, 184, 166, .5)
+         }
+
+         70% {
+            box-shadow: 0 0 0 14px rgba(20, 184, 166, 0)
+         }
+
+         100% {
+            box-shadow: 0 0 0 0 rgba(20, 184, 166, 0)
+         }
+      }
+
+      @keyframes slide-up-in {
+         from {
+            opacity: 0;
+            transform: translateY(24px)
+         }
+
+         to {
+            opacity: 1;
+            transform: none
+         }
+      }
+
+      @keyframes fade-in {
+         from {
+            opacity: 0
+         }
+
+         to {
+            opacity: 1
+         }
+      }
+
+      @keyframes pop-in {
+         0% {
+            opacity: 0;
+            transform: scale(.85)
+         }
+
+         70% {
+            transform: scale(1.04)
+         }
+
+         100% {
+            opacity: 1;
+            transform: scale(1)
+         }
+      }
+
+      @keyframes gradient-shift {
+         0% {
+            background-position: 0% 50%
+         }
+
+         50% {
+            background-position: 100% 50%
+         }
+
+         100% {
+            background-position: 0% 50%
+         }
+      }
+
+      @keyframes shake {
+
+         0%,
+         100% {
+            transform: translateX(0)
+         }
+
+         20%,
+         60% {
+            transform: translateX(-4px)
+         }
+
+         40%,
+         80% {
+            transform: translateX(4px)
+         }
+      }
+
+      @keyframes spin-slow {
+         from {
+            transform: rotate(0)
+         }
+
+         to {
+            transform: rotate(360deg)
+         }
+      }
+
+      /* ============================================================
+   NAV CTA PULSE
+   ============================================================ */
+      .nav-cta.is-pulsing {
+         animation: cta-pop .55s cubic-bezier(.34, 1.56, .64, 1), cta-ring .7s ease-out
+      }
+
+      .nav-cta.is-pulsing .cta-icon {
+         animation: cta-icon-bounce .55s ease-in-out
+      }
+
+      .cta-icon {
+         transform-origin: center bottom
+      }
+
+      /* ============================================================
+   CARD HOVER SYSTEM
+   Borders are one shade darker (slate-200 / brand-200). On hover the
+   border shifts to the brand accent (brand-500) with a smooth
+   transition, plus lift, shadow, and inner image zoom.
+   ============================================================ */
+      .card-hover {
+         position: relative;
+         transition: transform .35s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease, border-color .35s ease, background-color .35s ease
+      }
+
+      .card-hover::before {
+         content: '';
+         position: absolute;
+         inset: 0;
+         border-radius: inherit;
+         pointer-events: none;
+         opacity: 0;
+         background: linear-gradient(135deg, rgba(20, 184, 166, .06), rgba(20, 184, 166, 0) 60%);
+         transition: opacity .35s ease
+      }
+
+      .card-img {
+         transition: transform .5s cubic-bezier(.22, 1, .36, 1), filter .35s ease;
+         will-change: transform
+      }
+
+      .card-arrow {
+         transition: transform .3s ease
+      }
+
+      .card-icon {
+         transition: transform .35s ease, background-color .35s ease, color .35s ease
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 36px -12px rgba(15, 118, 110, .30), 0 8px 16px -8px rgba(15, 23, 42, .14);
+            border-color: #14b8a6
+         }
+
+         .card-hover:hover::before {
+            opacity: 1
+         }
+
+         .card-hover:hover .card-img {
+            transform: scale(1.07)
+         }
+
+         .card-hover:hover .card-arrow {
+            transform: translateX(5px)
+         }
+
+         .card-hover:hover .card-icon {
+            transform: scale(1.1) rotate(-4deg);
+            background-color: #14b8a6;
+            color: #fff
+         }
+      }
+
+      /* ============================================================
+   STANDALONE IMAGE ANIMATION (hero + about)
+   ============================================================ */
+      .img-animate {
+         transition: transform .6s cubic-bezier(.22, 1, .36, 1), filter .4s ease;
+         will-change: transform
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .img-animate:hover {
+            transform: scale(1.04)
+         }
+      }
+
+      /* ============================================================
+   BUTTON SYSTEM
+   .btn-primary / .btn-secondary / .btn-outline / .btn-dark /
+   .btn-whatsapp / .btn-email. Hover: colour shift, deeper shadow,
+   2px lift, icon nudge. Active: pressed back down.
+   ============================================================ */
+      .btn {
+         position: relative;
+         overflow: hidden;
+         transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), box-shadow .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease
+      }
+
+      .btn::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 0;
+         height: 0;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, .35);
+         transform: translate(-50%, -50%);
+         transition: width .5s ease, height .5s ease;
+         pointer-events: none
+      }
+
+      .btn:active::after {
+         width: 220px;
+         height: 220px
+      }
+
+      .btn .btn-icon,
+      .btn svg {
+         transition: transform .3s ease
+      }
+
+      .btn-primary {
+         background-color: #0d9488;
+         color: #fff;
+         box-shadow: 0 4px 12px -2px rgba(13, 148, 136, .35)
+      }
+
+      .btn-secondary {
+         background-color: #fff;
+         color: #334155;
+         border: 1px solid #cbd5e1
+      }
+
+      .btn-outline {
+         background-color: transparent;
+         color: #0f766e;
+         border: 1px solid #0d9488
+      }
+
+      .btn-dark {
+         color: #cbd5e1;
+         border: 1px solid #334155
+      }
+
+      .btn-whatsapp {
+         background-color: #25D366;
+         color: #fff;
+         box-shadow: 0 4px 12px -2px rgba(37, 211, 102, .4)
+      }
+
+      .btn-email {
+         background-color: #0f766e;
+         color: #fff;
+         box-shadow: 0 4px 12px -2px rgba(15, 118, 110, .35)
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .btn:hover {
+            transform: translateY(-3px) scale(1.02)
+         }
+
+         .btn:hover svg {
+            transform: scale(1.12) rotate(-6deg)
+         }
+
+         .btn-primary:hover {
+            background-color: #0f766e;
+            box-shadow: 0 12px 22px -6px rgba(15, 118, 110, .5)
+         }
+
+         .btn-secondary:hover {
+            background-color: #f0fdfa;
+            border-color: #14b8a6;
+            color: #0f766e;
+            box-shadow: 0 10px 20px -6px rgba(15, 23, 42, .18)
+         }
+
+         .btn-outline:hover {
+            background-color: #0d9488;
+            color: #fff;
+            box-shadow: 0 10px 20px -6px rgba(13, 148, 136, .45)
+         }
+
+         .btn-dark:hover {
+            border-color: #2dd4bf;
+            color: #5eead4;
+            box-shadow: 0 10px 20px -6px rgba(0, 0, 0, .45)
+         }
+
+         .btn-whatsapp:hover {
+            background-color: #1ebe5b;
+            box-shadow: 0 12px 24px -6px rgba(37, 211, 102, .55)
+         }
+
+         .btn-email:hover {
+            background-color: #115e59;
+            box-shadow: 0 12px 24px -6px rgba(15, 118, 110, .55)
+         }
+      }
+
+      .btn:active {
+         transform: translateY(0) scale(.97);
+         transition-duration: .08s
+      }
+
+      .btn:disabled,
+      .btn[aria-disabled="true"] {
+         opacity: .55;
+         cursor: not-allowed;
+         transform: none;
+         box-shadow: none
+      }
+
+      .btn-primary:focus-visible {
+         outline-color: #0f766e
+      }
+
+      .btn-dark:focus-visible {
+         outline-color: #5eead4
+      }
+
+      .btn-whatsapp:focus-visible,
+      .btn-email:focus-visible {
+         outline-color: #0f766e
+      }
+
+      /* ============================================================
+   SOCIAL PILL BUTTONS (footer)
+   ============================================================ */
+      .social-pill {
+         transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), border-color .3s ease, color .3s ease, background-color .3s ease, box-shadow .3s ease
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .social-pill:hover {
+            transform: translateY(-3px) scale(1.05)
+         }
+      }
+
+      /* ============================================================
+   BACK-TO-TOP
+   ============================================================ */
+      #back-to-top {
+         transition: transform .3s ease, opacity .3s ease, background-color .25s ease, box-shadow .25s ease
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         #back-to-top:not(.invisible):hover {
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 14px 24px -8px rgba(15, 118, 110, .55)
+         }
+
+         #back-to-top:not(.invisible):hover svg {
+            animation: float-soft 1.6s ease-in-out infinite
+         }
+      }
+
+      /* ============================================================
+   ICON BADGES inside cards (Why-Choose-Us, Contact)
+   ============================================================ */
+      .icon-badge {
+         transition: transform .35s ease, background-color .35s ease, color .35s ease, box-shadow .35s ease
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .card-hover:hover .icon-badge {
+            transform: scale(1.1) rotate(-5deg);
+            background-color: #14b8a6;
+            color: #fff;
+            box-shadow: 0 8px 16px -4px rgba(20, 184, 166, .5)
+         }
+      }
+
+      /* ============================================================
+   STAT CARDS (About) — number pulse
+   ============================================================ */
+      .stat-num {
+         transition: color .3s ease, transform .3s ease
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .card-hover:hover .stat-num {
+            transform: scale(1.08)
+         }
+      }
+
+      /* ============================================================
+   PROCESS STEP NUMBER — pop on hover
+   ============================================================ */
+      .step-num {
+         transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), box-shadow .35s ease
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .card-hover:hover .step-num {
+            transform: scale(1.15) rotate(6deg);
+            box-shadow: 0 10px 20px -6px rgba(15, 118, 110, .5)
+         }
+      }
+
+      /* ============================================================
+   FORM INPUTS — subtle focus lift
+   ============================================================ */
+      input,
+      select,
+      textarea {
+         transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease, background-color .25s ease
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+         transform: translateY(-1px)
+      }
+
+      /* ============================================================
+   MAP — subtle zoom on hover
+   ============================================================ */
+      .map-container {
+         position: relative;
+         width: 100%;
+         height: 300px;
+         overflow: hidden;
+         border-radius: 1.5rem;
+         border: 1px solid #e2e8f0;
+         background-color: #f0fdfa;
+         box-shadow: 0 10px 25px -8px rgba(15, 23, 42, .2);
+         transition: box-shadow .35s ease, border-color .35s ease
+      }
+
+      .map-container iframe {
+         display: block;
+         width: 100%;
+         height: 100%;
+         border: 0;
+         transition: transform .6s cubic-bezier(.22, 1, .36, 1)
+      }
+
+      @media(hover:hover) and (pointer:fine) {
+         .map-container:hover {
+            box-shadow: 0 20px 36px -12px rgba(15, 118, 110, .3);
+            border-color: #5eead4
+         }
+
+         .map-container:hover iframe {
+            transform: scale(1.03)
+         }
+      }
+
+      @media(min-width:640px) {
+         .map-container {
+            height: 340px
+         }
+      }
+
+      @media(min-width:1024px) {
+         .map-container {
+            height: 380px
+         }
+      }
+
+      /* ============================================================
+   CONFIRMATION PANEL ENTRANCE
+   ============================================================ */
+      #appointment-success:not(.hidden) {
+         animation: pop-in .5s cubic-bezier(.34, 1.56, .64, 1) both
+      }
+
+      #appointment-success .success-icon {
+         animation: pulse-ring 1.8s ease-out infinite
+      }
+
+      /* ============================================================
+   REVEAL STAGGER helper (applied via JS data-stagger)
+   ============================================================ */
+      .reveal[data-stagger] {
+         transition-delay: var(--reveal-delay, 0ms)
+      }
+
+      /* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+      @media(prefers-reduced-motion:reduce) {
+
+         .nav-cta.is-pulsing,
+         .nav-cta.is-pulsing .cta-icon {
+            animation: none
+         }
+
+         #appointment-success:not(.hidden),
+         #appointment-success .success-icon {
+            animation: none
+         }
+
+         .card-hover:hover,
+         .btn:hover,
+         .btn:active,
+         .img-animate:hover,
+         .social-pill:hover,
+         #back-to-top:not(.invisible):hover {
+            transform: none !important
+         }
+
+         .card-hover:hover .card-img,
+         .card-hover:hover .card-arrow,
+         .card-hover:hover .card-icon,
+         .card-hover:hover .icon-badge,
+         .card-hover:hover .stat-num,
+         .card-hover:hover .step-num {
+            transform: none !important
+         }
+
+         .map-container:hover iframe {
+            transform: none !important
+         }
+
+         #back-to-top:not(.invisible):hover svg {
+            animation: none
+         }
+
+         img,
+         a,
+         button {
+            transition-duration: .01ms !important
+         }
+
+         .faq-panel,
+         .faq-panel[data-open="true"] {
+            transition: none
+         }
+
+         .js-enabled .reveal {
+            opacity: 1;
+            transform: none;
+            transition: none
+         }
+      }
+   </style>
+</head>
+
+<body class="bg-white font-sans text-slate-700 antialiased">
+   <a href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Skip
+      to main content</a>
+
+   <header id="site-header"
+      class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/90 backdrop-blur transition-shadow duration-300">
+      <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+         aria-label="Main navigation">
+         <a href="#home" class="group flex items-center gap-2.5" aria-label="SmileCraft Orthodontics home">
+            <img src="assets/icons/logo.svg" alt="" width="36" height="36"
+               class="h-9 w-9 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+            <span class="font-display text-lg font-semibold text-slate-900">Smile<span
+                  class="text-brand-600">Craft</span></span>
+         </a>
+         <ul class="hidden items-center gap-1 lg:flex">
+            <li><a href="#home"
+                  class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-brand-50 hover:text-brand-700">Home</a>
+            </li>
+            <li><a href="#about"
+                  class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-brand-50 hover:text-brand-700">About</a>
+            </li>
+            <li><a href="#treatments"
+                  class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-brand-50 hover:text-brand-700">Treatments</a>
+            </li>
+            <li><a href="#doctors"
+                  class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-brand-50 hover:text-brand-700">Our
+                  Doctors</a></li>
+            <li><a href="#testimonials"
+                  class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-brand-50 hover:text-brand-700">Testimonials</a>
+            </li>
+            <li><a href="#contact"
+                  class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-brand-50 hover:text-brand-700">Contact</a>
+            </li>
+         </ul>
+         <a href="#appointment" id="nav-book"
+            class="nav-cta btn btn-primary hidden items-center rounded-full px-4 py-2 text-sm font-semibold lg:inline-flex"><svg
+               class="cta-icon mr-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+               aria-hidden="true">
+               <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1z" />
+            </svg>Book Appointment</a>
+         <button id="menu-toggle" type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:rotate-90 active:scale-90 lg:hidden"
+            aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
+            <svg id="icon-menu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+               aria-hidden="true">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+               stroke-width="2" aria-hidden="true">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+         </button>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+         <ul class="space-y-1 px-4 py-3 sm:px-6">
+            <li><a href="#home"
+                  class="mobile-link block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-700 hover:translate-x-1">Home</a>
+            </li>
+            <li><a href="#about"
+                  class="mobile-link block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-700 hover:translate-x-1">About</a>
+            </li>
+            <li><a href="#treatments"
+                  class="mobile-link block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-700 hover:translate-x-1">Treatments</a>
+            </li>
+            <li><a href="#doctors"
+                  class="mobile-link block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-700 hover:translate-x-1">Our
+                  Doctors</a></li>
+            <li><a href="#testimonials"
+                  class="mobile-link block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-700 hover:translate-x-1">Testimonials</a>
+            </li>
+            <li><a href="#contact"
+                  class="mobile-link block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-700 hover:translate-x-1">Contact</a>
+            </li>
+            <li class="pt-2"><a href="#appointment"
+                  class="mobile-link nav-cta btn btn-primary flex items-center justify-center rounded-full px-5 py-2.5 text-center text-base font-semibold"><svg
+                     class="cta-icon mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                     stroke-width="2" aria-hidden="true">
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1z" />
+                  </svg>Book Appointment</a></li>
+         </ul>
+      </div>
+   </header>
+
+   <main id="main">
+
+      <section id="home"
+         class="relative scroll-mt-14 overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white pt-24 pb-10 sm:pt-28 lg:pb-14">
+         <div class="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
+            <div class="reveal text-center lg:text-left">
+               <span
+                  class="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-sm font-medium text-brand-800 transition-transform duration-300 hover:scale-105">
+                  <span class="h-2 w-2 animate-pulse rounded-full bg-brand-500" aria-hidden="true"></span>
+                  Specialist orthodontic care for all ages
+               </span>
+               <h1 class="mt-4 font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                  Straighter teeth.<br>
+                  <span class="text-brand-600">A smile you'll love.</span>
+               </h1>
+               <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed sm:text-lg text-slate-600 lg:mx-0">
+                  From classic braces to nearly invisible aligners, our orthodontists design gentle, personalized
+                  treatment plans that give you a healthy bite and a confident smile.
+               </p>
+               <div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+                  <a href="#appointment"
+                     class="btn btn-primary inline-flex w-full items-center justify-center rounded-full px-7 py-3 text-base font-semibold sm:w-auto">Book
+                     Free Consultation</a>
+                  <a href="#treatments"
+                     class="btn btn-secondary inline-flex w-full items-center justify-center rounded-full px-7 py-3 text-base font-semibold sm:w-auto">Explore
+                     Treatments</a>
+               </div>
+               <ul
+                  class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-slate-600 lg:justify-start">
+                  <li class="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1"><svg
+                        class="h-5 w-5 text-brand-600 transition-transform duration-300 hover:scale-125" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                     </svg>Digital smile planning</li>
+                  <li class="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1"><svg
+                        class="h-5 w-5 text-brand-600 transition-transform duration-300 hover:scale-125" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                     </svg>Flexible payment options</li>
+                  <li class="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1"><svg
+                        class="h-5 w-5 text-brand-600 transition-transform duration-300 hover:scale-125" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                     </svg>Child &amp; adult care</li>
+               </ul>
+            </div>
+            <div class="reveal relative mx-auto w-full max-w-md lg:max-w-lg">
+               <div class="absolute -inset-3 rounded-[2.5rem] bg-brand-200/50 blur-2xl" aria-hidden="true"></div>
+               <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10">
+                  <img src="/assets/images/photo-1598256989809-394fa4f6cd26.avif"
+                     data-fallback="assets/images/hero-dental.svg"
+                     alt="Close-up stock photo of a smile with metal orthodontic braces" width="800" height="640"
+                     fetchpriority="high" class="img-animate aspect-[5/4] w-full object-cover">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="about" class="scroll-mt-14 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
+            <div class="reveal order-2 lg:order-1">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">About Us</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">An orthodontic clinic built
+                  around you</h2>
+               <p class="mt-3 leading-relaxed text-slate-600">
+                  SmileCraft Orthodontics is a specialist clinic dedicated to aligning teeth and jaws for better health,
+                  function and confidence. Every plan starts with listening to your goals, then combining careful
+                  clinical assessment with the latest technology.
+               </p>
+               <p class="mt-3 leading-relaxed text-slate-600">
+                  We keep our approach simple: clear explanations, honest timelines and gentle care at every visit,
+                  whether you are a child starting early intervention or an adult finally ready to straighten your
+                  smile.
+               </p>
+               <dl class="mt-6 grid grid-cols-3 gap-3">
+                  <div class="card-hover rounded-2xl border border-brand-200 bg-brand-50 p-3 text-center sm:p-4">
+                     <dt class="text-sm text-slate-600">Years of experience</dt>
+                     <dd class="stat-num mt-1 font-display text-2xl font-bold text-brand-700 sm:text-3xl">15+</dd>
+                  </div>
+                  <div class="card-hover rounded-2xl border border-brand-200 bg-brand-50 p-3 text-center sm:p-4">
+                     <dt class="text-sm text-slate-600">Smiles transformed</dt>
+                     <dd class="stat-num mt-1 font-display text-2xl font-bold text-brand-700 sm:text-3xl">5,000+</dd>
+                  </div>
+                  <div class="card-hover rounded-2xl border border-brand-200 bg-brand-50 p-3 text-center sm:p-4">
+                     <dt class="text-sm text-slate-600">Specialist orthodontists</dt>
+                     <dd class="stat-num mt-1 font-display text-2xl font-bold text-brand-700 sm:text-3xl">2</dd>
+                  </div>
+               </dl>
+            </div>
+            <div class="reveal order-1 lg:order-2">
+               <div class="grid grid-cols-2 gap-3">
+                  <div class="card-hover col-span-2 overflow-hidden rounded-2xl border border-slate-200 shadow-md"><img
+                        src="/assets/images/photo-1777331903190-341a3dd0441b.avif"
+                        data-fallback="assets/images/treatment/braces.svg"
+                        alt="Stock photo of a dentist talking with a patient in a modern dental office" width="fixed"
+                        height="50" loading="lazy" class="aspect-[16/9] w-full object-cover card-img"></div>
+                  <div class="card-hover overflow-hidden rounded-2xl border border-slate-200 shadow-md"><img
+                        src="/assets/images/photo-1698749778813-ad5f2814e50f.avif"
+                        data-fallback="assets/images/treatment/clear-aligners.svg"
+                        alt="Stock photo of a dental mirror in the foreground with a dental chair behind" width="300"
+                        height="225" loading="lazy" class="aspect-[4/3] w-full object-cover card-img"></div>
+                  <div class="card-hover overflow-hidden rounded-2xl border border-slate-200 shadow-md"><img
+                        src="/assets/images/pexels-photo-14458273.avif"
+                        data-fallback="assets/images/treatment/retainers.svg"
+                        alt="Stock photo of a bright, cheerful dental clinic room" width="300" height="225"
+                        loading="lazy" class="aspect-[4/3] w-full object-cover card-img"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="treatments" class="scroll-mt-14 bg-slate-50 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal mx-auto max-w-2xl text-center">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Our Treatments</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">Options for every smile and
+                  lifestyle</h2>
+               <p class="mt-3 text-slate-600">We will recommend the treatment that fits your teeth, your timeline and
+                  your budget.</p>
+            </div>
+            <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+               <article
+                  class="reveal card-hover flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/photo-1720685193964-4529228a33c1.avif"
+                        data-fallback="assets/images/treatment/braces.svg"
+                        alt="Close-up stock photo of a tooth with an orthodontic bracket" width="400" height="250"
+                        loading="lazy" class="aspect-[16/10] w-full object-cover card-img"></div>
+                  <div class="flex flex-1 flex-col p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Braces</h3>
+                     <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Metal and ceramic braces remain the
+                        most reliable way to correct crowding, gaps and complex bite problems.</p>
+                     <a href="#appointment" data-treatment="Braces"
+                        class="book-treatment mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-all duration-300 hover:text-brand-800 hover:translate-x-1">Book
+                        this treatment <span aria-hidden="true" class="card-arrow inline-block">&rarr;</span></a>
+                  </div>
+               </article>
+               <article
+                  class="reveal card-hover flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/photo-1564420228450-d9a5bc8d6565.avif"
+                        data-fallback="assets/images/treatment/clear-aligners.svg"
+                        alt="Stock photo of hands holding clear dental aligners and a white case" width="400"
+                        height="250" loading="lazy" class="aspect-[16/10] w-full object-cover card-img"></div>
+                  <div class="flex flex-1 flex-col p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Clear Aligners</h3>
+                     <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Removable, transparent trays that
+                        gradually shift your teeth, ideal for mild to moderate alignment concerns.</p>
+                     <a href="#appointment" data-treatment="Clear Aligners"
+                        class="book-treatment mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-all duration-300 hover:text-brand-800 hover:translate-x-1">Book
+                        this treatment <span aria-hidden="true" class="card-arrow inline-block">&rarr;</span></a>
+                  </div>
+               </article>
+               <article
+                  class="reveal card-hover flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/photo-1609840114035-3c981b782dfe.avif"
+                        data-fallback="assets/images/treatment/invisalign.svg"
+                        alt="Stock photo of a person inserting a clear plastic aligner over their teeth" width="400"
+                        height="250" loading="lazy" class="aspect-[16/10] w-full object-cover card-img"></div>
+                  <div class="flex flex-1 flex-col p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Invisalign</h3>
+                     <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">A branded clear-aligner system with a
+                        digitally planned series of trays, so you can preview your results before you start.</p>
+                     <a href="#appointment" data-treatment="Invisalign"
+                        class="book-treatment mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-all duration-300 hover:text-brand-800 hover:translate-x-1">Book
+                        this treatment <span aria-hidden="true" class="card-arrow inline-block">&rarr;</span></a>
+                  </div>
+               </article>
+               <article
+                  class="reveal card-hover flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/photo-1694675236489-d73651370688.avif"
+                        data-fallback="assets/images/treatment/retainers.svg"
+                        alt="Stock photo of a gloved hand holding a clear plastic orthodontic appliance" width="400"
+                        height="250" loading="lazy" class="aspect-[16/10] w-full object-cover card-img"></div>
+                  <div class="flex flex-1 flex-col p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Retainers</h3>
+                     <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Custom fixed or removable retainers
+                        that protect your results and keep your teeth in their new position for life.</p>
+                     <a href="#appointment" data-treatment="Retainers"
+                        class="book-treatment mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-all duration-300 hover:text-brand-800 hover:translate-x-1">Book
+                        this treatment <span aria-hidden="true" class="card-arrow inline-block">&rarr;</span></a>
+                  </div>
+               </article>
+               <article
+                  class="reveal card-hover flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm sm:col-span-2 lg:col-span-1">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/photo-1720685193942-5a1c5ac7fd80.avif"
+                        data-fallback="assets/images/treatment/pediatric.svg"
+                        alt="Stock photo of a dental model of teeth with braces" width="400" height="250" loading="lazy"
+                        class="aspect-[16/10] w-full object-cover card-img"></div>
+                  <div class="flex flex-1 flex-col p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Pediatric Orthodontics</h3>
+                     <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Early assessment and gentle
+                        interceptive care that guides growing jaws and can make later treatment simpler.</p>
+                     <a href="#appointment" data-treatment="Pediatric Orthodontics"
+                        class="book-treatment mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-all duration-300 hover:text-brand-800 hover:translate-x-1">Book
+                        this treatment <span aria-hidden="true" class="card-arrow inline-block">&rarr;</span></a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </section>
+
+      <section id="why-us" class="scroll-mt-14 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal mx-auto max-w-2xl text-center">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Why Choose Us</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">Care you can trust, comfort
+                  you'll notice</h2>
+            </div>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+               <div class="reveal card-hover rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div
+                     class="icon-badge flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                     </svg>
+                  </div>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Experienced Orthodontists</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Specialists focused solely on orthodontics,
+                     with years of hands-on case experience.</p>
+               </div>
+               <div class="reveal card-hover rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div
+                     class="icon-badge flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                           d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2M7 7h10v10H7z" />
+                     </svg>
+                  </div>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Modern Technology</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Digital scans and 3D treatment planning for
+                     precise, predictable results.</p>
+               </div>
+               <div class="reveal card-hover rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div
+                     class="icon-badge flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                           d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                     </svg>
+                  </div>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Personalized Treatment</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">No one-size-fits-all plans. Your treatment is
+                     designed around your teeth and your goals.</p>
+               </div>
+               <div class="reveal card-hover rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div
+                     class="icon-badge flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                           d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                     </svg>
+                  </div>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Comfortable Care</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">A calm, friendly clinic with gentle techniques
+                     and clear communication at every step.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="doctors" class="scroll-mt-14 bg-slate-50 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal mx-auto max-w-2xl text-center">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Our Doctors</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">Meet your orthodontic
+                  specialists</h2>
+            </div>
+            <div class="mt-8 grid gap-6 md:grid-cols-2">
+               <article
+                  class="reveal card-hover overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/pexels-photo-8669946.avif"
+                        data-fallback="assets/images/doctor-1.svg"
+                        alt="Stock photo of a female dentist and a dental nurse with a patient (illustrative, not Dr. Aanya Mehta)"
+                        width="400" height="300" loading="lazy"
+                        class="aspect-[4/3] w-full object-cover object-top card-img"></div>
+                  <div class="p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Dr. Aanya Mehta</h3>
+                     <p class="text-sm font-medium text-brand-700">BDS, MDS (Orthodontics &amp; Dentofacial Orthopedics)
+                     </p>
+                     <p class="mt-1 text-sm text-slate-500">Lead Orthodontist &middot; 15 years experience</p>
+                     <p class="mt-3 text-sm leading-relaxed text-slate-600">Specializes in clear aligners, adult
+                        orthodontics and complex bite correction.</p>
+                     <a href="#appointment"
+                        class="btn btn-outline mt-4 inline-flex rounded-full px-5 py-2 text-sm font-semibold">Book a
+                        consultation</a>
+                  </div>
+               </article>
+               <article
+                  class="reveal card-hover overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="overflow-hidden"><img src="/assets/images/treatment/photo-1667133295352-ef4c83620e8e.avif"
+                        data-fallback="assets/images/doctor-2.svg"
+                        alt="Stock photo of a dentist in a dark uniform examining a patient (illustrative, not Dr. Rohan Iyer)"
+                        width="400" height="300" loading="lazy"
+                        class="aspect-[4/3] w-full object-cover object-top card-img"></div>
+                  <div class="p-5">
+                     <h3 class="font-display text-lg font-semibold text-slate-900">Dr. Rohan Iyer</h3>
+                     <p class="text-sm font-medium text-brand-700">BDS, MDS (Orthodontics), Certified Invisalign
+                        Provider</p>
+                     <p class="mt-1 text-sm text-slate-500">Senior Orthodontist &middot; 10 years experience</p>
+                     <p class="mt-3 text-sm leading-relaxed text-slate-600">Specializes in pediatric orthodontics, early
+                        interceptive care and fixed braces.</p>
+                     <a href="#appointment"
+                        class="btn btn-outline mt-4 inline-flex rounded-full px-5 py-2 text-sm font-semibold">Book a
+                        consultation</a>
+                  </div>
+               </article>
+            </div>
+            <p class="reveal mt-4 text-center text-xs text-slate-500">Doctor photos are illustrative stock images and do
+               not show the named doctors.</p>
+         </div>
+      </section>
+
+      <section id="process" class="scroll-mt-14 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal mx-auto max-w-2xl text-center">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Treatment Process</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">Your journey to a new smile
+               </h2>
+            </div>
+            <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+               <li class="reveal card-hover relative rounded-2xl border border-brand-200 bg-brand-50 p-5">
+                  <span
+                     class="step-num flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-display text-base font-semibold text-white">1</span>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Consultation</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">We discuss your concerns, goals and medical
+                     history in a relaxed first visit.</p>
+               </li>
+               <li class="reveal card-hover relative rounded-2xl border border-brand-200 bg-brand-50 p-5">
+                  <span
+                     class="step-num flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-display text-base font-semibold text-white">2</span>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Dental Assessment</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">X-rays, photographs and digital scans give us a
+                     complete picture of your bite.</p>
+               </li>
+               <li class="reveal card-hover relative rounded-2xl border border-brand-200 bg-brand-50 p-5">
+                  <span
+                     class="step-num flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-display text-base font-semibold text-white">3</span>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Treatment Planning</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">We recommend the best option and explain the
+                     timeline, steps and costs clearly.</p>
+               </li>
+               <li class="reveal card-hover relative rounded-2xl border border-brand-200 bg-brand-50 p-5">
+                  <span
+                     class="step-num flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-display text-base font-semibold text-white">4</span>
+                  <h3 class="mt-4 font-display text-base font-semibold text-slate-900">Follow-up</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Regular check-ups keep progress on track,
+                     followed by retainers to protect your results.</p>
+               </li>
+            </ol>
+         </div>
+      </section>
+
+      <section id="testimonials" class="scroll-mt-14 bg-brand-900 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal mx-auto max-w-2xl text-center">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-300">Testimonials</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">What our patients say</h2>
+            </div>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+               <figure
+                  class="reveal card-hover flex flex-col rounded-2xl border border-brand-200 bg-white p-5 shadow-lg">
+                  <div class="text-lg tracking-widest text-amber-400 transition-transform duration-300 hover:scale-110"
+                     role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">"I was nervous about getting
+                     braces as an adult, but the team made everything easy. My teeth look amazing and the visits were
+                     always on time."</blockquote>
+                  <figcaption class="mt-4 flex items-center gap-3 border-t border-slate-200 pt-4">
+                     <img src="/assets/icons/photo-1609840113929-b130355987e1.jpg" data-fallback="assets/icons/logo.svg"
+                        alt="Stock photo of a smiling woman (illustrative, not the quoted patient)" width="40"
+                        height="40" loading="lazy"
+                        class="h-10 w-10 shrink-0 rounded-full object-cover transition-transform duration-300 hover:scale-110">
+                     <div>
+                        <p class="font-semibold text-slate-900">Priya S.</p>
+                        <p class="text-sm text-slate-500">Braces patient</p>
+                     </div>
+                  </figcaption>
+               </figure>
+               <figure
+                  class="reveal card-hover flex flex-col rounded-2xl border border-brand-200 bg-white p-5 shadow-lg">
+                  <div class="text-lg tracking-widest text-amber-400 transition-transform duration-300 hover:scale-110"
+                     role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">"The aligner plan was explained
+                     step by step and I could see my final result from day one. Nobody at work even noticed I was
+                     wearing them."</blockquote>
+                  <figcaption class="mt-4 flex items-center gap-3 border-t border-slate-200 pt-4">
+                     <img src="/assets/icons/photo-1667133295308-9ef24f71952e.jpg" data-fallback="assets/icons/logo.svg"
+                        alt="Stock photo of a smiling man (illustrative, not the quoted patient)" width="40" height="40"
+                        loading="lazy"
+                        class="h-10 w-10 shrink-0 rounded-full object-cover transition-transform duration-300 hover:scale-110">
+                     <div>
+                        <p class="font-semibold text-slate-900">Arjun K.</p>
+                        <p class="text-sm text-slate-500">Clear aligner patient</p>
+                     </div>
+                  </figcaption>
+               </figure>
+               <figure
+                  class="reveal card-hover flex flex-col rounded-2xl border border-brand-200 bg-white p-5 shadow-lg">
+                  <div class="text-lg tracking-widest text-amber-400 transition-transform duration-300 hover:scale-110"
+                     role="img" aria-label="Rated 4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;<span
+                        class="text-slate-300">&#9733;</span></div>
+                  <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">"My son was scared of the
+                     dentist, but the doctor was patient and kind. He now looks forward to his check-ups and proudly
+                     shows off his smile."</blockquote>
+                  <figcaption class="mt-4 flex items-center gap-3 border-t border-slate-200 pt-4">
+                     <span
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100 text-sm font-semibold text-brand-700 transition-transform duration-300 hover:scale-110"
+                        aria-hidden="true">NR</span>
+                     <div>
+                        <p class="font-semibold text-slate-900">Neha R.</p>
+                        <p class="text-sm text-slate-500">Parent of a pediatric patient</p>
+                     </div>
+                  </figcaption>
+               </figure>
+            </div>
+            <p class="reveal mt-4 text-center text-xs text-brand-200">Patient photos are illustrative stock images and
+               do not show the people quoted.</p>
+         </div>
+      </section>
+
+      <section id="appointment" class="scroll-mt-14 bg-gradient-to-br from-brand-50 to-sky-50 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto grid max-w-7xl items-start gap-8 px-4 sm:px-6 lg:grid-cols-5 lg:gap-12 lg:px-8">
+            <div class="reveal lg:col-span-2">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Appointment</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">Request your consultation
+               </h2>
+               <p class="mt-3 leading-relaxed text-slate-600">Fill in your details and choose how you'd like to send
+                  your request — via WhatsApp or email. We'll get back to you to confirm a time that suits you.</p>
+               <ul class="mt-5 space-y-3 text-sm text-slate-600">
+                  <li class="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1"><svg
+                        class="mt-0.5 h-5 w-5 shrink-0 text-brand-600 transition-transform duration-300 hover:scale-125"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                     </svg>No obligation. Your first consultation is a conversation, not a commitment.</li>
+                  <li class="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1"><svg
+                        class="mt-0.5 h-5 w-5 shrink-0 text-brand-600 transition-transform duration-300 hover:scale-125"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                     </svg>Children and adults are both welcome.</li>
+                  <li class="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1"><svg
+                        class="mt-0.5 h-5 w-5 shrink-0 text-brand-600 transition-transform duration-300 hover:scale-125"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                     </svg>We usually respond within one working day.</li>
+               </ul>
+               <div class="card-hover mt-6 rounded-2xl border border-brand-200 bg-white p-4 text-sm text-slate-600">
+                  <p class="font-semibold text-slate-900">Please note</p>
+                  <p class="mt-1">Submitting this form opens a pre-filled WhatsApp chat or email draft. This is an
+                     <strong>appointment request</strong>, not a confirmed booking. Your appointment is only confirmed
+                     once our team replies to you directly.</p>
+               </div>
+            </div>
+            <div class="reveal lg:col-span-3">
+               <div
+                  class="rounded-3xl bg-white p-5 shadow-xl ring-1 ring-slate-100 transition-shadow duration-500 hover:shadow-2xl hover:ring-brand-200 sm:p-6">
+                  <form id="appointment-form" novalidate>
+                     <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="sm:col-span-2">
+                           <label for="patient-name" class="block text-sm font-medium text-slate-800">Full name <span
+                                 class="text-rose-600" aria-hidden="true">*</span></label>
+                           <input type="text" id="patient-name" name="patientName" autocomplete="name" required
+                              aria-describedby="patient-name-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                              placeholder="Your full name">
+                           <p id="patient-name-error" class="mt-1.5 hidden text-sm text-rose-600" role="alert"></p>
+                        </div>
+                        <div>
+                           <label for="patient-phone" class="block text-sm font-medium text-slate-800">Phone number
+                              <span class="text-rose-600" aria-hidden="true">*</span></label>
+                           <input type="tel" id="patient-phone" name="patientPhone" autocomplete="tel" required
+                              aria-describedby="patient-phone-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                              placeholder="+91 9665781350">
+                           <p id="patient-phone-error" class="mt-1.5 hidden text-sm text-rose-600" role="alert"></p>
+                        </div>
+                        <div>
+                           <label for="patient-email" class="block text-sm font-medium text-slate-800">Email address
+                              <span class="text-rose-600" aria-hidden="true">*</span></label>
+                           <input type="email" id="patient-email" name="patientEmail" autocomplete="email" required
+                              aria-describedby="patient-email-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                              placeholder="you@example.com">
+                           <p id="patient-email-error" class="mt-1.5 hidden text-sm text-rose-600" role="alert"></p>
+                        </div>
+                        <div>
+                           <label for="treatment-select" class="block text-sm font-medium text-slate-800">Treatment
+                              <span class="text-rose-600" aria-hidden="true">*</span></label>
+                           <select id="treatment-select" name="treatment" required
+                              aria-describedby="treatment-select-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-200">
+                              <option value="">Select a treatment</option>
+                              <option value="Braces">Braces</option>
+                              <option value="Clear Aligners">Clear Aligners</option>
+                              <option value="Invisalign">Invisalign</option>
+                              <option value="Retainers">Retainers</option>
+                              <option value="Pediatric Orthodontics">Pediatric Orthodontics</option>
+                              <option value="Not sure yet">Not sure yet - I need advice</option>
+                           </select>
+                           <p id="treatment-select-error" class="mt-1.5 hidden text-sm text-rose-600" role="alert"></p>
+                        </div>
+                        <div>
+                           <label for="preferred-date" class="block text-sm font-medium text-slate-800">Preferred date
+                              <span class="text-rose-600" aria-hidden="true">*</span></label>
+                           <input type="date" id="preferred-date" name="preferredDate" required
+                              aria-describedby="preferred-date-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-200">
+                           <p id="preferred-date-error" class="mt-1.5 hidden text-sm text-rose-600" role="alert"></p>
+                        </div>
+                        <div>
+                           <label for="preferred-time" class="block text-sm font-medium text-slate-800">Preferred time
+                              <span class="text-rose-600" aria-hidden="true">*</span></label>
+                           <select id="preferred-time" name="preferredTime" required
+                              aria-describedby="preferred-time-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-200">
+                              <option value="">Select a time</option>
+                              <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
+                              <option value="Afternoon (12 PM - 3 PM)">Afternoon (12 PM - 3 PM)</option>
+                              <option value="Late afternoon (3 PM - 6 PM)">Late afternoon (3 PM - 6 PM)</option>
+                              <option value="Saturday morning (9 AM - 2 PM)">Saturday morning (9 AM - 2 PM)</option>
+                           </select>
+                           <p id="preferred-time-error" class="mt-1.5 hidden text-sm text-rose-600" role="alert"></p>
+                        </div>
+                        <div class="sm:col-span-2">
+                           <label for="additional-message" class="block text-sm font-medium text-slate-800">Additional
+                              message <span class="text-slate-400">(optional)</span></label>
+                           <textarea id="additional-message" name="additionalMessage" rows="3"
+                              aria-describedby="additional-message-error"
+                              class="mt-1.5 block w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                              placeholder="Anything else we should know? (e.g. concerns, previous treatment)"></textarea>
+                        </div>
+                     </div>
+                     <fieldset class="mt-5">
+                        <legend class="text-sm font-medium text-slate-800">Send request via</legend>
+                        <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+                           <button type="submit" id="send-whatsapp" value="whatsapp"
+                              class="btn btn-whatsapp inline-flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold">
+                              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488" />
+                              </svg>
+                              Send via WhatsApp
+                           </button>
+                           <button type="submit" id="send-email" value="email"
+                              class="btn btn-email inline-flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold">
+                              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                 stroke-width="2" aria-hidden="true">
+                                 <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              </svg>
+                              Send via Email
+                           </button>
+                        </div>
+                        <p class="mt-2 text-xs text-slate-500">Choose one option to open a pre-filled message. You can
+                           review and edit it before sending.</p>
+                     </fieldset>
+                  </form>
+                  <div id="appointment-success" class="hidden text-center" role="status" aria-live="polite"
+                     tabindex="-1">
+                     <div
+                        class="success-icon mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+                           aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                     </div>
+                     <h3 class="mt-5 font-display text-2xl font-semibold text-slate-900">Request ready to send</h3>
+                     <p id="success-message" class="mt-3 text-slate-600"></p>
+                     <p class="mt-3 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-800 ring-1 ring-amber-200">
+                        <strong>Important:</strong> This is not yet a confirmed appointment. Your booking is only
+                        confirmed after our clinic replies to you directly.</p>
+                     <button type="button" id="new-request-button"
+                        class="btn btn-outline mt-6 inline-flex rounded-full px-6 py-2.5 text-sm font-semibold">Make
+                        another request</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="contact" class="scroll-mt-14 py-12 sm:py-14 lg:py-16">
+         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal mx-auto max-w-2xl text-center">
+               <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Contact</p>
+               <h2 class="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">Visit or get in touch</h2>
+            </div>
+            <div class="mt-8 grid items-start gap-6 lg:grid-cols-[1fr_auto_1fr] lg:gap-8">
+               <div class="reveal space-y-5">
+                  <div class="border-b border-slate-300 pb-5">
+                  <div
+                     class="card-hover flex items-start gap-4 rounded-2xl border border-transparent bg-transparent p-3 -m-3">
+                     <div
+                        class="icon-badge flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                           aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                     </div>
+                     <div>
+                        <h3 class="font-display text-lg font-semibold text-slate-900">Address</h3>
+                        <address class="mt-1 not-italic text-slate-600">123 Smile Avenue, Suite 4<br>Your City, State
+                           000000</address>
+                     </div>
+                  </div>
+                  </div>
+                  <div class="border-b border-slate-300 pb-5">
+                  <div
+                     class="card-hover flex items-start gap-4 rounded-2xl border border-transparent bg-transparent p-3 -m-3">
+                     <div
+                        class="icon-badge flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                           aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                     </div>
+                     <div>
+                        <h3 class="font-display text-lg font-semibold text-slate-900">Phone</h3>
+                        <a href="tel:+919665781350"
+                           class="mt-1 inline-block text-slate-600 transition-colors duration-300 hover:text-brand-700">+91
+                           9665781350</a>
+                     </div>
+                  </div>
+                  </div>
+                  <div class="border-b border-slate-300 pb-5">
+                  <div
+                     class="card-hover flex items-start gap-4 rounded-2xl border border-transparent bg-transparent p-3 -m-3">
+                     <div
+                        class="icon-badge flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                           aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                     </div>
+                     <div>
+                        <h3 class="font-display text-lg font-semibold text-slate-900">Email</h3>
+                        <a href="mailto:hello@smilecraft.example"
+                           class="mt-1 inline-block text-slate-600 transition-colors duration-300 hover:text-brand-700">hello@smilecraft.example</a>
+                     </div>
+                  </div>
+                  </div>
+                  <div class="border-b border-slate-300 pb-5">
+                  <div
+                     class="card-hover flex items-start gap-4 rounded-2xl border border-transparent bg-transparent p-3 -m-3">
+                     <div
+                        class="icon-badge flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                           aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                     </div>
+                     <div class="w-full max-w-xs">
+                        <h3 class="font-display text-lg font-semibold text-slate-900">Opening hours</h3>
+                        <dl class="mt-1 space-y-1 text-slate-600">
+                           <div class="flex justify-between gap-6">
+                              <dt>Monday - Friday</dt>
+                              <dd>9:00 AM - 6:00 PM</dd>
+                           </div>
+                           <div class="flex justify-between gap-6">
+                              <dt>Saturday</dt>
+                              <dd>9:00 AM - 2:00 PM</dd>
+                           </div>
+                           <div class="flex justify-between gap-6">
+                              <dt>Sunday</dt>
+                              <dd>Closed</dd>
+                           </div>
+                        </dl>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+               <!-- Partition between contact details and map -->
+               <div class="hidden bg-slate-300 lg:block lg:w-px lg:self-stretch" role="separator" aria-hidden="true"></div>
+               <div class="reveal map-container" id="clinic-map">
+                  <iframe src="https://maps.google.com/maps?q=orthodontic%20clinic&amp;z=13&amp;output=embed"
+                     title="Orthodontic Clinic Location Map" loading="lazy" allowfullscreen
+                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <footer class="bg-slate-900 text-slate-300">
+      <div
+         class="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 md:gap-x-10 lg:grid-cols-[minmax(0,1.4fr)_auto_auto_auto] lg:gap-x-14 lg:px-8 xl:gap-x-16">
+         <div>
+            <a href="#home" class="group flex items-center gap-2.5" aria-label="SmileCraft Orthodontics home">
+               <img src="assets/icons/logo.svg" alt="" width="36" height="36"
+                  class="h-9 w-9 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+               <span class="font-display text-lg font-semibold text-white">Smile<span
+                     class="text-brand-400">Craft</span></span>
+            </a>
+            <p class="mt-4 text-sm leading-relaxed text-slate-400">Specialist orthodontic care for children, teens and
+               adults. Gentle treatment, beautiful results.</p>
+         </div>
+         <div>
+            <h3 class="font-display text-base font-semibold text-white">Quick Links</h3>
+            <ul class="mt-3 space-y-1.5 text-sm">
+               <li><a href="#about"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">About</a>
+               </li>
+               <li><a href="#treatments"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">Treatments</a>
+               </li>
+               <li><a href="#doctors"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">Our
+                     Doctors</a></li>
+               <li><a href="#faq"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">FAQ</a>
+               </li>
+               <li><a href="#appointment"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">Book
+                     Appointment</a></li>
+            </ul>
+         </div>
+         <div>
+            <h3 class="font-display text-base font-semibold text-white">Clinic Details</h3>
+            <ul class="mt-3 space-y-1.5 text-sm">
+               <li>123 Smile Avenue, Suite 4, Your City</li>
+               <li><a href="tel:+919665781350"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">+91
+                     9665781350</a></li>
+               <li><a href="mailto:ajayshirse9665@gmail.com"
+                     class="inline-block transition-all duration-300 hover:text-brand-300 hover:translate-x-1">ajayshirse9665@gmail.com</a>
+               </li>
+               <li>Mon - Fri 9 AM - 6 PM, Sat 9 AM - 2 PM</li>
+            </ul>
+         </div>
+         <div>
+            <h3 class="font-display text-base font-semibold text-white">Follow Us</h3>
+            <ul class="mt-4 flex flex-wrap gap-3 text-sm">
+               <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                     class="social-pill btn btn-dark inline-flex rounded-full px-4 py-2">Facebook</a></li>
+               <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                     class="social-pill btn btn-dark inline-flex rounded-full px-4 py-2">Instagram</a></li>
+               <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                     class="social-pill btn btn-dark inline-flex rounded-full px-4 py-2">YouTube</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="border-t border-slate-800">
+         <div class="mx-auto max-w-7xl px-4 py-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+            <p>&copy; <span id="footer-year">2026</span> SmileCraft Orthodontics. All rights reserved.</p>
+            <p class="mt-1 text-xs text-slate-500">Photographs are stock images from Unsplash and Pexels, used for
+               illustration only. They do not show SmileCraft staff, patients or premises.</p>
+         </div>
+      </div>
+   </footer>
+
+   <button id="back-to-top" type="button"
+      class="invisible fixed bottom-6 right-6 z-40 flex h-12 w-12 translate-y-4 items-center justify-center rounded-full bg-brand-600 text-white opacity-0 shadow-lg"
+      aria-label="Back to top">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+      </svg>
+   </button>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

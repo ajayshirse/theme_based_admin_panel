@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Content Management — ThemeBase</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      z-index: 50;
+      pointer-events: none;
+    }
+    @media (min-width: 1024px) {
+      body.sidebar-collapsed .tooltip { display: none; }
+      body.sidebar-collapsed .group:hover .tooltip { display: block; }
+      body.sidebar-collapsed #sidebar { width: 72px; }
+      body.sidebar-collapsed .sidebar-text { display: none; }
+      body.sidebar-collapsed .nav-link { justify-content: center; padding-left: 0; padding-right: 0; }
+    }
+  </style>
+</head>
+
+<body data-page="content-management" class="bg-slate-50 text-slate-900 min-h-screen font-sans antialiased">
+
+  <div id="sidebar-root"></div>
+
+  <div id="mainContent" class="lg:ml-64 transition-all duration-300">
+    <div id="header-root"></div>
+
+    <main class="p-5 lg:p-7 max-w-[1600px] mx-auto">
+
+      <!-- Page head -->
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+        <div>
+          <div class="text-indigo-600 text-[11px] font-bold uppercase tracking-[0.14em]">
+            ThemeBase
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold mt-1 tracking-tight">Content Management</h1>
+          <p class="text-slate-500 text-sm mt-1">
+            Select a theme and edit its content page by page.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 1: Theme selection -->
+<div id="themeSelectStep" class="bg-white rounded-xl border border-slate-200 p-5 mb-5">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="w-8 h-8 rounded-lg bg-slate-900 grid place-items-center">
+      <i data-lucide="layout-template" class="w-4 h-4 text-white"></i>
+    </div>
+    <div>
+      <div class="font-semibold text-slate-800">Select Theme</div>
+      <div class="text-xs text-slate-500">Choose a sub-category and theme to start editing its content</div>
+    </div>
+  </div>
+
+  <!-- Sub-category tabs -->
+  <div class="flex items-center gap-2 mb-4 border-b border-slate-200 pb-3">
+    <button data-tab="dental"
+      class="subcat-tab active inline-flex items-center gap-1.5 px-3 py-1.5 
+             text-xs font-medium rounded-lg transition
+             bg-slate-900 text-white">
+      <i data-lucide="smile" class="w-3.5 h-3.5"></i>
+      Dental
+    </button>
+    <button data-tab="dermat"
+      class="subcat-tab inline-flex items-center gap-1.5 px-3 py-1.5 
+             text-xs font-medium rounded-lg transition
+             bg-white text-slate-600 border border-slate-200 hover:bg-slate-100">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+      Dermatology
+    </button>
+    <button data-tab="eye"
+      class="subcat-tab inline-flex items-center gap-1.5 px-3 py-1.5 
+             text-xs font-medium rounded-lg transition
+             bg-white text-slate-600 border border-slate-200 hover:bg-slate-100">
+      <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+      Eye Care
+    </button>
+    <button data-tab="ortho"
+      class="subcat-tab inline-flex items-center gap-1.5 px-3 py-1.5 
+             text-xs font-medium rounded-lg transition
+             bg-white text-slate-600 border border-slate-200 hover:bg-slate-100">
+      <i data-lucide="bone" class="w-3.5 h-3.5"></i>
+      Ortho
+    </button>
+  </div>
+
+  <!-- Dental themes panel -->
+  <div id="panel-dental" class="subcat-panel grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <button data-select-theme="dental_theme1"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dental Theme 1</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Carousel</div>
+      </div>
+    </button>
+
+    <button data-select-theme="dental_theme2"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dental Theme 2</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Single Hero</div>
+      </div>
+    </button>
+
+    <button data-select-theme="dental_theme3"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dental Theme 3</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Wellness</div>
+      </div>
+    </button>
+
+    <button data-select-theme="dental_theme4"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dental Theme 4</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Clean Blue</div>
+      </div>
+    </button>
+  </div>
+
+  <!-- Dermatology themes panel -->
+  <div id="panel-dermat" class="subcat-panel hidden grid-cols-1 sm:grid-cols-3 gap-3">
+    <button data-select-theme="dermat_theme1"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dermat Theme 1</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Classic</div>
+      </div>
+    </button>
+
+    <button data-select-theme="dermat_theme2"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dermat Theme 2</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Modern</div>
+      </div>
+    </button>
+
+    <button data-select-theme="dermat_theme3"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Dermat Theme 3</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Luxury</div>
+      </div>
+    </button>
+  </div>
+
+  <!-- Eye care themes panel -->
+  <div id="panel-eye" class="subcat-panel hidden grid-cols-1 sm:grid-cols-3 gap-3">
+    <button data-select-theme="eye_theme1"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Eye Theme 1</div>
+        <div class="text-xs text-slate-500 mt-0.5">Single Page · Clean Clinical</div>
+      </div>
+    </button>
+
+    <button data-select-theme="eye_theme2"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Eye Theme 2</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Institute</div>
+      </div>
+    </button>
+
+    <button data-select-theme="eye_theme3"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Eye Theme 3</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Editorial</div>
+      </div>
+    </button>
+  </div>
+
+  <!-- Ortho themes panel -->
+  <div id="panel-ortho" class="subcat-panel hidden grid-cols-1 sm:grid-cols-3 gap-3">
+    <button data-select-theme="ortho_theme1"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Ortho Theme 1</div>
+        <div class="text-xs text-slate-500 mt-0.5">Single Page · Orthodontic</div>
+      </div>
+    </button>
+
+    <button data-select-theme="ortho_theme2"
+      class="theme-option group flex items-center gap-3 p-4 rounded-lg 
+             border-2 border-slate-200 bg-white hover:border-slate-300 
+             transition text-left">
+      <div class="w-12 h-12 rounded-lg bg-slate-100 grid place-items-center 
+                  border border-slate-200 shrink-0">
+        <i data-lucide="layout-template" class="w-5 h-5 text-slate-500"></i>
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-slate-800 text-sm">Ortho Theme 2</div>
+        <div class="text-xs text-slate-500 mt-0.5">Multipage · Bone &amp; Joint</div>
+      </div>
+    </button>
+  </div>
+</div>
+
+      <!-- Step 2: Wizard (hidden initially) -->
+      <div id="wizardContainer" class="hidden">
+
+        <!-- Wizard header -->
+        <div class="bg-white rounded-xl border border-slate-200 mb-5 overflow-hidden">
+
+          <!-- Wizard header top bar -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-3 p-4 border-b border-slate-200">
+  <div class="flex items-center gap-3">
+    
+    <!-- BACK BUTTON (NEW) -->
+    <button id="backToThemeBtn"
+      class="inline-flex items-center justify-center w-9 h-9 rounded-lg 
+             text-slate-600 bg-white border border-slate-200 
+             hover:bg-slate-100 hover:text-slate-900 transition shrink-0"
+      title="Back to theme selection">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+    </button>
+
+    <div class="w-9 h-9 rounded-lg bg-slate-900 grid place-items-center shrink-0">
+      <i data-lucide="layout-template" class="w-4 h-4 text-white"></i>
+    </div>
+    <div>
+      <div id="wizardThemeName" class="font-semibold text-slate-800 text-sm">—</div>
+      <div id="wizardThemeMeta" class="text-xs text-slate-500">—</div>
+    </div>
+  </div>
+
+  <div class="sm:ml-auto flex items-center gap-2">
+    <button id="changeThemeBtn"
+      class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium 
+             text-slate-600 bg-white border border-slate-200 rounded-lg 
+             hover:bg-slate-50 transition">
+      <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
+      Change Theme
+    </button>
+
+    <button id="saveDraftBtn"
+      class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium 
+             text-slate-700 bg-white border border-slate-200 rounded-lg 
+             hover:bg-slate-50 transition">
+      <i data-lucide="save" class="w-3.5 h-3.5"></i>
+      Save Draft
+    </button>
+
+    <button id="publishBtn"
+      class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium 
+             text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition">
+      <i data-lucide="rocket" class="w-3.5 h-3.5"></i>
+      Publish
+    </button>
+  </div>
+</div>
+
+          <!-- Wizard steps (page-wise) -->
+          <div id="wizardSteps" class="flex gap-1 overflow-x-auto p-4">
+            <!-- Steps injected by JS -->
+          </div>
+        </div>
+
+        <!-- Form body -->
+        <div class="bg-white rounded-xl border border-slate-200">
+          <div id="formBody" class="p-5">
+            <!-- Dynamic fields injected by JS -->
+          </div>
+
+          <!-- Footer: navigation -->
+          <div class="flex items-center justify-between gap-3 px-5 py-4 
+                      bg-slate-50 border-t border-slate-200">
+            <button id="prevStepBtn"
+              class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium 
+                     text-slate-700 bg-white border border-slate-200 rounded-lg 
+                     hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed 
+                     transition">
+              <i data-lucide="arrow-left" class="w-4 h-4"></i>
+              Previous
+            </button>
+
+            <div id="stepIndicator" class="text-xs text-slate-500 font-medium">
+              Step 1 of 5
+            </div>
+
+            <button id="nextStepBtn"
+              class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium 
+                     text-white bg-slate-900 rounded-lg hover:bg-slate-800 
+                     disabled:opacity-50 disabled:cursor-not-allowed transition">
+              Next
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/content-management.js"></script>
+</body>
+</html>

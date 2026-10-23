@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — ThemeBase</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind config for Inter + tooltip styles -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Tooltip + collapsed-sidebar custom rules (Tailwind-only via @layer not possible in CDN, so minimal inline) -->
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Tooltip base */
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      z-index: 50;
+      pointer-events: none;
+      box-shadow: 0 8px 20px rgba(15,23,42,.15);
+    }
+    .tooltip::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 8px;
+      height: 8px;
+      background: #0f172a;
+    }
+
+    /* Show tooltip only when sidebar is collapsed (desktop) */
+    @media (min-width: 1024px) {
+      body.sidebar-collapsed .tooltip { display: none; }
+      body.sidebar-collapsed .group:hover .tooltip { display: block; }
+      body.sidebar-collapsed #sidebar { width: 72px; }
+      body.sidebar-collapsed .sidebar-text { display: none; }
+      body.sidebar-collapsed .nav-link { justify-content: center; padding-left: 0; padding-right: 0; }
+      body.sidebar-collapsed .nav-link i { margin: 0; }
+    }
+  </style>
+</head>
+
+<body data-page="dashboard" class="bg-slate-50 text-slate-900 min-h-screen font-sans antialiased">
+
+  <!-- Sidebar injected here -->
+  <div id="sidebar-root"></div>
+
+  <!-- Main wrapper -->
+  <div id="mainContent" class="lg:ml-64 transition-all duration-300">
+
+    <!-- Header injected here -->
+    <div id="header-root"></div>
+
+    <!-- Page content -->
+    <main class="p-5 lg:p-7 max-w-[1600px] mx-auto">
+
+      <!-- Page head -->
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+        <div>
+          <div class="text-indigo-600 text-[11px] font-bold uppercase tracking-[0.14em]">
+            ThemeBase
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold mt-1 tracking-tight">Dashboard</h1>
+          <p class="text-slate-500 text-sm mt-1">
+            Manage your templates, websites and deployments.
+          </p>
+        </div>
+        <a href="create.html"
+           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 
+                  text-white font-medium text-sm px-4 py-2.5 rounded-lg transition">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          Create New Website
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Templates</div>
+            <i data-lucide="layout-template" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div class="text-3xl font-bold mt-2 tracking-tight">9</div>
+          <div class="text-xs text-emerald-600 font-medium mt-1">3 industries · 3 themes</div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">My Websites</div>
+            <i data-lucide="globe" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div class="text-3xl font-bold mt-2 tracking-tight">0</div>
+          <div class="text-xs text-emerald-600 font-medium mt-1">Your saved projects</div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Published</div>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div class="text-3xl font-bold mt-2 tracking-tight">0</div>
+          <div class="text-xs text-emerald-600 font-medium mt-1">Ready for preview</div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Total Users</div>
+            <i data-lucide="users" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div class="text-3xl font-bold mt-2 tracking-tight">—</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Backend not connected</div>
+        </div>
+      </div>
+
+      <!-- Content grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-5">
+        <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-semibold text-lg tracking-tight">Featured Templates</h2>
+            <a href="templates.html" class="text-sm text-indigo-600 font-medium hover:text-indigo-700">
+              View All
+            </a>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="border border-slate-200 rounded-lg overflow-hidden">
+              <div class="h-28 bg-slate-100 grid place-items-center">
+                <i data-lucide="image" class="w-6 h-6 text-slate-400"></i>
+              </div>
+              <div class="p-3">
+                <div class="font-semibold text-sm">Dental Theme 1</div>
+                <div class="text-xs text-slate-500 mt-0.5">Dental · Responsive</div>
+              </div>
+            </div>
+            <div class="border border-slate-200 rounded-lg overflow-hidden">
+              <div class="h-28 bg-slate-100 grid place-items-center">
+                <i data-lucide="image" class="w-6 h-6 text-slate-400"></i>
+              </div>
+              <div class="p-3">
+                <div class="font-semibold text-sm">Ortho Theme 2</div>
+                <div class="text-xs text-slate-500 mt-0.5">Ortho · Responsive</div>
+              </div>
+            </div>
+            <div class="border border-slate-200 rounded-lg overflow-hidden">
+              <div class="h-28 bg-slate-100 grid place-items-center">
+                <i data-lucide="image" class="w-6 h-6 text-slate-400"></i>
+              </div>
+              <div class="p-3">
+                <div class="font-semibold text-sm">Pedia Theme 3</div>
+                <div class="text-xs text-slate-500 mt-0.5">Pedia · Responsive</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="bg-white rounded-xl border border-slate-200 p-5">
+          <h2 class="font-semibold text-lg tracking-tight mb-4">Recent Activity</h2>
+          <div class="text-slate-400 text-sm text-center py-12">
+            No activity yet.
+          </div>
+        </aside>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

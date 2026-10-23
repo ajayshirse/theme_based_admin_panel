@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>User Management — ThemeBase</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      z-index: 50;
+      pointer-events: none;
+      box-shadow: 0 8px 20px rgba(15,23,42,.15);
+    }
+    .tooltip::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 8px; height: 8px;
+      background: #0f172a;
+    }
+    @media (min-width: 1024px) {
+      body.sidebar-collapsed .tooltip { display: none; }
+      body.sidebar-collapsed .group:hover .tooltip { display: block; }
+      body.sidebar-collapsed #sidebar { width: 72px; }
+      body.sidebar-collapsed .sidebar-text { display: none; }
+      body.sidebar-collapsed .nav-link { justify-content: center; padding-left: 0; padding-right: 0; }
+    }
+  </style>
+</head>
+
+<body data-page="users" class="bg-slate-50 text-slate-900 min-h-screen font-sans antialiased">
+
+  <div id="sidebar-root"></div>
+
+  <div id="mainContent" class="lg:ml-64 transition-all duration-300">
+    <div id="header-root"></div>
+
+    <main class="p-5 lg:p-7 max-w-[1600px] mx-auto">
+
+      <!-- Page head -->
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+        <div>
+          <div class="text-indigo-600 text-[11px] font-bold uppercase tracking-[0.14em]">
+            ThemeBase
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold mt-1 tracking-tight">User Management</h1>
+          <p class="text-slate-500 text-sm mt-1">
+            Create, edit and manage admin users and their access.
+          </p>
+        </div>
+        <button id="createUserBtn"
+          class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 
+                 text-white font-medium text-sm px-4 py-2.5 rounded-lg transition">
+          <i data-lucide="user-plus" class="w-4 h-4"></i>
+          Create User
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Total Users</div>
+            <i data-lucide="users" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div id="statTotal" class="text-3xl font-bold mt-2 tracking-tight">0</div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Active</div>
+            <i data-lucide="user-check" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div id="statActive" class="text-3xl font-bold mt-2 tracking-tight text-emerald-600">0</div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Inactive</div>
+            <i data-lucide="user-x" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div id="statInactive" class="text-3xl font-bold mt-2 tracking-tight text-amber-600">0</div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-500 text-sm font-medium">Admins</div>
+            <i data-lucide="shield" class="w-4 h-4 text-slate-400"></i>
+          </div>
+          <div id="statAdmins" class="text-3xl font-bold mt-2 tracking-tight">0</div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white rounded-xl border border-slate-200">
+
+        <!-- Toolbar -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3 p-4 border-b border-slate-200">
+          <div class="flex items-center h-10 flex-1 max-w-md bg-slate-50 
+                      border border-slate-200 rounded-lg px-3 
+                      focus-within:border-slate-400 transition">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400"></i>
+            <input id="userSearch" type="text" placeholder="Search by name or email..."
+              class="w-full bg-transparent outline-none px-2 text-sm text-slate-800 
+                     placeholder-slate-400">
+          </div>
+
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-medium text-slate-500">Role:</label>
+            <select id="roleFilter"
+              class="h-10 bg-white border border-slate-200 rounded-lg px-3 text-sm 
+                     text-slate-700 focus:outline-none focus:border-slate-400 transition">
+              <option value="">All</option>
+              <option value="Admin">Admin</option>
+              <option value="Editor">Editor</option>
+              <option value="Viewer">Viewer</option>
+            </select>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-medium text-slate-500">Status:</label>
+            <select id="statusFilter"
+              class="h-10 bg-white border border-slate-200 rounded-lg px-3 text-sm 
+                     text-slate-700 focus:outline-none focus:border-slate-400 transition">
+              <option value="">All</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+
+          <div class="sm:ml-auto text-sm text-slate-500">
+            Total: <span id="userCount" class="font-semibold text-slate-800">0</span>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50/60">
+                <th class="text-left font-semibold text-slate-500 text-[11px] uppercase tracking-wider px-4 py-3">User</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] uppercase tracking-wider px-4 py-3">Role</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] uppercase tracking-wider px-4 py-3">Status</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] uppercase tracking-wider px-4 py-3">Last Login</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] uppercase tracking-wider px-4 py-3">Created</th>
+                <th class="text-right font-semibold text-slate-500 text-[11px] uppercase tracking-wider px-4 py-3 w-40">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+          </table>
+        </div>
+
+        <div id="emptyState" class="hidden text-center py-16">
+          <div class="w-12 h-12 rounded-full bg-slate-100 grid place-items-center mx-auto mb-3">
+            <i data-lucide="user-x" class="w-5 h-5 text-slate-400"></i>
+          </div>
+          <div class="font-semibold text-slate-700">No users found</div>
+          <div class="text-sm text-slate-500 mt-1">Try changing the search or filter.</div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="modalRoot"></div>
+
+  <script src="js/app.js"></script>
+
+  <script>
+    // =========================================================
+    //  Users data
+    // =========================================================
+    let users = [
+      {
+        id: 'u1',
+        name: 'Ajay Sharma',
+        email: 'ajay@themebase.com',
+        role: 'Admin',
+        status: 'Active',
+        lastLogin: '2026-10-13 09:12',
+        createdAt: '2026-01-10',
+      },
+      {
+        id: 'u2',
+        name: 'Priya Verma',
+        email: 'priya@themebase.com',
+        role: 'Editor',
+        status: 'Active',
+        lastLogin: '2026-10-12 18:40',
+        createdAt: '2026-03-22',
+      },
+      {
+        id: 'u3',
+        name: 'Rahul Mehta',
+        email: 'rahul@themebase.com',
+        role: 'Viewer',
+        status: 'Inactive',
+        lastLogin: '2026-09-30 11:05',
+        createdAt: '2026-05-14',
+      },
+    ];
+
+    const roleLabels = { Admin: 'Admin', Editor: 'Editor', Viewer: 'Viewer' };
+
+    // =========================================================
+    //  Render table
+    // =========================================================
+    function renderTable(list) {
+      const tbody = document.getElementById('userTableBody');
+      const empty = document.getElementById('emptyState');
+      const count = document.getElementById('userCount');
+
+      count.textContent = list.length;
+
+      // Update stats
+      document.getElementById('statTotal').textContent    = users.length;
+      document.getElementById('statActive').textContent   = users.filter(u => u.status === 'Active').length;
+      document.getElementById('statInactive').textContent = users.filter(u => u.status === 'Inactive').length;
+      document.getElementById('statAdmins').textContent   = users.filter(u => u.role === 'Admin').length;
+
+      if (!list.length) {
+        tbody.innerHTML = '';
+        empty.classList.remove('hidden');
+        return;
+      }
+      empty.classList.add('hidden');
+
+      tbody.innerHTML = list.map(u => `
+        <tr class="border-b border-slate-100 hover:bg-slate-50/60 transition">
+
+          <!-- User -->
+          <td class="px-4 py-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-slate-200 text-slate-700 
+                          grid place-items-center text-sm font-semibold shrink-0">
+                ${initials(u.name)}
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-slate-800 truncate">${u.name}</div>
+                <div class="text-xs text-slate-500 truncate">${u.email}</div>
+              </div>
+            </div>
+          </td>
+
+          <!-- Role -->
+          <td class="px-4 py-3">${roleBadge(u.role)}</td>
+
+          <!-- Status -->
+          <td class="px-4 py-3">${statusBadge(u.status)}</td>
+
+          <!-- Last Login -->
+          <td class="px-4 py-3 text-slate-600">${u.lastLogin}</td>
+
+          <!-- Created -->
+          <td class="px-4 py-3 text-slate-600">${u.createdAt}</td>
+
+          <!-- Actions -->
+<td class="px-4 py-3">
+  <div class="flex items-center justify-end gap-1.5">
+
+    <!-- Edit -->
+    <button data-action="edit" data-id="${u.id}"
+      title="Edit user"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-slate-600 bg-white border border-slate-200 rounded-md
+             hover:bg-slate-100 hover:text-slate-900 hover:border-slate-300 
+             transition">
+      <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Edit
+      </span>
+    </button>
+
+    <!-- Reset Password -->
+    <button data-action="reset-password" data-id="${u.id}"
+      title="Reset password"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-slate-600 bg-white border border-slate-200 rounded-md
+             hover:bg-slate-100 hover:text-slate-900 hover:border-slate-300 
+             transition">
+      <i data-lucide="key-round" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Reset Password
+      </span>
+    </button>
+
+    <!-- Toggle Active/Inactive -->
+    <button data-action="toggle" data-id="${u.id}"
+      title="${u.status === 'Active' ? 'Deactivate' : 'Activate'}"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             ${u.status === 'Active'
+               ? 'text-amber-600 bg-white border border-amber-200 hover:bg-amber-50 hover:border-amber-300'
+               : 'text-emerald-600 bg-white border border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300'}
+             rounded-md transition">
+      <i data-lucide="${u.status === 'Active' ? 'user-x' : 'user-check'}" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        ${u.status === 'Active' ? 'Deactivate' : 'Activate'}
+      </span>
+    </button>
+
+    <!-- Delete -->
+    <button data-action="delete" data-id="${u.id}"
+      title="Delete user"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-rose-600 bg-white border border-rose-200 rounded-md
+             hover:bg-rose-50 hover:border-rose-300 transition">
+      <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Delete
+      </span>
+    </button>
+
+  </div>
+</td>
+          
+        </tr>
+      `).join('');
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function initials(name) {
+      return name.split(' ').map(p => p[0]).slice(0, 2).join('').toUpperCase();
+    }
+
+    function roleBadge(role) {
+      const map = {
+        Admin:  { bg: 'bg-indigo-50',  text: 'text-indigo-700',  border: 'border-indigo-100' },
+        Editor: { bg: 'bg-sky-50',     text: 'text-sky-700',     border: 'border-sky-100' },
+        Viewer: { bg: 'bg-slate-100',  text: 'text-slate-700',   border: 'border-slate-200' },
+      };
+      const c = map[role] || map.Viewer;
+      return `<span class="inline-flex items-center gap-1.5 px-2 py-1 
+                     text-[11px] font-semibold ${c.text} ${c.bg} 
+                     border ${c.border} rounded-full">
+                ${role}
+              </span>`;
+    }
+
+    function statusBadge(status) {
+      if (status === 'Active') {
+        return `<span class="inline-flex items-center gap-1.5 px-2 py-1 
+                       text-[11px] font-semibold text-emerald-700 
+                       bg-emerald-50 border border-emerald-100 rounded-full">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Active
+                </span>`;
+      }
+      return `<span class="inline-flex items-center gap-1.5 px-2 py-1 
+                     text-[11px] font-semibold text-amber-700 
+                     bg-amber-50 border border-amber-100 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Inactive
+              </span>`;
+    }
+
+    // =========================================================
+    //  Filters
+    // =========================================================
+    function applyFilters() {
+      const q      = document.getElementById('userSearch').value.toLowerCase().trim();
+      const role   = document.getElementById('roleFilter').value;
+      const status = document.getElementById('statusFilter').value;
+
+      const filtered = users.filter(u => {
+        const matchQ = !q ||
+          u.name.toLowerCase().includes(q) ||
+          u.email.toLowerCase().includes(q);
+        const matchRole   = !role   || u.role === role;
+        const matchStatus = !status || u.status === status;
+        return matchQ && matchRole && matchStatus;
+      });
+
+      renderTable(filtered);
+    }
+
+    document.getElementById('userSearch').addEventListener('input', applyFilters);
+    document.getElementById('roleFilter').addEventListener('change', applyFilters);
+    document.getElementById('statusFilter').addEventListener('change', applyFilters);
+
+    // =========================================================
+    //  Action dispatcher
+    // =========================================================
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action][data-id]');
+      if (!btn) return;
+      const { action, id } = btn.dataset;
+      const user = users.find(u => u.id === id);
+      if (!user) return;
+
+      if (action === 'edit')            openUserModal(user);
+      if (action === 'reset-password')  openResetPasswordModal(user);
+      if (action === 'toggle')          toggleUserStatus(user);
+      if (action === 'delete')          openDeleteModal(user);
+    });
+
+    document.getElementById('createUserBtn').addEventListener('click', () => openUserModal(null));
+
+    // =========================================================
+    //  Create / Edit User Modal
+    // =========================================================
+    function openUserModal(user) {
+      const isEdit = !!user;
+      const root = document.getElementById('modalRoot');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm 
+                    grid place-items-center p-4" id="modalBackdrop">
+          <div class="bg-white w-full max-w-lg rounded-xl shadow-2xl overflow-hidden">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 h-14 border-b border-slate-200">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-slate-100 grid place-items-center">
+                  <i data-lucide="${isEdit ? 'user-cog' : 'user-plus'}" class="w-4 h-4 text-slate-600"></i>
+                </div>
+                <div class="font-semibold text-slate-800">
+                  ${isEdit ? 'Edit User' : 'Create New User'}
+                </div>
+              </div>
+              <button id="closeModal"
+                class="text-slate-500 hover:text-slate-900 hover:bg-slate-100 
+                       p-2 rounded-lg transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
+
+              <div>
+                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                  Full Name <span class="text-rose-500">*</span>
+                </label>
+                <input id="uName" type="text" value="${user?.name || ''}"
+                  placeholder="e.g. Priya Verma"
+                  class="w-full h-10 px-3 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 focus:outline-none focus:border-slate-400 transition">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                  Email Address <span class="text-rose-500">*</span>
+                </label>
+                <input id="uEmail" type="email" value="${user?.email || ''}"
+                  placeholder="user@example.com"
+                  class="w-full h-10 px-3 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 focus:outline-none focus:border-slate-400 transition">
+              </div>
+
+              ${!isEdit ? `
+                <div>
+                  <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                    Password <span class="text-rose-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <input id="uPassword" type="password" placeholder="Min 8 characters"
+                      class="w-full h-10 px-3 pr-10 rounded-lg border border-slate-200 
+                             text-sm text-slate-800 focus:outline-none focus:border-slate-400 transition">
+                    <button type="button" id="togglePass"
+                      class="absolute inset-y-0 right-0 px-3 text-slate-400 hover:text-slate-700">
+                      <i data-lucide="eye" class="w-4 h-4"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                    Confirm Password <span class="text-rose-500">*</span>
+                  </label>
+                  <input id="uConfirm" type="password" placeholder="Re-enter password"
+                    class="w-full h-10 px-3 rounded-lg border border-slate-200 
+                           text-sm text-slate-800 focus:outline-none focus:border-slate-400 transition">
+                </div>
+              ` : ''}
+
+              <div>
+                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                  Role <span class="text-rose-500">*</span>
+                </label>
+                <select id="uRole"
+                  class="w-full h-10 px-3 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 focus:outline-none focus:border-slate-400 transition">
+                  <option value="Admin"  ${user?.role === 'Admin'  ? 'selected' : ''}>Admin — full access</option>
+                  <option value="Editor" ${user?.role === 'Editor' ? 'selected' : ''}>Editor — content edit</option>
+                  <option value="Viewer" ${user?.role === 'Viewer' ? 'selected' : ''}>Viewer — read only</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-600 mb-1.5">Status</label>
+                <div class="flex items-center gap-4">
+                  <label class="flex items-center gap-2 text-sm text-slate-700">
+                    <input type="radio" name="uStatus" value="Active"
+                      ${(!user || user.status === 'Active') ? 'checked' : ''}
+                      class="accent-slate-900">
+                    Active
+                  </label>
+                  <label class="flex items-center gap-2 text-sm text-slate-700">
+                    <input type="radio" name="uStatus" value="Inactive"
+                      ${user?.status === 'Inactive' ? 'checked' : ''}
+                      class="accent-slate-900">
+                    Inactive
+                  </label>
+                </div>
+              </div>
+
+              <div id="formError" class="hidden text-xs text-rose-600"></div>
+            </div>
+
+            <!-- Footer -->
+            <div class="flex items-center justify-end gap-2 px-5 py-4 
+                        bg-slate-50 border-t border-slate-200">
+              <button id="cancelBtn"
+                class="px-4 py-2 text-sm font-medium text-slate-700 bg-white 
+                       border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+                Cancel
+              </button>
+              <button id="saveBtn"
+                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium 
+                       text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition">
+                <i data-lucide="${isEdit ? 'save' : 'user-plus'}" class="w-4 h-4"></i>
+                ${isEdit ? 'Save Changes' : 'Create User'}
+              </button>
+            </div>
+
+          </div>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+
+      const close = () => { root.innerHTML = ''; };
+      document.getElementById('closeModal').addEventListener('click', close);
+      document.getElementById('cancelBtn').addEventListener('click', close);
+      document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+        if (e.target.id === 'modalBackdrop') close();
+      });
+
+      // Password visibility toggle
+      const togglePass = document.getElementById('togglePass');
+      if (togglePass) {
+        togglePass.addEventListener('click', () => {
+          const inp = document.getElementById('uPassword');
+          inp.type = inp.type === 'password' ? 'text' : 'password';
+        });
+      }
+
+      // Save
+      document.getElementById('saveBtn').addEventListener('click', () => {
+        const name   = document.getElementById('uName').value.trim();
+        const email  = document.getElementById('uEmail').value.trim();
+        const role   = document.getElementById('uRole').value;
+        const status = document.querySelector('input[name="uStatus"]:checked').value;
+        const err    = document.getElementById('formError');
+
+        if (!name || !email) {
+          err.textContent = 'Name and email are required.';
+          err.classList.remove('hidden');
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          err.textContent = 'Please enter a valid email.';
+          err.classList.remove('hidden');
+          return;
+        }
+
+        if (!isEdit) {
+          const pw  = document.getElementById('uPassword').value;
+          const cpw = document.getElementById('uConfirm').value;
+          if (pw.length < 8) {
+            err.textContent = 'Password must be at least 8 characters.';
+            err.classList.remove('hidden');
+            return;
+          }
+          if (pw !== cpw) {
+            err.textContent = 'Passwords do not match.';
+            err.classList.remove('hidden');
+            return;
+          }
+        }
+
+        if (isEdit) {
+          Object.assign(user, { name, email, role, status });
+          showToast(`"${name}" updated`);
+        } else {
+          users.unshift({
+            id: 'u' + Date.now(),
+            name, email, role, status,
+            lastLogin: '—',
+            createdAt: new Date().toISOString().slice(0, 10),
+          });
+          showToast(`"${name}" created`);
+        }
+
+        close();
+        applyFilters();
+      });
+    }
+
+    // =========================================================
+    //  Reset Password Modal
+    // =========================================================
+    function openResetPasswordModal(user) {
+      const root = document.getElementById('modalRoot');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm 
+                    grid place-items-center p-4" id="modalBackdrop">
+          <div class="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden">
+
+            <div class="flex items-center justify-between px-5 h-14 border-b border-slate-200">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-slate-100 grid place-items-center">
+                  <i data-lucide="key-round" class="w-4 h-4 text-slate-600"></i>
+                </div>
+                <div class="font-semibold text-slate-800">Reset Password</div>
+              </div>
+              <button id="closeModal"
+                class="text-slate-500 hover:text-slate-900 hover:bg-slate-100 
+                       p-2 rounded-lg transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <div class="p-5 space-y-4">
+              <div class="text-sm text-slate-600">
+                Set a new password for 
+                <span class="font-semibold text-slate-800">${user.name}</span>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                  New Password <span class="text-rose-500">*</span>
+                </label>
+                <input id="rpPassword" type="password" placeholder="Min 8 characters"
+                  class="w-full h-10 px-3 rounded-lg border border-slate-200 
+                         text-sm focus:outline-none focus:border-slate-400 transition">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                  Confirm Password <span class="text-rose-500">*</span>
+                </label>
+                <input id="rpConfirm" type="password" placeholder="Re-enter password"
+                  class="w-full h-10 px-3 rounded-lg border border-slate-200 
+                         text-sm focus:outline-none focus:border-slate-400 transition">
+              </div>
+
+              <div id="rpError" class="hidden text-xs text-rose-600"></div>
+            </div>
+
+            <div class="flex items-center justify-end gap-2 px-5 py-4 
+                        bg-slate-50 border-t border-slate-200">
+              <button id="cancelBtn"
+                class="px-4 py-2 text-sm font-medium text-slate-700 bg-white 
+                       border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+                Cancel
+              </button>
+              <button id="saveBtn"
+                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium 
+                       text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition">
+                <i data-lucide="check" class="w-4 h-4"></i>
+                Reset Password
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+
+      const close = () => { root.innerHTML = ''; };
+      document.getElementById('closeModal').addEventListener('click', close);
+      document.getElementById('cancelBtn').addEventListener('click', close);
+      document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+        if (e.target.id === 'modalBackdrop') close();
+      });
+
+      document.getElementById('saveBtn').addEventListener('click', () => {
+        const pw  = document.getElementById('rpPassword').value;
+        const cpw = document.getElementById('rpConfirm').value;
+        const err = document.getElementById('rpError');
+
+        if (pw.length < 8) {
+          err.textContent = 'Password must be at least 8 characters.';
+          err.classList.remove('hidden');
+          return;
+        }
+        if (pw !== cpw) {
+          err.textContent = 'Passwords do not match.';
+          err.classList.remove('hidden');
+          return;
+        }
+
+        close();
+        showToast(`Password reset for "${user.name}"`);
+      });
+    }
+
+    // =========================================================
+    //  Toggle status
+    // =========================================================
+    function toggleUserStatus(user) {
+      user.status = user.status === 'Active' ? 'Inactive' : 'Active';
+      applyFilters();
+      showToast(`"${user.name}" ${user.status === 'Active' ? 'activated' : 'deactivated'}`);
+    }
+
+    // =========================================================
+    //  Delete modal
+    // =========================================================
+    function openDeleteModal(user) {
+      const root = document.getElementById('modalRoot');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm 
+                    grid place-items-center p-4" id="modalBackdrop">
+          <div class="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden">
+
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-full bg-rose-50 grid place-items-center mb-4">
+                <i data-lucide="alert-triangle" class="w-6 h-6 text-rose-600"></i>
+              </div>
+              <div class="font-semibold text-slate-800 text-lg">Delete User?</div>
+              <div class="text-sm text-slate-500 mt-1">
+                Are you sure you want to delete 
+                <span class="font-semibold text-slate-700">${user.name}</span>? 
+                This action cannot be undone.
+              </div>
+            </div>
+
+            <div class="flex items-center justify-end gap-2 px-6 py-4 
+                        bg-slate-50 border-t border-slate-200">
+              <button id="cancelBtn"
+                class="px-4 py-2 text-sm font-medium text-slate-700 bg-white 
+                       border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+                Cancel
+              </button>
+              <button id="confirmBtn"
+                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium 
+                       text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+
+      const close = () => { root.innerHTML = ''; };
+      document.getElementById('cancelBtn').addEventListener('click', close);
+      document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+        if (e.target.id === 'modalBackdrop') close();
+      });
+
+      document.getElementById('confirmBtn').addEventListener('click', () => {
+        users = users.filter(u => u.id !== user.id);
+        close();
+        applyFilters();
+        showToast(`"${user.name}" deleted`);
+      });
+    }
+
+    // =========================================================
+    //  Toast
+    // =========================================================
+    function showToast(msg) {
+      const t = document.createElement('div');
+      t.className = 'fixed bottom-5 right-5 z-[60] bg-slate-900 text-white text-sm ' +
+                    'font-medium px-4 py-3 rounded-lg shadow-lg flex items-center gap-2';
+      t.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4"></i> ${msg}`;
+      document.body.appendChild(t);
+      if (window.lucide) window.lucide.createIcons();
+      setTimeout(() => t.remove(), 2400);
+    }
+
+    // =========================================================
+    //  Init
+    // =========================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(applyFilters, 100);
+    });
+  </script>
+</body>
+</html>

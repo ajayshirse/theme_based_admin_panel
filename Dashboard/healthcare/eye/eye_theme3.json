@@ -1,0 +1,2798 @@
+{
+  "themeId": "eye_theme3",
+  "label": "Aurelia Eye Care — Teal Editorial Theme",
+  "industry": "healthcare",
+  "subIndustry": "eye",
+  "type": "multi-page",
+  "themeType": "editorial-teal",
+  "description": "A premium teal-and-white eye clinic theme with hero slideshow, animated banners, filterable services/gallery/blog, doctor profiles, FAQ accordion and demo appointment and contact forms.",
+  "previewUrl": "/healthcare/eye/eye_theme3/index.html",
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Header, hero slideshow, services, story, doctors, quote, insights, CTA and footer",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "topBar",
+          "label": "Top Bar",
+          "type": "single",
+          "fields": [
+            {
+              "name": "leftText",
+              "label": "Left Text",
+              "type": "text",
+              "placeholder": "Thoughtful care for every stage of life"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+91 20 1234 5678"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "placeholder": "Mon–Sat · 9:00 AM–6:00 PM"
+            }
+          ]
+        },
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            {
+              "name": "brandName",
+              "label": "Brand Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Aurelia"
+            },
+            {
+              "name": "brandTagline",
+              "label": "Tagline",
+              "type": "text",
+              "placeholder": "EYE CARE"
+            },
+            {
+              "name": "favicon",
+              "label": "Favicon / Logo File",
+              "type": "image",
+              "hint": "assets/icons/aurelia-eye.svg"
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 9,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Menu Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Home"
+            },
+            {
+              "name": "url",
+              "label": "Menu URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "index.html"
+            }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book a visit"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "required": true,
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "heroSection",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "required": true,
+              "placeholder": "A MORE HUMAN APPROACH TO EYE CARE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "See the world"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "with"
+            },
+            {
+              "name": "titleHighlight",
+              "label": "Title — Italic Highlight",
+              "type": "text",
+              "placeholder": "new clarity."
+            },
+            {
+              "name": "subtitle",
+              "label": "Lead Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button Text",
+              "type": "text",
+              "placeholder": "Book an appointment"
+            },
+            {
+              "name": "primaryButtonLink",
+              "label": "Primary Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button Text",
+              "type": "text",
+              "placeholder": "Explore treatments"
+            },
+            {
+              "name": "secondaryButtonLink",
+              "label": "Secondary Button Link",
+              "type": "text",
+              "placeholder": "services.html"
+            },
+            {
+              "name": "noteTitle",
+              "label": "Hero Note Title",
+              "type": "text",
+              "placeholder": "Care begins with listening."
+            },
+            {
+              "name": "noteText",
+              "label": "Hero Note Text",
+              "type": "text",
+              "placeholder": "Personal guidance at every visit"
+            },
+            {
+              "name": "floatingTitle",
+              "label": "Floating Card Title",
+              "type": "text",
+              "placeholder": "Care with clarity"
+            },
+            {
+              "name": "floatingText",
+              "label": "Floating Card Text",
+              "type": "text",
+              "placeholder": "Every question matters"
+            },
+            {
+              "name": "sideLabel",
+              "label": "Side Label",
+              "type": "text",
+              "placeholder": "PUNE · INDIA"
+            },
+            {
+              "name": "bottomText",
+              "label": "Bottom Strip Text",
+              "type": "text",
+              "placeholder": "Thoughtful care, clearer days"
+            }
+          ]
+        },
+        {
+          "id": "heroSlides",
+          "label": "Hero Slideshow",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "image",
+              "label": "Slide Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1400px wide"
+            },
+            {
+              "name": "alt",
+              "label": "Alt Text",
+              "type": "text",
+              "placeholder": "Eye-care professional consulting with a patient"
+            }
+          ]
+        },
+        {
+          "id": "quickStrip",
+          "label": "Quick Info Strip",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "symbol",
+              "label": "Symbol",
+              "type": "text",
+              "placeholder": "⌖"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clinic hours"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "placeholder": "Mon–Sat, 9 AM–6 PM"
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "contact.html"
+            },
+            {
+              "name": "badge",
+              "label": "Badge (optional)",
+              "type": "text",
+              "placeholder": "By appointment"
+            }
+          ]
+        },
+        {
+          "id": "servicesSection",
+          "label": "Services Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "CARE THAT FITS YOU"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Good vision is personal."
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "Your care should be, too."
+            },
+            {
+              "name": "intro",
+              "label": "Intro Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "homeServices",
+          "label": "Home Service Cards",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "symbol",
+              "label": "Symbol",
+              "type": "text",
+              "placeholder": "◉"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Comprehensive Eye Exams"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "service-details.html"
+            }
+          ]
+        },
+        {
+          "id": "storySection",
+          "label": "Story / Difference Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "THE AURELIA DIFFERENCE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Medicine with skill."
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "Care with feeling."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            },
+            {
+              "name": "captionTitle",
+              "label": "Image Caption Title",
+              "type": "text",
+              "placeholder": "Care without the rush"
+            },
+            {
+              "name": "captionText",
+              "label": "Image Caption Text",
+              "type": "text",
+              "placeholder": "Space to ask, understand and decide"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Get to know us"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "about.html"
+            }
+          ]
+        },
+        {
+          "id": "storyValues",
+          "label": "Story Value List",
+          "type": "list",
+          "min": 1,
+          "max": 5,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Listen first"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "placeholder": "Your concerns guide the conversation."
+            }
+          ]
+        },
+        {
+          "id": "doctorsSection",
+          "label": "Doctors Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "PEOPLE WHO CARE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Meet your care"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "companions."
+            }
+          ]
+        },
+        {
+          "id": "quoteSection",
+          "label": "Patient Experience Quote",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "THE PATIENT EXPERIENCE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Good care starts"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "with feeling heard."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "quote",
+              "label": "Quote",
+              "type": "textarea",
+              "rows": 2,
+              "required": true
+            },
+            {
+              "name": "authorInitial",
+              "label": "Author Initial",
+              "type": "text",
+              "placeholder": "A"
+            },
+            {
+              "name": "authorName",
+              "label": "Author / Source",
+              "type": "text",
+              "placeholder": "Aurelia care philosophy"
+            },
+            {
+              "name": "authorNote",
+              "label": "Author Note",
+              "type": "text",
+              "placeholder": "Illustrative statement · Not a patient review"
+            }
+          ]
+        },
+        {
+          "id": "insightsSection",
+          "label": "Insights Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clarity beyond"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "the clinic."
+            },
+            {
+              "name": "intro",
+              "label": "Intro Text",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "linkText",
+              "label": "Link Text",
+              "type": "text",
+              "placeholder": "Browse insights"
+            },
+            {
+              "name": "linkUrl",
+              "label": "Link URL",
+              "type": "text",
+              "placeholder": "blog.html"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        },
+        {
+          "id": "footerAbout",
+          "label": "Footer About",
+          "type": "single",
+          "fields": [
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Clear guidance, attentive people, and a more considered eye-care experience."
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@aureliaeyecare.example"
+            }
+          ]
+        },
+        {
+          "id": "footerLinks",
+          "label": "Footer Link Column",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our services"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "services.html"
+            }
+          ]
+        },
+        {
+          "id": "footerVisit",
+          "label": "Footer Visit Us",
+          "type": "single",
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Heading",
+              "type": "text",
+              "placeholder": "Visit us"
+            },
+            {
+              "name": "addressLine1",
+              "label": "Address Line 1",
+              "type": "text",
+              "placeholder": "Sample clinic address"
+            },
+            {
+              "name": "addressLine2",
+              "label": "Address Line 2",
+              "type": "text",
+              "placeholder": "Baner, Pune, Maharashtra"
+            },
+            {
+              "name": "days",
+              "label": "Days",
+              "type": "text",
+              "placeholder": "Mon–Sat"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "placeholder": "9:00 AM–6:00 PM"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Plan your visit"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom",
+          "type": "single",
+          "fields": [
+            {
+              "name": "copyright",
+              "label": "Copyright Text",
+              "type": "text",
+              "placeholder": "Aurelia Eye Care. Demo website concept."
+            },
+            {
+              "name": "disclaimer",
+              "label": "Medical Disclaimer",
+              "type": "text",
+              "placeholder": "Medical information is educational and not a substitute for professional advice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "Story, mission/vision/values and promise cards",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "ABOUT AURELIA"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Care that sees"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "the whole you."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "A considered approach to eye health."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "storyBlock",
+          "label": "Our Story",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "OUR STORY"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Eye care should feel"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "clear and human."
+            },
+            {
+              "name": "paragraph1",
+              "label": "Paragraph 1",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "paragraph2",
+              "label": "Paragraph 2",
+              "type": "textarea",
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "coreValues",
+          "label": "Mission / Vision / Values",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our mission"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "promiseSection",
+          "label": "Promise Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "OUR PROMISE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Thoughtful in every"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "little detail."
+            }
+          ]
+        },
+        {
+          "id": "promiseCards",
+          "label": "Promise Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "symbol",
+              "label": "Symbol",
+              "type": "text",
+              "placeholder": "✳"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clear communication"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "description": "Service directory with filters",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "OUR SERVICES"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "A clearer path to"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "eye health."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Explore the kinds of consultations and specialist care a modern eye clinic may offer."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "filterBar",
+          "label": "Filter Bar",
+          "type": "single",
+          "fields": [
+            {
+              "name": "introText",
+              "label": "Intro Text",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Choose a care area to explore."
+            },
+            {
+              "name": "filterAll",
+              "label": "'All' Label",
+              "type": "text",
+              "placeholder": "All services"
+            },
+            {
+              "name": "filterRoutine",
+              "label": "Filter 2 Label",
+              "type": "text",
+              "placeholder": "Routine care"
+            },
+            {
+              "name": "filterSpecialist",
+              "label": "Filter 3 Label",
+              "type": "text",
+              "placeholder": "Specialist care"
+            }
+          ]
+        },
+        {
+          "id": "servicesList",
+          "label": "Services",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "symbol",
+              "label": "Symbol",
+              "type": "text",
+              "placeholder": "◉"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cataract Consultation"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "select",
+              "options": [
+                "routine",
+                "specialist"
+              ],
+              "hint": "Used by the filter buttons"
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "service-details.html"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Notice Box",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Please note:"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "service-details",
+      "label": "Service Details",
+      "description": "Service overview, discussion points, visit card and FAQs",
+      "file": "service-details.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "SERVICE DETAILS"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Care begins with"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "a conversation."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Understand the typical steps involved in an eye-care consultation."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "overview",
+          "label": "Service Overview",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "SERVICE OVERVIEW"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Understand your options"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "with confidence."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            },
+            {
+              "name": "nextTitle",
+              "label": "'What happens next?' Title",
+              "type": "text",
+              "placeholder": "What happens next?"
+            },
+            {
+              "name": "nextText",
+              "label": "'What happens next?' Text",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "urgentNote",
+              "label": "Urgent Care Note",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "discussList",
+          "label": "What May Be Discussed",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "planVisit",
+          "label": "Plan Your Visit Card",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "PLAN YOUR VISIT"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Have questions?"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button",
+              "type": "text",
+              "placeholder": "Request a visit"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button",
+              "type": "text",
+              "placeholder": "Contact details"
+            },
+            {
+              "name": "bringTitle",
+              "label": "Bring List Title",
+              "type": "text",
+              "placeholder": "Helpful to bring"
+            }
+          ]
+        },
+        {
+          "id": "bringList",
+          "label": "Helpful To Bring",
+          "type": "list",
+          "min": 0,
+          "max": 8,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Current glasses or contact lenses"
+            }
+          ]
+        },
+        {
+          "id": "faqs",
+          "label": "Common Questions",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctors",
+      "label": "Doctors",
+      "description": "Doctor directory",
+      "file": "doctors.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "OUR DOCTORS"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Meet the people"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "behind your care."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Learn who you may meet at your visit."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Notice Box",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Sample profiles:"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsList",
+          "label": "Doctors",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Ananya Mehta"
+            },
+            {
+              "name": "title",
+              "label": "Designation",
+              "type": "text",
+              "placeholder": "Consultant Ophthalmologist"
+            },
+            {
+              "name": "focus",
+              "label": "Focus Area",
+              "type": "text",
+              "placeholder": "Comprehensive eye care"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 700×900 portrait"
+            },
+            {
+              "name": "tag",
+              "label": "Photo Tag",
+              "type": "text",
+              "placeholder": "Sample profile"
+            },
+            {
+              "name": "link",
+              "label": "Profile Link",
+              "type": "text",
+              "placeholder": "doctor-details.html"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctor-details",
+      "label": "Doctor Details",
+      "description": "Doctor profile page",
+      "file": "doctor-details.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "DOCTOR PROFILE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "A more personal"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "introduction."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Meet your clinician."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "profile",
+          "label": "Doctor Profile",
+          "type": "single",
+          "fields": [
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "tag",
+              "label": "Photo Tag",
+              "type": "text",
+              "placeholder": "SAMPLE PROFILE"
+            },
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "CLINICIAN PROFILE"
+            },
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Ananya Mehta"
+            },
+            {
+              "name": "designation",
+              "label": "Designation",
+              "type": "text",
+              "placeholder": "Consultant Ophthalmologist"
+            },
+            {
+              "name": "bio",
+              "label": "Biography",
+              "type": "textarea",
+              "rows": 5
+            },
+            {
+              "name": "approachTitle",
+              "label": "Approach Title",
+              "type": "text",
+              "placeholder": "Approach to care"
+            },
+            {
+              "name": "approachText",
+              "label": "Approach Text",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            }
+          ]
+        },
+        {
+          "id": "interests",
+          "label": "Areas of Interest",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Comprehensive eye care"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery",
+      "description": "Filterable photo gallery",
+      "file": "gallery.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "OUR SPACE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "A look around"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "the care experience."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Explore our clinic and care moments."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "galleryNote",
+          "label": "Gallery Note & Filters",
+          "type": "single",
+          "fields": [
+            {
+              "name": "note",
+              "label": "Note",
+              "type": "text",
+              "placeholder": "Photography is illustrative."
+            },
+            {
+              "name": "filterAll",
+              "label": "'All' Label",
+              "type": "text",
+              "placeholder": "All photos"
+            },
+            {
+              "name": "filterClinic",
+              "label": "Filter 2 Label",
+              "type": "text",
+              "placeholder": "Clinic"
+            },
+            {
+              "name": "filterCare",
+              "label": "Filter 3 Label",
+              "type": "text",
+              "placeholder": "Care moments"
+            }
+          ]
+        },
+        {
+          "id": "galleryItems",
+          "label": "Gallery Photos",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "image",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "caption",
+              "label": "Caption",
+              "type": "text",
+              "required": true,
+              "placeholder": "A welcoming clinic interior"
+            },
+            {
+              "name": "alt",
+              "label": "Alt Text",
+              "type": "text"
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "select",
+              "options": [
+                "clinic",
+                "care"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blog",
+      "label": "Insights",
+      "description": "Article listing with filters",
+      "file": "blog.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "EYE-CARE INSIGHTS"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Little things you can do"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "for clearer days."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "General eye-health education."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "blogNote",
+          "label": "Notice & Filters",
+          "type": "single",
+          "fields": [
+            {
+              "name": "note",
+              "label": "Note",
+              "type": "text",
+              "placeholder": "Educational content only."
+            },
+            {
+              "name": "filterAll",
+              "label": "'All' Label",
+              "type": "text",
+              "placeholder": "All topics"
+            },
+            {
+              "name": "filterEveryday",
+              "label": "Filter 2 Label",
+              "type": "text",
+              "placeholder": "Everyday care"
+            },
+            {
+              "name": "filterClinic",
+              "label": "Filter 3 Label",
+              "type": "text",
+              "placeholder": "Clinic visits"
+            }
+          ]
+        },
+        {
+          "id": "posts",
+          "label": "Articles",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "tag",
+              "label": "Tag",
+              "type": "text",
+              "placeholder": "EVERYDAY EYE CARE"
+            },
+            {
+              "name": "readMinutes",
+              "label": "Read Time (minutes)",
+              "type": "number",
+              "placeholder": "4"
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Cover Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "select",
+              "options": [
+                "everyday",
+                "clinic"
+              ]
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "blog-details.html"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blog-details",
+      "label": "Article Details",
+      "description": "Single article page",
+      "file": "blog-details.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "EYE-CARE INSIGHTS"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Building eye-friendly"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "habits into your day."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Sample educational article."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "article",
+          "label": "Article",
+          "type": "single",
+          "fields": [
+            {
+              "name": "image",
+              "label": "Cover Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "tag",
+              "label": "Tag",
+              "type": "text",
+              "placeholder": "EVERYDAY EYE CARE"
+            },
+            {
+              "name": "readTime",
+              "label": "Read Time",
+              "type": "text",
+              "placeholder": "4 MIN READ"
+            },
+            {
+              "name": "intro",
+              "label": "Intro Paragraph",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "calloutTitle",
+              "label": "Callout Title",
+              "type": "text",
+              "placeholder": "A useful next step"
+            },
+            {
+              "name": "calloutText",
+              "label": "Callout Text",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "disclaimer",
+              "label": "Disclaimer",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "sections",
+          "label": "Article Sections",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Heading",
+              "type": "text",
+              "required": true,
+              "placeholder": "Make room for breaks"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "textarea",
+              "required": true,
+              "rows": 4
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "description": "Accordion questions and answers",
+      "file": "faq.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "FREQUENTLY ASKED QUESTIONS"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "A few answers"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "before you visit."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "General information to help you prepare."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "faqList",
+          "label": "FAQs",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "faqContact",
+          "label": "Contact Prompt",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Didn't find your answer?"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Contact the clinic"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "contact.html"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR NEXT STEP"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Make space for"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "better vision."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Have a question or ready to plan a visit? Start with a conversation."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Request an appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phoneText",
+              "label": "Phone Line",
+              "type": "text",
+              "placeholder": "Or call +91 20 1234 5678"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appointment",
+      "label": "Appointment",
+      "description": "Appointment intro, info cards and form options",
+      "file": "appointment.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "APPOINTMENT"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Let's plan your"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "next visit."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Send an appointment request."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "intro",
+          "label": "Intro",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR VISIT, YOUR PACE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Start with a"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "simple request."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "infoCards",
+          "label": "Info Cards",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "symbol",
+              "label": "Symbol",
+              "type": "text",
+              "placeholder": "◷"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clinic hours"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "placeholder": "Monday–Saturday, 9 AM–6 PM"
+            }
+          ]
+        },
+        {
+          "id": "formSettings",
+          "label": "Form Settings",
+          "type": "single",
+          "fields": [
+            {
+              "name": "formTitle",
+              "label": "Form Title",
+              "type": "text",
+              "placeholder": "Appointment request"
+            },
+            {
+              "name": "consentText",
+              "label": "Consent Checkbox Text",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Preview request"
+            },
+            {
+              "name": "footnote",
+              "label": "Footnote",
+              "type": "text",
+              "placeholder": "Demo only: details are not transmitted or stored."
+            }
+          ]
+        },
+        {
+          "id": "visitTypes",
+          "label": "Type of Visit Options",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Comprehensive eye exam"
+            }
+          ]
+        },
+        {
+          "id": "timeSlots",
+          "label": "Preferred Time Options",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Morning (9 AM–12 PM)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Message form, contact details and area map",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "CONTACT & DIRECTIONS"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "We're here to"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (italic)",
+              "type": "text",
+              "placeholder": "help you find us."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Contact details and directions."
+            },
+            {
+              "name": "bannerImages",
+              "label": "Banner Slideshow Images (one URL per line)",
+              "type": "list",
+              "rows": 4,
+              "hint": "3–4 images rotate automatically in the banner"
+            }
+          ]
+        },
+        {
+          "id": "slideshowCard",
+          "label": "Side Slideshow Card",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "YOUR EYE-CARE JOURNEY"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "placeholder": "A calmer, clearer kind of care."
+            }
+          ]
+        },
+        {
+          "id": "messageForm",
+          "label": "Message Form",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "SEND A MESSAGE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "How can we"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "guide you?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "formTitle",
+              "label": "Form Title",
+              "type": "text",
+              "placeholder": "Contact form"
+            },
+            {
+              "name": "consentText",
+              "label": "Consent Checkbox Text",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Preview message"
+            }
+          ]
+        },
+        {
+          "id": "topics",
+          "label": "Topic Options",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "General enquiry"
+            }
+          ]
+        },
+        {
+          "id": "contactDetails",
+          "label": "Get In Touch",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "GET IN TOUCH"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "placeholder": "Questions are"
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2",
+              "type": "text",
+              "placeholder": "welcome here."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "addressLine1",
+              "label": "Address Line 1",
+              "type": "text",
+              "placeholder": "Sample clinic address, Baner,"
+            },
+            {
+              "name": "addressLine2",
+              "label": "Address Line 2",
+              "type": "text",
+              "placeholder": "Pune, Maharashtra, India"
+            },
+            {
+              "name": "mapsLink",
+              "label": "Google Maps Link",
+              "type": "url"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true,
+              "placeholder": "+91 20 1234 5678"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@aureliaeyecare.example"
+            },
+            {
+              "name": "hoursWeekday",
+              "label": "Opening Hours — Weekdays",
+              "type": "text",
+              "placeholder": "Monday–Saturday · 9 AM–6 PM"
+            },
+            {
+              "name": "hoursSunday",
+              "label": "Opening Hours — Sunday",
+              "type": "text",
+              "placeholder": "Sunday · Closed"
+            }
+          ]
+        },
+        {
+          "id": "mapCard",
+          "label": "Area Map Card",
+          "type": "single",
+          "fields": [
+            {
+              "name": "areaLabel",
+              "label": "Area Label",
+              "type": "text",
+              "placeholder": "BANER, PUNE"
+            },
+            {
+              "name": "areaNote",
+              "label": "Area Note",
+              "type": "text",
+              "placeholder": "Sample area only"
+            },
+            {
+              "name": "roadLabel1",
+              "label": "Road Label 1",
+              "type": "text",
+              "placeholder": "BANER ROAD"
+            },
+            {
+              "name": "roadLabel2",
+              "label": "Road Label 2",
+              "type": "text",
+              "placeholder": "AUNDH–BANER LINK ROAD"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Find your way"
+            },
+            {
+              "name": "caption",
+              "label": "Caption",
+              "type": "text",
+              "placeholder": "This is a general area map, not a verified clinic pin."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Open Maps"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global": {
+    "colors": {
+      "teal": "#073f46",
+      "teal2": "#0e6268",
+      "mint": "#d8f1e8",
+      "aqua": "#9fe1d1",
+      "ink": "#173b3d",
+      "muted": "#647c7b",
+      "paper": "#fbfdfb",
+      "line": "#dce9e5",
+      "coral": "#e6a18a"
+    },
+    "fonts": {
+      "display": "Manrope",
+      "body": "DM Sans"
+    }
+  }
+}

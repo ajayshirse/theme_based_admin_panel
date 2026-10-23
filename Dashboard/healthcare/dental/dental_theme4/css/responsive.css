@@ -1,0 +1,36 @@
+/* Curemax Dental – responsive overrides */
+@media (min-width:1024px){
+  :root{--header-h:84px}
+  .section{padding-block:6rem}
+  .page-banner{padding:5rem 0}
+}
+@media (min-width:768px){
+  .section-head{margin-bottom:3.5rem}
+}
+@media (min-width:1280px){
+  .menu-toggle,.mobile-panel,.mobile-overlay{display:none}
+}
+@media (max-width:1279px){
+  .nav-desktop{display:none}
+}
+@media (max-width:1023px){
+  .hero-media{max-width:34rem;margin-inline:auto}
+}
+@media (max-width:767px){
+  .float-card{padding:.6rem .8rem}
+  .float-card strong{font-size:1.1rem}
+  .lb-prev{left:.4rem}.lb-next{right:.4rem}
+  .to-top{right:.9rem;bottom:.9rem}
+  .gallery-item .cap{opacity:1;transform:none}
+}
+@media (max-width:359px){
+  .brand{font-size:1.2rem}
+  .btn{padding:.8rem 1.2rem}
+}
+@media (hover:none){
+  .gallery-item .cap{opacity:1;transform:none}
+}
+
+@media (max-width:1023px){
+  .cta-band{background:linear-gradient(120deg,#1553b8,#1e6feb)}
+}

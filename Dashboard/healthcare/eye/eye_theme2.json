@@ -1,0 +1,1191 @@
+{
+  "themeId": "eye_theme2",
+  "label": "Lumina Eye Institute — Teal Institute Theme",
+  "industry": "healthcare",
+  "subIndustry": "eye",
+  "type": "multi-page",
+  "themeType": "institute-multipage",
+  "description": "A modern eye hospital theme with Fraunces/Inter typography, teal + navy palette, doctor profiles, service detail pages, eye-health library, blog and WhatsApp appointment booking.",
+  "previewUrl": "/healthcare/eye/eye_theme2/index.html",
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Hero, stats, services preview, why choose us, doctors, journey, testimonials, blog, CTA, header and footer",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "topBar",
+          "label": "Top Announcement Bar",
+          "type": "single",
+          "fields": [
+            {
+              "name": "leftText",
+              "label": "Left Text",
+              "type": "text",
+              "placeholder": "Demo website — contact details are placeholders"
+            },
+            {
+              "name": "rightText",
+              "label": "Right Text",
+              "type": "text",
+              "placeholder": "+00 000 000 0000 · hello@example.com"
+            }
+          ]
+        },
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            {
+              "name": "logoLetter",
+              "label": "Logo Letter",
+              "type": "text",
+              "required": true,
+              "placeholder": "L",
+              "hint": "Single letter shown in the round logo"
+            },
+            {
+              "name": "brandName",
+              "label": "Header Brand Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Lumina"
+            },
+            {
+              "name": "footerBrandName",
+              "label": "Footer Brand Name",
+              "type": "text",
+              "placeholder": "Lumina Eye Institute"
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 9,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Menu Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Home"
+            },
+            {
+              "name": "url",
+              "label": "Menu URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "index.html"
+            }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "required": true,
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "heroSection",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Eye care, thoughtfully delivered"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clear sight starts with careful care."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "heroImage",
+              "label": "Hero Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1000px wide"
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button Text",
+              "type": "text",
+              "placeholder": "Book an Appointment"
+            },
+            {
+              "name": "primaryButtonLink",
+              "label": "Primary Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button Text",
+              "type": "text",
+              "placeholder": "Explore Services"
+            },
+            {
+              "name": "secondaryButtonLink",
+              "label": "Secondary Button Link",
+              "type": "text",
+              "placeholder": "services.html"
+            },
+            {
+              "name": "floatingTitle",
+              "label": "Floating Card Title",
+              "type": "text",
+              "placeholder": "Sample stat"
+            },
+            {
+              "name": "floatingText",
+              "label": "Floating Card Text",
+              "type": "text",
+              "placeholder": "00,000+ visits"
+            }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Row",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            {
+              "name": "number",
+              "label": "Number",
+              "type": "text",
+              "required": true,
+              "placeholder": "20+"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Years of care"
+            }
+          ]
+        },
+        {
+          "id": "servicesSection",
+          "label": "Services Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Services"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Care for every stage of eye health"
+            }
+          ]
+        },
+        {
+          "id": "servicesCta",
+          "label": "Services CTA Tile",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "View all services"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "services.html",
+              "hint": "Cards shown here come from the Services page (first 4 items)"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseSection",
+          "label": "Why Choose Us Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Why choose us"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Built around the patient"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseCards",
+          "label": "Why Choose Us Cards",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Specialist-led care"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsSection",
+          "label": "Doctors Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Doctors"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Meet our clinicians"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "journeySection",
+          "label": "Patient Journey Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Your journey"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "From booking to follow-up"
+            }
+          ]
+        },
+        {
+          "id": "journeySteps",
+          "label": "Patient Journey Steps",
+          "type": "list",
+          "min": 3,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Step Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book online"
+            }
+          ]
+        },
+        {
+          "id": "testimonialsSection",
+          "label": "Testimonials Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Testimonials"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Patient feedback"
+            }
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "quote",
+              "label": "Review Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "author",
+              "label": "Author Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Patient name"
+            }
+          ]
+        },
+        {
+          "id": "blogSection",
+          "label": "Blog Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Blog"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Latest from the blog"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Ready to book a visit?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Request an appointment in a minute."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book an Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "footerAbout",
+          "label": "Footer About",
+          "type": "single",
+          "fields": [
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 3,
+              "placeholder": "Educational information; not a substitute for professional advice."
+            },
+            {
+              "name": "emergencyNote",
+              "label": "Emergency Note",
+              "type": "text",
+              "placeholder": "For eye emergencies, contact your local emergency services."
+            }
+          ]
+        },
+        {
+          "id": "footerContact",
+          "label": "Footer Contact",
+          "type": "single",
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Heading",
+              "type": "text",
+              "placeholder": "Visit & contact"
+            },
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "text",
+              "placeholder": "Address line"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+00 000 000 0000"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@example.com"
+            },
+            {
+              "name": "hours",
+              "label": "Opening Hours",
+              "type": "text",
+              "placeholder": "Mon–Sat: 9:00–17:00"
+            }
+          ]
+        },
+        {
+          "id": "newsletter",
+          "label": "Newsletter Box",
+          "type": "single",
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "placeholder": "Eye-care tips by email"
+            },
+            {
+              "name": "placeholder",
+              "label": "Input Placeholder",
+              "type": "text",
+              "placeholder": "you@example.com"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Join"
+            }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom",
+          "type": "single",
+          "fields": [
+            {
+              "name": "copyright",
+              "label": "Copyright Text",
+              "type": "text",
+              "placeholder": "Lumina Eye Institute. All rights reserved.",
+              "hint": "Year is added automatically"
+            },
+            {
+              "name": "backToTopText",
+              "label": "Back-to-top Text",
+              "type": "text",
+              "placeholder": "Back to top ↑"
+            }
+          ]
+        },
+        {
+          "id": "siteSettings",
+          "label": "Site Contact Settings",
+          "type": "single",
+          "fields": [
+            {
+              "name": "countryCode",
+              "label": "Country Code",
+              "type": "text",
+              "required": true,
+              "placeholder": "91"
+            },
+            {
+              "name": "phoneDigits",
+              "label": "Phone Number (digits only)",
+              "type": "text",
+              "required": true,
+              "placeholder": "9665781350",
+              "hint": "Used for call links and WhatsApp appointment requests"
+            },
+            {
+              "name": "phoneDisplay",
+              "label": "Phone Number (display)",
+              "type": "text",
+              "required": true,
+              "placeholder": "96657 81350"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "About page banner and clinic story",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "About Lumina Eye Institute"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "A short line about your clinic."
+            }
+          ]
+        },
+        {
+          "id": "aboutImage",
+          "label": "About Image",
+          "type": "single",
+          "fields": [
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1000px wide, clinic interior"
+            }
+          ]
+        },
+        {
+          "id": "storyCard",
+          "label": "Our Story Card",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our story"
+            },
+            {
+              "name": "text",
+              "label": "Story Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "description": "Service list and service detail content",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our Services"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Educational overviews of the care we offer."
+            }
+          ]
+        },
+        {
+          "id": "servicesList",
+          "label": "Services (also used for service detail pages)",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "URL Slug",
+              "type": "text",
+              "required": true,
+              "placeholder": "cataract-care",
+              "hint": "Lowercase, hyphens only. Used in service.html?slug=..."
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cataract Care"
+            },
+            {
+              "name": "short",
+              "label": "Short Description",
+              "type": "textarea",
+              "required": true,
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "points",
+              "label": "What to Expect (one per line)",
+              "type": "list",
+              "required": true,
+              "rows": 5
+            },
+            {
+              "name": "faqs",
+              "label": "FAQs (Question | Answer per line)",
+              "type": "list",
+              "rows": 5,
+              "hint": "Format: How long does it take? | Duration varies..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctors",
+      "label": "Doctors",
+      "description": "Doctor cards and profile content",
+      "file": "doctors.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our Doctors"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Meet the clinicians who will care for you."
+            }
+          ]
+        },
+        {
+          "id": "doctorsList",
+          "label": "Doctors (also used for profile pages)",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Doctor ID",
+              "type": "text",
+              "required": true,
+              "placeholder": "asha-verma",
+              "hint": "Lowercase, hyphens only. Used in doctor.html?id=..."
+            },
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Asha Verma"
+            },
+            {
+              "name": "qualification",
+              "label": "Qualifications",
+              "type": "text",
+              "placeholder": "MBBS, MS (Ophthalmology)"
+            },
+            {
+              "name": "specialty",
+              "label": "Specialty",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cataract & Refractive Surgery"
+            },
+            {
+              "name": "experience",
+              "label": "Experience",
+              "type": "text",
+              "placeholder": "15 years"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 600×800 portrait"
+            },
+            {
+              "name": "bio",
+              "label": "Biography",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "consultation",
+              "label": "Consultation Days / Timings",
+              "type": "text",
+              "placeholder": "Mon, Wed, Fri · 10:00–14:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Eye Health",
+      "description": "Eye conditions library with search",
+      "file": "eye-health.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Eye Health & Conditions"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "General education. See an eye doctor for diagnosis."
+            }
+          ]
+        },
+        {
+          "id": "searchBox",
+          "label": "Search Box",
+          "type": "single",
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "placeholder": "Search conditions"
+            },
+            {
+              "name": "placeholder",
+              "label": "Placeholder",
+              "type": "text",
+              "placeholder": "e.g. cataract"
+            }
+          ]
+        },
+        {
+          "id": "conditions",
+          "label": "Conditions",
+          "type": "list",
+          "min": 1,
+          "max": 40,
+          "fields": [
+            {
+              "name": "name",
+              "label": "Condition Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cataract"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "required": true,
+              "rows": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "description": "Blog posts and article content",
+      "file": "blog.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Blog"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Educational articles."
+            }
+          ]
+        },
+        {
+          "id": "posts",
+          "label": "Blog Posts (also used for article pages)",
+          "type": "list",
+          "min": 1,
+          "max": 50,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "URL Slug",
+              "type": "text",
+              "required": true,
+              "placeholder": "screen-time-and-eye-strain"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "text",
+              "required": true,
+              "placeholder": "Eye Health",
+              "hint": "Category filter buttons are generated automatically"
+            },
+            {
+              "name": "readMinutes",
+              "label": "Read Time (minutes)",
+              "type": "number",
+              "placeholder": "4"
+            },
+            {
+              "name": "image",
+              "label": "Cover Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Article Body (one paragraph per line)",
+              "type": "list",
+              "required": true,
+              "rows": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appointment",
+      "label": "Appointment",
+      "description": "Appointment form text, sidebar and checklist",
+      "file": "appointment.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book an Appointment"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Fill in the form and send your request to our team on WhatsApp."
+            }
+          ]
+        },
+        {
+          "id": "formSettings",
+          "label": "Form Settings",
+          "type": "single",
+          "fields": [
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Request Appointment"
+            },
+            {
+              "name": "privacyNote",
+              "label": "Privacy Note",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Do not share sensitive medical details. For emergencies, contact local emergency services."
+            }
+          ]
+        },
+        {
+          "id": "callCard",
+          "label": "Call Us Card",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Call us directly"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "placeholder": "Prefer to talk? Call or WhatsApp us."
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "placeholder": "Mon–Sat: 9:00–17:00"
+            }
+          ]
+        },
+        {
+          "id": "howItWorks",
+          "label": "How It Works",
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "fields": [
+            {
+              "name": "step",
+              "label": "Step Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Fill in your details and preferred slot"
+            }
+          ]
+        },
+        {
+          "id": "bringList",
+          "label": "Bring With You",
+          "type": "list",
+          "min": 0,
+          "max": 8,
+          "fields": [
+            {
+              "name": "item",
+              "label": "Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Previous prescriptions or reports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Map, branches and contact form",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Contact Us"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "How to reach us."
+            }
+          ]
+        },
+        {
+          "id": "mapSettings",
+          "label": "Map Location",
+          "type": "single",
+          "fields": [
+            {
+              "name": "latitude",
+              "label": "Latitude",
+              "type": "number",
+              "required": true,
+              "placeholder": "18.5204"
+            },
+            {
+              "name": "longitude",
+              "label": "Longitude",
+              "type": "number",
+              "required": true,
+              "placeholder": "73.8567"
+            },
+            {
+              "name": "caption",
+              "label": "Map Caption",
+              "type": "text",
+              "placeholder": "Our clinic location"
+            }
+          ]
+        },
+        {
+          "id": "branches",
+          "label": "Branches (also used in appointment form)",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            {
+              "name": "name",
+              "label": "Branch Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Main Campus"
+            },
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email"
+            },
+            {
+              "name": "hours",
+              "label": "Opening Hours",
+              "type": "text",
+              "placeholder": "Mon–Sat: 9:00–17:00"
+            }
+          ]
+        },
+        {
+          "id": "contactForm",
+          "label": "Contact Form",
+          "type": "single",
+          "fields": [
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Send message"
+            },
+            {
+              "name": "note",
+              "label": "Form Note",
+              "type": "text",
+              "placeholder": "Your message is not stored or sent in demo mode."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global": {
+    "colors": {
+      "navy": "#0b2447",
+      "brand": "#0e8f9c",
+      "brandDark": "#0b7580",
+      "mist": "#eef6fa",
+      "ink": "#1e293b"
+    },
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Inter"
+    }
+  }
+}

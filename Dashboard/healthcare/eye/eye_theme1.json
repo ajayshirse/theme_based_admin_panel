@@ -1,0 +1,628 @@
+{
+  "themeId": "eye_theme1",
+  "label": "VisionCare Eye Clinic — Clean Clinical Theme",
+  "industry": "healthcare",
+  "subIndustry": "eye",
+  "type": "single-page",
+  "themeType": "clean-clinical",
+  "description": "A bright, trustworthy single-page eye clinic theme with split hero, service cards, animated stats, about section with testimonial, appointment banner and footer.",
+  "previewUrl": "/healthcare/eye/eye_theme1/index.html",
+  "pages": [
+    {
+      "id": "single",
+      "label": "Single Page",
+      "description": "One-page layout with anchored sections: Hero, Services, Stats, About, Testimonials, Appointment CTA, Footer.",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            {
+              "name": "logoIcon",
+              "label": "Logo Icon (Lucide name)",
+              "type": "text",
+              "required": true,
+              "placeholder": "eye",
+              "hint": "Any icon name from lucide.dev"
+            },
+            {
+              "name": "brandName",
+              "label": "Brand Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Vision"
+            },
+            {
+              "name": "brandSuffix",
+              "label": "Brand Suffix (colored)",
+              "type": "text",
+              "placeholder": "Care"
+            },
+            {
+              "name": "brandTagline",
+              "label": "Tagline under logo",
+              "type": "text",
+              "placeholder": "EYE CLINIC"
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Menu Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Home"
+            },
+            {
+              "name": "anchor",
+              "label": "Section Anchor",
+              "type": "text",
+              "required": true,
+              "placeholder": "#home"
+            }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonIcon",
+              "label": "Button Icon (Lucide name)",
+              "type": "text",
+              "placeholder": "calendar-days"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "required": true,
+              "placeholder": "tel:+919665781350",
+              "hint": "tel: link, WhatsApp link or #anchor"
+            }
+          ]
+        },
+        {
+          "id": "heroSection",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "BETTER VISION, BETTER LIFE"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clear Vision,"
+            },
+            {
+              "name": "titleHighlight",
+              "label": "Title — Highlighted Line",
+              "type": "text",
+              "required": true,
+              "placeholder": "Bright Future."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3,
+              "placeholder": "Advanced eye care with compassion and technology — for you and your family."
+            },
+            {
+              "name": "heroImage",
+              "label": "Hero Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1200px wide, close-up eye / patient photo"
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "primaryButtonLink",
+              "label": "Primary Button Link",
+              "type": "text",
+              "placeholder": "tel:+919665781350"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button Text",
+              "type": "text",
+              "placeholder": "Discover Our Care"
+            },
+            {
+              "name": "secondaryButtonAnchor",
+              "label": "Secondary Button Anchor",
+              "type": "text",
+              "placeholder": "#about"
+            },
+            {
+              "name": "chipTitle",
+              "label": "Floating Chip Title",
+              "type": "text",
+              "placeholder": "Precision eye care"
+            },
+            {
+              "name": "chipSubtitle",
+              "label": "Floating Chip Subtitle",
+              "type": "text",
+              "placeholder": "Focused on your vision"
+            }
+          ]
+        },
+        {
+          "id": "heroTrust",
+          "label": "Hero Trust Points",
+          "type": "list",
+          "min": 0,
+          "max": 4,
+          "fields": [
+            {
+              "name": "icon",
+              "label": "Icon (Lucide name)",
+              "type": "text",
+              "placeholder": "badge-check"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Advanced Technology"
+            }
+          ]
+        },
+        {
+          "id": "servicesSection",
+          "label": "Services Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "OUR SERVICES"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Comprehensive Eye Care"
+            },
+            {
+              "name": "titleHighlight",
+              "label": "Title — Highlighted Word",
+              "type": "text",
+              "placeholder": "Services"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Thoughtful care for every stage of your vision journey."
+            }
+          ]
+        },
+        {
+          "id": "servicesCards",
+          "label": "Service Cards",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "icon",
+              "label": "Icon (Lucide name)",
+              "type": "text",
+              "required": true,
+              "placeholder": "eye"
+            },
+            {
+              "name": "color",
+              "label": "Icon Color Style",
+              "type": "select",
+              "options": [
+                "blue",
+                "mint",
+                "violet",
+                "peach",
+                "rose"
+              ]
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Comprehensive Eye Checkup",
+              "hint": "Use <br> for a manual line break"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "linkUrl",
+              "label": "Card Link",
+              "type": "text",
+              "placeholder": "tel:+919665781350"
+            }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Strip",
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "fields": [
+            {
+              "name": "icon",
+              "label": "Icon (Lucide name)",
+              "type": "text",
+              "placeholder": "users-round"
+            },
+            {
+              "name": "target",
+              "label": "Counter Target (number)",
+              "type": "number",
+              "placeholder": "10000",
+              "hint": "Leave empty if using a static value such as 4.9/5"
+            },
+            {
+              "name": "suffix",
+              "label": "Suffix",
+              "type": "text",
+              "placeholder": "+"
+            },
+            {
+              "name": "staticValue",
+              "label": "Static Value (no counter)",
+              "type": "text",
+              "placeholder": "4.9/5"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Happy Patients"
+            }
+          ]
+        },
+        {
+          "id": "aboutSection",
+          "label": "About Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "ABOUT VISIONCARE"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "We care for your eyes like our"
+            },
+            {
+              "name": "titleHighlight",
+              "label": "Title — Highlighted Word",
+              "type": "text",
+              "placeholder": "own."
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "required": true,
+              "rows": 4
+            },
+            {
+              "name": "image",
+              "label": "About Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 900px wide"
+            },
+            {
+              "name": "badgeNumber",
+              "label": "Experience Badge Number",
+              "type": "text",
+              "placeholder": "20"
+            },
+            {
+              "name": "badgeSuffix",
+              "label": "Experience Badge Suffix",
+              "type": "text",
+              "placeholder": "+"
+            },
+            {
+              "name": "badgeLabel",
+              "label": "Experience Badge Label",
+              "type": "text",
+              "placeholder": "Years of Experience"
+            },
+            {
+              "name": "linkText",
+              "label": "Link Text",
+              "type": "text",
+              "placeholder": "Get to know us"
+            },
+            {
+              "name": "linkAnchor",
+              "label": "Link Anchor",
+              "type": "text",
+              "placeholder": "#contact"
+            }
+          ]
+        },
+        {
+          "id": "aboutChecklist",
+          "label": "About Checklist",
+          "type": "list",
+          "min": 0,
+          "max": 8,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Checklist Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Modern diagnostic technology"
+            }
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Patient Testimonials",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "starsCount",
+              "label": "Stars (1-5)",
+              "type": "number",
+              "placeholder": "5"
+            },
+            {
+              "name": "quote",
+              "label": "Review Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "authorImage",
+              "label": "Author Photo",
+              "type": "image"
+            },
+            {
+              "name": "authorName",
+              "label": "Author Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Rohan Deshmukh"
+            },
+            {
+              "name": "authorLabel",
+              "label": "Author Label",
+              "type": "text",
+              "placeholder": "Patient review"
+            }
+          ]
+        },
+        {
+          "id": "appointmentBand",
+          "label": "Appointment Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Small Heading",
+              "type": "text",
+              "placeholder": "TAKE THE FIRST STEP TOWARDS CLEAR VISION"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Let's care for your eyes, together."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Call to Book"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "tel:+919665781350"
+            }
+          ]
+        },
+        {
+          "id": "footerBrand",
+          "label": "Footer About",
+          "type": "single",
+          "fields": [
+            {
+              "name": "description",
+              "label": "Footer Description",
+              "type": "textarea",
+              "rows": 3,
+              "placeholder": "Clearer vision. Healthier lives. Compassionate eye care for you and your family."
+            }
+          ]
+        },
+        {
+          "id": "footerSocials",
+          "label": "Social Links",
+          "type": "list",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "platform",
+              "label": "Platform",
+              "type": "text",
+              "required": true,
+              "placeholder": "Facebook"
+            },
+            {
+              "name": "icon",
+              "label": "Icon (Lucide name)",
+              "type": "text",
+              "placeholder": "facebook"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "url",
+              "placeholder": "https://facebook.com/yourclinic"
+            }
+          ]
+        },
+        {
+          "id": "footerColumns",
+          "label": "Footer Link Columns",
+          "type": "list",
+          "min": 1,
+          "max": 3,
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Column Heading",
+              "type": "text",
+              "required": true,
+              "placeholder": "Explore"
+            },
+            {
+              "name": "links",
+              "label": "Links (Label | URL per line)",
+              "type": "list",
+              "required": true,
+              "rows": 6,
+              "hint": "Format: Our Services | #services"
+            }
+          ]
+        },
+        {
+          "id": "contactDetails",
+          "label": "Contact Details",
+          "type": "single",
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Column Heading",
+              "type": "text",
+              "placeholder": "Contact Us"
+            },
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "textarea",
+              "required": true,
+              "rows": 2,
+              "placeholder": "123, Vision Care Street, Pune, Maharashtra 411001"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true,
+              "placeholder": "+91 96657 81350"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@visioncare.example"
+            },
+            {
+              "name": "hours",
+              "label": "Opening Hours",
+              "type": "text",
+              "placeholder": "Mon – Sat: 9:00 AM – 7:00 PM"
+            }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom",
+          "type": "single",
+          "fields": [
+            {
+              "name": "copyright",
+              "label": "Copyright Text",
+              "type": "text",
+              "placeholder": "VisionCare Eye Clinic. All rights reserved.",
+              "hint": "Year is added automatically"
+            },
+            {
+              "name": "backToTopText",
+              "label": "Back-to-top Text",
+              "type": "text",
+              "placeholder": "Back to top ↑"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global": {
+    "colors": {
+      "navy": "#071a3b",
+      "blue": "#0757e8",
+      "blue2": "#0799f5",
+      "ink": "#112344",
+      "muted": "#68758a",
+      "pale": "#f3f8ff",
+      "line": "#e8eef7"
+    },
+    "fonts": {
+      "display": "Manrope",
+      "body": "DM Sans"
+    }
+  }
+}

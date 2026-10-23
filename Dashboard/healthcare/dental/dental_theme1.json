@@ -1,0 +1,782 @@
+{
+  "themeId": "dental_theme1",
+  "label": "BrightSmile Dental — Carousel Theme",
+  "industry": "healthcare",
+  "subIndustry": "dental",
+  "type": "multi-page",
+  "themeType": "carousel-hero",
+  "description": "Modern family dental clinic theme with hero carousel, about, treatments, smile gallery, and contact pages.",
+  "previewUrl": "/healthcare/dental/dental_theme1/index.html",
+
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Hero carousel, clinic intro, treatments preview, process, before/after, stats, testimonials and smile gallery.",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            { "name": "logoImage", "label": "Logo Image URL", "type": "image", "required": true, "placeholder": "assets/abhiroop_logo.png", "hint": "Recommended: PNG with transparent background, height 65px" },
+            { "name": "brandName", "label": "Brand Name", "type": "text", "required": true, "placeholder": "BrightSmile" },
+            { "name": "brandSuffix", "label": "Brand Suffix (colored)", "type": "text", "placeholder": "Dental" },
+            { "name": "brandAlt", "label": "Logo Alt Text", "type": "text", "placeholder": "BrightSmile Dental Clinic" }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "label", "label": "Menu Label", "type": "text", "required": true, "placeholder": "Home" },
+            { "name": "url", "label": "Menu URL", "type": "text", "required": true, "placeholder": "index.html" }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Actions",
+          "type": "single",
+          "fields": [
+            { "name": "searchEnabled", "label": "Show Search Icon", "type": "boolean" },
+            { "name": "bookButtonText", "label": "Book Button Text", "type": "text", "placeholder": "Book Appointment" },
+            { "name": "bookButtonLink", "label": "Book Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "heroCarousel",
+          "label": "Hero Carousel",
+          "type": "carousel",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "backgroundImage", "label": "Background Image", "type": "image", "required": true, "hint": "Recommended: 1920x1080, will be used with parallax" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "required": true, "placeholder": "Modern Family Dental Clinic" },
+            { "name": "title", "label": "Title (HTML allowed)", "type": "text", "required": true, "placeholder": "Healthy Teeth,<br>Confident Smiles" },
+            { "name": "text", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "heroControls",
+          "label": "Hero Controls",
+          "type": "single",
+          "fields": [
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Appointment" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "playLinkText", "label": "Video Link Text", "type": "text", "placeholder": "Watch Clinic Tour" },
+            { "name": "playLinkUrl", "label": "Video Link URL", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "marquee",
+          "label": "Scrolling Marquee Strip",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "text", "label": "Service Name", "type": "text", "required": true, "placeholder": "General Dentistry" }
+          ]
+        },
+        {
+          "id": "aboutSection",
+          "label": "About Section (Home)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "About The Clinic" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "Dental care designed around comfort, trust and lasting results" },
+            { "name": "lead", "label": "Lead Paragraph", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Image (overlap)", "type": "image", "required": true },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Explore Our Treatments" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "#services" }
+          ]
+        },
+        {
+          "id": "aboutPoints",
+          "label": "About Points (Home)",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome class)", "type": "text", "required": true, "placeholder": "fa-solid fa-user-doctor" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Experienced Specialists" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "servicesPreview",
+          "label": "Services Preview (Home)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "What We Do" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "servicesList",
+          "label": "Services Cards",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "number", "label": "Service Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "title", "label": "Service Title", "type": "text", "required": true, "placeholder": "General Dentistry" },
+            { "name": "description", "label": "Service Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Learn More" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "processSection",
+          "label": "Process Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How We Work" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Step Title", "type": "text", "required": true },
+            { "name": "description", "label": "Step Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "beforeAfter",
+          "label": "Before / After Comparison",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Real Smile Transformation" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "Drag The Slider, See The Difference" },
+            { "name": "beforeImage", "label": "Before Image", "type": "image", "required": true },
+            { "name": "afterImage", "label": "After Image", "type": "image", "required": true },
+            { "name": "beforeLabel", "label": "Before Label", "type": "text", "placeholder": "Before" },
+            { "name": "afterLabel", "label": "After Label", "type": "text", "placeholder": "After" },
+            { "name": "description", "label": "Case Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "See More Smiles" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "#projects" }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Counter Band",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "target", "label": "Counter Target (number)", "type": "number", "required": true, "placeholder": "5000" },
+            { "name": "suffix", "label": "Suffix (e.g. +)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Stat Label", "type": "text", "required": true, "placeholder": "Treatments Completed" }
+          ]
+        },
+        {
+          "id": "testimonialsSection",
+          "label": "Testimonials Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Patient Words" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "What Our Patients Say" }
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials Slider",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "quote", "label": "Testimonial Text", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "patientImage", "label": "Patient Photo", "type": "image", "required": true },
+            { "name": "patientName", "label": "Patient Name", "type": "text", "required": true },
+            { "name": "patientLocation", "label": "Patient Location / Role", "type": "text", "required": true }
+          ]
+        },
+        {
+          "id": "gallerySection",
+          "label": "Smile Gallery Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Smile Gallery" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "Recent Cases From Our Clinic" }
+          ]
+        },
+        {
+          "id": "galleryItems",
+          "label": "Smile Gallery Items",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "category", "label": "Category", "type": "text", "required": true, "placeholder": "Cosmetic" },
+            { "name": "title", "label": "Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Subtitle / Detail", "type": "text", "placeholder": "3 visits" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Ready To Smile With Confidence Again?" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "required": true, "placeholder": "Book Your Appointment" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "#contact" }
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "type": "single",
+          "fields": [
+            { "name": "logoImage", "label": "Footer Logo", "type": "image" },
+            { "name": "description", "label": "Footer Description", "type": "textarea", "rows": 2 },
+            { "name": "newsletterPlaceholder", "label": "Newsletter Placeholder", "type": "text", "placeholder": "Your email address" }
+          ]
+        },
+        {
+          "id": "footerColumns",
+          "label": "Footer Link Columns",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            { "name": "heading", "label": "Column Heading", "type": "text", "required": true, "placeholder": "Treatments" },
+            { "name": "links", "label": "Links (Label | URL per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: General Dentistry | #general" }
+          ]
+        },
+        {
+          "id": "footerContact",
+          "label": "Footer Contact Column",
+          "type": "single",
+          "fields": [
+            { "name": "address", "label": "Address", "type": "textarea", "rows": 2 },
+            { "name": "timings", "label": "Opening Hours", "type": "text" },
+            { "name": "phone", "label": "Phone", "type": "text" },
+            { "name": "email", "label": "Email", "type": "email" }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom Bar",
+          "type": "single",
+          "fields": [
+            { "name": "copyright", "label": "Copyright Text", "type": "text", "placeholder": "© 2026 BrightSmile Dental Clinic. All rights reserved." },
+            { "name": "tagline", "label": "Tagline", "type": "text", "placeholder": "Caring for smiles, one patient at a time." }
+          ]
+        },
+        {
+          "id": "socials",
+          "label": "Social Media Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "platform", "label": "Platform", "type": "text", "required": true, "placeholder": "instagram" },
+            { "name": "icon", "label": "Icon Class", "type": "text", "required": true, "placeholder": "fa-brands fa-instagram" },
+            { "name": "url", "label": "URL", "type": "text", "required": true, "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "appointmentModal",
+          "label": "Book Appointment Modal",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Book Appointment" },
+            { "name": "title", "label": "Title (HTML allowed)", "type": "text", "placeholder": "Let's Take Care Of<br>Your Smile" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "submitButtonText", "label": "Submit Button Text", "type": "text", "placeholder": "Request Appointment" },
+            { "name": "note", "label": "Note Below Form", "type": "text", "placeholder": "We typically respond within 24 business hours." },
+            { "name": "treatmentOptions", "label": "Treatment Options (Label | Value per line)", "type": "list", "rows": 8, "hint": "Format: General Dentistry / Checkup | general-dentistry" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "description": "Clinic story, highlights, video, team, testimonials.",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Caring Since 2010" },
+            { "name": "title", "label": "Page Title", "type": "text", "required": true, "placeholder": "About Our Clinic" },
+            { "name": "backgroundImage", "label": "Background Image", "type": "image", "required": true },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "About Us" }
+          ]
+        },
+        {
+          "id": "aboutSplit",
+          "label": "About Split Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "About The Clinic" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "lead", "label": "Lead Paragraph", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Image", "type": "image", "required": true }
+          ]
+        },
+        {
+          "id": "aboutList",
+          "label": "About Bullet Points",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "text", "label": "Bullet Text", "type": "text", "required": true, "placeholder": "Experienced specialists across every dental field" }
+          ]
+        },
+        {
+          "id": "highlightCards",
+          "label": "Highlight Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "title", "label": "Title", "type": "text", "required": true },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 },
+            { "name": "isStat", "label": "Is Stat Card?", "type": "boolean" },
+            { "name": "statNumber", "label": "Stat Number (if stat card)", "type": "text", "placeholder": "15+" },
+            { "name": "statLabel", "label": "Stat Label (if stat card)", "type": "text", "placeholder": "Years of Experience" }
+          ]
+        },
+        {
+          "id": "offerSection",
+          "label": "What We Offer Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "What We Offer" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 },
+            { "name": "videoBackground", "label": "Video Frame Background Image", "type": "image" },
+            { "name": "videoUrl", "label": "Video URL", "type": "text", "placeholder": "https://www.youtube.com" }
+          ]
+        },
+        {
+          "id": "offerFeatures",
+          "label": "Offer Feature Icons",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "label", "label": "Feature Label", "type": "text", "required": true, "placeholder": "General Dentistry" }
+          ]
+        },
+        {
+          "id": "teamSection",
+          "label": "Team Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Meet Our Dentists" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "The People Behind Every Healthy Smile" },
+            { "name": "viewAllText", "label": "View All Button Text", "type": "text", "placeholder": "All Members" },
+            { "name": "viewAllLink", "label": "View All Button Link", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "teamMembers",
+          "label": "Team Members",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "photo", "label": "Photo", "type": "image", "required": true },
+            { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "Dr. Meera Kulkarni" },
+            { "name": "role", "label": "Role", "type": "text", "required": true, "placeholder": "Chief Dental Surgeon" },
+            { "name": "instagram", "label": "Instagram URL", "type": "text", "placeholder": "#" },
+            { "name": "linkedin", "label": "LinkedIn URL", "type": "text", "placeholder": "#" },
+            { "name": "pinterest", "label": "Pinterest URL", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "We're Ready To Help You" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Need Dental Care or a Second Opinion?" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Contact With Us" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "#contact" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Treatments",
+      "description": "All treatment services with detail rows, process, FAQ.",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Treatments" },
+            { "name": "title", "label": "Page Title (HTML allowed)", "type": "text", "required": true, "placeholder": "Complete Dental Care<br>Under One Roof" },
+            { "name": "backgroundImage", "label": "Background Image", "type": "image" },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current", "type": "text", "placeholder": "Treatments" }
+          ]
+        },
+        {
+          "id": "servicesSectionHeader",
+          "label": "Services Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "What We Do" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "Every Treatment Your Smile Needs" },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "servicesGrid",
+          "label": "Services Grid Cards",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "number", "label": "Card Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "title", "label": "Title", "type": "text", "required": true },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Learn More" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "#general" }
+          ]
+        },
+        {
+          "id": "treatmentDetails",
+          "label": "Treatment Detail Rows",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "anchorId", "label": "Anchor ID (for links)", "type": "text", "required": true, "placeholder": "general" },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "required": true, "placeholder": "01 — General Dentistry" },
+            { "name": "title", "label": "Treatment Title", "type": "text", "required": true },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "badge", "label": "Badge Text", "type": "text", "placeholder": "Most Popular" },
+            { "name": "reverseLayout", "label": "Reverse Layout (image on right)", "type": "boolean" },
+            { "name": "alternateBackground", "label": "Alternate Background", "type": "boolean" },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "rows": 6 },
+            { "name": "metaDuration", "label": "Meta: Duration", "type": "text", "placeholder": "30–45 mins" },
+            { "name": "metaSittings", "label": "Meta: Sittings / Visits", "type": "text", "placeholder": "1 visit" },
+            { "name": "metaExtra", "label": "Meta: Third Field Label", "type": "text", "placeholder": "Pain Level" },
+            { "name": "metaExtraValue", "label": "Meta: Third Field Value", "type": "text", "placeholder": "Painless" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Book Checkup" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "processSection",
+          "label": "Process Section (shared)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How It Works" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Title", "type": "text", "required": true },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "faqSection",
+          "label": "FAQ Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Common Questions" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Ask Us Anything" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "faqItems",
+          "label": "FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Smile Gallery",
+      "description": "Filterable gallery, case study, stats.",
+      "file": "gallery.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Real Results, Real Smiles" },
+            { "name": "title", "label": "Page Title", "type": "text", "required": true, "placeholder": "Smile Gallery" },
+            { "name": "backgroundImage", "label": "Background Image", "type": "image" },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current", "type": "text", "placeholder": "Smile Gallery" }
+          ]
+        },
+        {
+          "id": "galleryHeader",
+          "label": "Gallery Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Work" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "Transformations From Our Clinic" },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "galleryFilters",
+          "label": "Gallery Filter Categories",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "label", "label": "Filter Label", "type": "text", "required": true, "placeholder": "Cosmetic" },
+            { "name": "value", "label": "Filter Value (slug)", "type": "text", "required": true, "placeholder": "cosmetic" }
+          ]
+        },
+        {
+          "id": "galleryItems",
+          "label": "Gallery Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "category", "label": "Category (slug)", "type": "text", "required": true, "placeholder": "cosmetic" },
+            { "name": "categoryLabel", "label": "Category Label", "type": "text", "required": true, "placeholder": "Cosmetic" },
+            { "name": "title", "label": "Title", "type": "text", "required": true },
+            { "name": "description", "label": "Description", "type": "text" },
+            { "name": "size", "label": "Grid Size", "type": "text", "placeholder": "large | wide | normal" }
+          ]
+        },
+        {
+          "id": "caseStudy",
+          "label": "Featured Case Study",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Case Study" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "A Complete Smile Makeover in Just 3 Visits" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "badge", "label": "Badge Text", "type": "text", "placeholder": "Featured Case" },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "rows": 6 },
+            { "name": "metaTimeLabel", "label": "Meta: Time Label", "type": "text", "placeholder": "Treatment Time" },
+            { "name": "metaTimeValue", "label": "Meta: Time Value", "type": "text", "placeholder": "3 visits" },
+            { "name": "metaComfortLabel", "label": "Meta: Comfort Label", "type": "text", "placeholder": "Comfort" },
+            { "name": "metaComfortValue", "label": "Meta: Comfort Value", "type": "text", "placeholder": "Painless" },
+            { "name": "metaResultLabel", "label": "Meta: Result Label", "type": "text", "placeholder": "Result" },
+            { "name": "metaResultValue", "label": "Meta: Result Value", "type": "text", "placeholder": "Natural Look" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Book Similar Treatment" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Band",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "target", "label": "Counter Target", "type": "number", "required": true },
+            { "name": "suffix", "label": "Suffix", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Contact info cards, enquiry form, map, FAQ.",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "We'd Love To Hear From You" },
+            { "name": "title", "label": "Page Title", "type": "text", "required": true, "placeholder": "Get In Touch" },
+            { "name": "backgroundImage", "label": "Background Image", "type": "image" },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current", "type": "text", "placeholder": "Contact" }
+          ]
+        },
+        {
+          "id": "quickContactCards",
+          "label": "Quick Contact Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-phone" },
+            { "name": "title", "label": "Card Title", "type": "text", "required": true, "placeholder": "Call Us" },
+            { "name": "description", "label": "Description (HTML allowed)", "type": "textarea", "required": true, "rows": 2 },
+            { "name": "linkText", "label": "Link Text", "type": "text" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text" }
+          ]
+        },
+        {
+          "id": "contactHeader",
+          "label": "Contact Form Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Send Us a Message" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "contactForm",
+          "label": "Contact Form",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Form Title", "type": "text", "placeholder": "Send an Enquiry" },
+            { "name": "subtitle", "label": "Form Subtitle", "type": "text", "placeholder": "All fields are required unless marked otherwise." },
+            { "name": "namePlaceholder", "label": "Name Placeholder", "type": "text", "placeholder": "Your full name" },
+            { "name": "phonePlaceholder", "label": "Phone Placeholder", "type": "text", "placeholder": "+91 98765 43210" },
+            { "name": "emailPlaceholder", "label": "Email Placeholder", "type": "text", "placeholder": "you@example.com" },
+            { "name": "subjectLabel", "label": "Subject Label", "type": "text", "placeholder": "I'm contacting about" },
+            { "name": "subjectOptions", "label": "Subject Options (Label | Value per line)", "type": "list", "rows": 8 },
+            { "name": "messagePlaceholder", "label": "Message Placeholder", "type": "text" },
+            { "name": "submitButtonText", "label": "Submit Button Text", "type": "text", "placeholder": "Send Message" },
+            { "name": "note", "label": "Note Below Form", "type": "text", "placeholder": "Your information is kept private and never shared." }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Opening Hours" },
+            { "name": "hours", "label": "Hours (Label | Value per line)", "type": "list", "rows": 6, "hint": "Format: Monday – Friday | 9:00 AM – 8:00 PM" }
+          ]
+        },
+        {
+          "id": "clinicDetails",
+          "label": "Clinic Details Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Clinic Details" },
+            { "name": "details", "label": "Details (Icon | Label | Value per line)", "type": "list", "rows": 6 }
+          ]
+        },
+        {
+          "id": "socialsBlock",
+          "label": "Follow Us Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Follow Us" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 },
+            { "name": "socials", "label": "Socials (Icon | URL per line)", "type": "list", "rows": 6 }
+          ]
+        },
+        {
+          "id": "emergencyBlock",
+          "label": "Emergency Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Title", "type": "text", "placeholder": "Dental Emergency?" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Call Now" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "mapSection",
+          "label": "Map Section",
+          "type": "single",
+          "fields": [
+            { "name": "mapEmbedUrl", "label": "Google Maps Embed URL", "type": "text", "required": true },
+            { "name": "cardTitle", "label": "Overlay Card Title", "type": "text", "placeholder": "BrightSmile Dental Clinic" },
+            { "name": "cardAddress", "label": "Overlay Card Address", "type": "textarea", "rows": 2 },
+            { "name": "directionsText", "label": "Directions Link Text", "type": "text", "placeholder": "Get Directions" },
+            { "name": "directionsUrl", "label": "Directions URL", "type": "text", "placeholder": "https://www.google.com/maps" }
+          ]
+        },
+        {
+          "id": "contactFaq",
+          "label": "Contact FAQ",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Before Your Visit" },
+            { "name": "title", "label": "Section Title", "type": "text", "required": true, "placeholder": "Common Questions" },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 3 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Call The Clinic" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "contactFaqItems",
+          "label": "Contact FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "global": {
+    "colors": {
+      "primary": "#0B4F6C",
+      "accent": "#1BB5A6",
+      "highlight": "#6FE0D2",
+      "cream": "#F2FAF9",
+      "paper": "#EEF7F6",
+      "ink": "#08222E"
+    },
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Manrope"
+    },
+    "assets": {
+      "backgroundPattern": "assets/abs-bg2.svg",
+      "toothDecoration": "assets/tooth.svg"
+    }
+  }
+}

@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Curemax Dental | Modern Dental Clinic</title>
+    <meta
+        content="Curemax Dental offers gentle, modern dental care: check-ups, implants, whitening, orthodontics and more. Book your appointment online."
+        name="description" />
+    <meta content="#1e6feb" name="theme-color" />
+    <link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="css/tailwind.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/animations.css" rel="stylesheet" />
+    <style>
+        /* Reference-inspired finishing touches */
+        .card,
+        .service-card,
+        .doctor-card,
+        .blog-card,
+        .gallery-item,
+        .testimonial-card {
+            transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+            will-change: transform
+        }
+
+        .card:hover,
+        .service-card:hover,
+        .doctor-card:hover,
+        .blog-card:hover,
+        .gallery-item:hover,
+        .testimonial-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(16, 54, 94, .14)
+        }
+
+        .card img,
+        .service-card img,
+        .doctor-card img,
+        .blog-card img,
+        .gallery-item img {
+            transition: transform .45s ease
+        }
+
+        .card:hover img,
+        .service-card:hover img,
+        .doctor-card:hover img,
+        .blog-card:hover img,
+        .gallery-item:hover img {
+            transform: scale(1.045)
+        }
+
+        @media(max-width:640px) {
+            .section {
+                padding-block: 2.6rem
+            }
+
+            .section-head {
+                margin-bottom: 1.8rem
+            }
+
+            .btn {
+                padding: .75rem 1.2rem
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="topbar">
+        <div class="container flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-2">
+            <ul class="flex flex-wrap items-center gap-x-5 gap-y-1">
+                <li class="flex items-center gap-2"><svg aria-hidden="true" class="icon" focusable="false"
+                        viewbox="0 0 24 24">
+                        <path
+                            d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z">
+                        </path>
+                    </svg><a href="tel:+61355500148">+61 3 5550 0148</a></li>
+                <li class="hidden sm:flex items-center gap-2"><svg aria-hidden="true" class="icon" focusable="false"
+                        viewbox="0 0 24 24">
+                        <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                        <path d="m22 7-10 6L2 7"></path>
+                    </svg><a href="mailto:hello@curemax-dental.example">hello@curemax-dental.example</a></li>
+                <li class="hidden lg:flex items-center gap-2"><svg aria-hidden="true" class="icon" focusable="false"
+                        viewbox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg><span>Mon–Fri 9am–6pm, Sat 9am–2pm</span></li>
+            </ul>
+            <div class="hidden sm:flex items-center gap-2"><a aria-label="Facebook (opens in a new tab)" class="social"
+                    href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"
+                        class="icon" focusable="false" viewbox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg></a><a aria-label="Instagram (opens in a new tab)" class="social"
+                    href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"
+                        class="icon" focusable="false" viewbox="0 0 24 24">
+                        <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M17.5 6.5h.01"></path>
+                    </svg></a><a aria-label="LinkedIn (opens in a new tab)" class="social"
+                    href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"
+                        class="icon" focusable="false" viewbox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect height="12" width="4" x="2" y="9"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a><a aria-label="YouTube (opens in a new tab)" class="social"
+                    href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"
+                        class="icon" focusable="false" viewbox="0 0 24 24">
+                        <path
+                            d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49 49 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49 49 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                        </path>
+                        <path d="m10 15 5-3-5-3z"></path>
+                    </svg></a></div>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="container flex items-center justify-between gap-3" style="min-height:var(--header-h)">
+            <a aria-label="Curemax Dental, home" class="brand" href="index.html"><img alt="" class="h-9 w-auto"
+                    height="38" src="assets/icons/logo.svg" width="32" /><span>Curemax<small
+                        class="hidden xs:block sm:block">Dental Clinic</small></span></a>
+            <nav aria-label="Main" class="nav-desktop" data-nav="">
+                <ul class="flex items-center gap-1 xl:gap-2">
+                    <li class="nav-item" data-pages="index.html"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" data-pages="about.html"><button aria-expanded="false" aria-haspopup="true"
+                            class="nav-link" type="button">About<svg aria-hidden="true" class="icon" focusable="false"
+                                viewbox="0 0 24 24">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg></button>
+                        <div class="dropdown"><a href="about.html">About the Clinic</a><a
+                                href="index.html#testimonials">Testimonials</a><a href="index.html#faq">FAQ</a></div>
+                    </li>
+                    <li class="nav-item" data-pages="services.html service-details.html"><button aria-expanded="false"
+                            aria-haspopup="true" class="nav-link" type="button">Services<svg aria-hidden="true"
+                                class="icon" focusable="false" viewbox="0 0 24 24">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg></button>
+                        <div class="dropdown"><a href="services.html">All Services</a><a
+                                href="service-details.html?service=cosmetic-dentistry">Cosmetic Dentistry</a><a
+                                href="service-details.html?service=teeth-whitening">Teeth Whitening</a><a
+                                href="service-details.html?service=dental-implants">Dental Implants</a><a
+                                href="service-details.html?service=orthodontics">Orthodontics</a><a
+                                href="/assets/images/services/cosmetic-dentistry.svg">Root Canal
+                                Treatment</a></div>
+                    </li>
+                    <li class="nav-item" data-pages="doctors.html doctor-details.html"><button aria-expanded="false"
+                            aria-haspopup="true" class="nav-link" type="button">Doctors<svg aria-hidden="true"
+                                class="icon" focusable="false" viewbox="0 0 24 24">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg></button>
+                        <div class="dropdown"><a href="doctors.html">All Doctors</a><a
+                                href="doctor-details.html?doctor=dr-aarav-mehta">Dr. Aarav Mehta</a><a
+                                href="doctor-details.html?doctor=dr-sophie-laurent">Dr. Sophie Laurent</a><a
+                                href="doctor-details.html?doctor=dr-daniel-okafor">Dr. Daniel Okafor</a><a
+                                href="doctor-details.html?doctor=dr-priya-nair">Dr. Priya Nair</a></div>
+                    </li>
+                    <li class="nav-item" data-pages="gallery.html"><a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-pages="blog.html blog-details.html"><a class="nav-link"
+                            href="blog.html">Blog</a></li>
+                    <li class="nav-item" data-pages="contact.html"><a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a class="btn btn-primary !px-4 sm:!px-6 !py-2.5 sm:!py-3" href="appointment.html"><svg
+                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                        <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                        <path d="M16 2v4M8 2v4M3 10h18"></path>
+                    </svg><span class="sm:hidden">Book</span><span class="hidden sm:inline">Book Appointment</span></a>
+                <button aria-controls="mobile-panel" aria-expanded="false" aria-label="Open menu" class="menu-toggle"
+                    id="menu-toggle" type="button"><svg aria-hidden="true" class="icon" focusable="false"
+                        viewbox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg></button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <aside aria-hidden="true" aria-label="Mobile menu" class="mobile-panel" id="mobile-panel">
+        <div class="flex items-center justify-between p-4 border-b border-line"><span
+                class="brand text-xl">Curemax</span><button aria-label="Close menu" class="menu-toggle" id="menu-close"
+                type="button"><svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                    <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg></button></div>
+        <nav aria-label="Mobile" class="p-3 flex-1" data-nav="">
+            <ul class="space-y-1">
+                <li data-pages="index.html"><a class="m-link" href="index.html">Home</a></li>
+                <li data-pages="about.html"><button aria-controls="msub-1" aria-expanded="false" class="m-link"
+                        type="button">About<svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></button>
+                    <div class="m-sub" id="msub-1"><a href="about.html">About the Clinic</a><a
+                            href="index.html#testimonials">Testimonials</a><a href="index.html#faq">FAQ</a></div>
+                </li>
+                <li data-pages="services.html service-details.html"><button aria-controls="msub-2" aria-expanded="false"
+                        class="m-link" type="button">Services<svg aria-hidden="true" class="icon" focusable="false"
+                            viewbox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></button>
+                    <div class="m-sub" id="msub-2"><a href="services.html">All Services</a><a
+                            href="service-details.html?service=cosmetic-dentistry">Cosmetic Dentistry</a><a
+                            href="service-details.html?service=teeth-whitening">Teeth Whitening</a><a
+                            href="service-details.html?service=dental-implants">Dental Implants</a><a
+                            href="service-details.html?service=orthodontics">Orthodontics</a><a
+                            href="service-details.html?service=root-canal">Root Canal Treatment</a></div>
+                </li>
+                <li data-pages="doctors.html doctor-details.html"><button aria-controls="msub-3" aria-expanded="false"
+                        class="m-link" type="button">Doctors<svg aria-hidden="true" class="icon" focusable="false"
+                            viewbox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></button>
+                    <div class="m-sub" id="msub-3"><a href="doctors.html">All Doctors</a><a
+                            href="doctor-details.html?doctor=dr-aarav-mehta">Dr. Aarav Mehta</a><a
+                            href="doctor-details.html?doctor=dr-sophie-laurent">Dr. Sophie Laurent</a><a
+                            href="doctor-details.html?doctor=dr-daniel-okafor">Dr. Daniel Okafor</a><a
+                            href="doctor-details.html?doctor=dr-priya-nair">Dr. Priya Nair</a></div>
+                </li>
+                <li data-pages="gallery.html"><a class="m-link" href="gallery.html">Gallery</a></li>
+                <li data-pages="blog.html blog-details.html"><a class="m-link" href="blog.html">Blog</a></li>
+                <li data-pages="contact.html"><a class="m-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="p-4 border-t border-line space-y-3">
+            <a class="btn btn-primary w-full" href="appointment.html"><svg aria-hidden="true" class="icon"
+                    focusable="false" viewbox="0 0 24 24">
+                    <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                    <path d="M16 2v4M8 2v4M3 10h18"></path>
+                </svg>Book Appointment</a>
+            <a class="btn btn-outline w-full" href="tel:+61355500148"><svg aria-hidden="true" class="icon"
+                    focusable="false" viewbox="0 0 24 24">
+                    <path
+                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z">
+                    </path>
+                </svg>+61 3 5550 0148</a>
+        </div>
+    </aside>
+    <main id="main">
+        <section aria-label="Featured dental care" class="hero hero-carousel">
+            <div class="hero-slides" data-hero-slides="">
+                <article aria-hidden="false" class="hero-slide is-active" data-hero-slide=""
+                    style="--hero-image:url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=2000&amp;q=90')">
+                    <div class="hero-shade"></div>
+                    <div class="container hero-content">
+                        <div class="hero-copy"><span class="eyebrow">Gentle, modern dental care</span>
+                            <h1>Healthy teeth.<br /><em>A smile you love.</em></h1>
+                            <p>Personalised dental care, modern technology and a team that puts your comfort first.</p>
+                            <div class="hero-actions"><a class="btn btn-primary" href="appointment.html">Book
+                                    Appointment <span aria-hidden="true">↗</span></a><a class="btn btn-glass"
+                                    href="services.html">Explore Services</a></div>
+                            <div class="hero-proof"><span>★★★★★</span><span>Trusted care for every smile</span></div>
+                        </div>
+                        <div class="hero-side-note"><span class="hero-note-icon">✦</span><strong>Care that feels
+                                different</strong><small>Comfort-first dentistry</small></div>
+                    </div>
+                </article>
+                <article aria-hidden="true" class="hero-slide" data-hero-slide=""
+                    style="--hero-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=2000&amp;q=90')">
+                    <div class="hero-shade hero-shade-blue"></div>
+                    <div class="container hero-content">
+                        <div class="hero-copy"><span class="eyebrow">Advanced technology · Personal care</span>
+                            <h1>Modern dentistry.<br /><em>Made around you.</em></h1>
+                            <p>From preventive check-ups to complete smile transformations, your treatment plan starts
+                                with listening.</p>
+                            <div class="hero-actions"><a class="btn btn-primary" href="about.html">Discover Curemax
+                                    <span aria-hidden="true">↗</span></a><a class="btn btn-glass"
+                                    href="appointment.html">Meet Our Team</a></div>
+                            <div class="hero-proof"><span>✦</span><span>Clear plans. Confident smiles.</span></div>
+                        </div>
+                        <div class="hero-side-note"><span class="hero-note-icon">✚</span><strong>Technology with a
+                                gentle touch</strong><small>Thoughtful care at every visit</small></div>
+                    </div>
+                </article>
+                <article aria-hidden="true" class="hero-slide" data-hero-slide=""
+                    style="--hero-image:url('https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=2000&amp;q=90')">
+                    <div class="hero-shade hero-shade-teal"></div>
+                    <div class="container hero-content">
+                        <div class="hero-copy"><span class="eyebrow">Your smile, your confidence</span>
+                            <h1>Love your smile.<br /><em>Live it confidently.</em></h1>
+                            <p>Explore cosmetic, restorative and family dental services designed to help you smile
+                                without hesitation.</p>
+                            <div class="hero-actions"><a class="btn btn-primary" href="services.html">Explore Treatments
+                                    <span aria-hidden="true">↗</span></a><a class="btn btn-glass"
+                                    href="appointment.html">Book a Visit</a></div>
+                            <div class="hero-proof"><span>♥</span><span>Welcoming care for the whole family</span></div>
+                        </div>
+                        <div class="hero-side-note"><span class="hero-note-icon">☺</span><strong>Your smile is in caring
+                                hands</strong><small>Family-friendly dental care</small></div>
+                    </div>
+                </article>
+            </div>
+            <div class="hero-bottom container">
+                <div aria-label="Choose banner" class="hero-pagination"> <button aria-current="true"
+                        aria-label="Show banner 1" class="hero-dot is-active" data-hero-dot="0"
+                        type="button"></button><button aria-label="Show banner 2" class="hero-dot" data-hero-dot="1"
+                        type="button"></button><button aria-label="Show banner 3" class="hero-dot" data-hero-dot="2"
+                        type="button"></button></div>
+                <div class="hero-arrows"><button aria-label="Previous banner" data-hero-prev=""
+                        type="button">←</button><button aria-label="Next banner" data-hero-next=""
+                        type="button">→</button></div><span class="hero-count"><strong data-hero-count="">01</strong> /
+                    03</span>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container grid items-center gap-12 lg:grid-cols-2">
+                <div class="reveal"><img alt="Bright modern dental treatment room"
+                        class="rounded-3xl w-full object-cover shadow-card aspect-[5/4]" decoding="async" height="720"
+                        loading="lazy"
+                        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                        width="900" /></div>
+                <div class="reveal"><span class="eyebrow">Who we are</span>
+                    <h2 class="text-3xl md:text-4xl">Welcome to Curemax Dental</h2>
+                    <p class="mt-4">We are a family-run clinic focused on prevention, honest advice and comfortable
+                        treatment. Our team brings together general dentistry and specialist care, so most of what you
+                        need is in one place.</p>
+                    <ul class="mt-6 space-y-3 check-list text-ink font-semibold">
+                        <li><svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>Experienced, award-winning dental team</li>
+                        <li><svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>Clear treatment plans before any work begins</li>
+                        <li><svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>Calm rooms designed for nervous patients</li>
+                    </ul>
+                    <div class="mt-8 flex flex-wrap items-center gap-4"><a class="btn btn-primary"
+                            href="about.html">About the clinic</a><a class="flex items-center gap-3 group"
+                            href="tel:+61355500148"><span class="icon-badge"><svg aria-hidden="true" class="icon"
+                                    focusable="false" viewbox="0 0 24 24">
+                                    <path
+                                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z">
+                                    </path>
+                                </svg></span><span><span class="block text-xs">Call us</span><strong
+                                    class="text-ink font-display">+61 3 5550 0148</strong></span></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-mist">
+            <div class="container">
+                <div class="section-head reveal"><span class="eyebrow">What we do</span>
+                    <h2>Our dental services</h2>
+                    <p>Complete care for every age, from preventive check-ups to advanced restorative treatment.</p>
+                </div>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 reveal">
+                    <div>
+                        <article class="card service-card">
+                            <div class="media"><a aria-hidden="true"
+                                    href="service-details.html?service=cosmetic-dentistry" tabindex="-1"><img alt=""
+                                        class="card-img" decoding="async" height="520" loading="lazy"
+                                        src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a><span class="icon-badge badge"><svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"></path>
+                                    </svg></span></div>
+                            <div class="body">
+                                <h3 class="text-xl">Cosmetic Dentistry</h3>
+                                <p>Veneers, bonding and smile makeovers designed around your face and your goals.</p><a
+                                    class="link-arrow" href="service-details.html?service=cosmetic-dentistry">Learn
+                                    more<svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card service-card">
+                            <div class="media"><a aria-hidden="true" href="service-details.html?service=teeth-whitening"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a><span class="icon-badge badge"><svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path
+                                            d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4">
+                                        </path>
+                                    </svg></span></div>
+                            <div class="body">
+                                <h3 class="text-xl">Teeth Whitening</h3>
+                                <p>Professional whitening that lifts stains safely, in the chair or at home.</p><a
+                                    class="link-arrow" href="service-details.html?service=teeth-whitening">Learn
+                                    more<svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card service-card">
+                            <div class="media"><a aria-hidden="true" href="service-details.html?service=dental-implants"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a><span class="icon-badge badge"><svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M12 3c-1.5-1-4-1-5 1.2-1 2.3.2 4.2.5 6.3.3 2.3.5 6 1.5 9.5.3 1 1.7 1 2-.5.3-1.5.5-3 1-3s.7 1.5 1 3c.3 1.5 1.7 1.5 2 .5 1-3.5 1.2-7.2 1.5-9.5.3-2.1 1.5-4 .5-6.3C16 2 13.5 2 12 3z">
+                                        </path>
+                                    </svg></span></div>
+                            <div class="body">
+                                <h3 class="text-xl">Dental Implants</h3>
+                                <p>Fixed, natural-feeling replacements for one tooth or several.</p><a
+                                    class="link-arrow" href="service-details.html?service=dental-implants">Learn
+                                    more<svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card service-card">
+                            <div class="media"><a aria-hidden="true" href="service-details.html?service=orthodontics"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a><span class="icon-badge badge"><svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M3 12h18"></path>
+                                        <rect height="8" rx="1.5" width="4" x="5" y="8"></rect>
+                                        <rect height="8" rx="1.5" width="4" x="15" y="8"></rect>
+                                    </svg></span></div>
+                            <div class="body">
+                                <h3 class="text-xl">Orthodontics</h3>
+                                <p>Braces and clear aligners to straighten teeth and balance your bite.</p><a
+                                    class="link-arrow" href="service-details.html?service=orthodontics">Learn more<svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card service-card">
+                            <div class="media"><a aria-hidden="true" href="service-details.html?service=root-canal"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1606265752439-1f18756aa8f9?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a><span class="icon-badge badge"><svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M13 2 3 14h9l-1 8 10-12h-9z"></path>
+                                    </svg></span></div>
+                            <div class="body">
+                                <h3 class="text-xl">Root Canal Treatment</h3>
+                                <p>Gentle treatment that relieves tooth pain and saves the natural tooth.</p><a
+                                    class="link-arrow" href="service-details.html?service=root-canal">Learn more<svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card service-card">
+                            <div class="media"><a aria-hidden="true" href="service-details.html?service=gum-treatment"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a><span class="icon-badge badge"><svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z">
+                                        </path>
+                                    </svg></span></div>
+                            <div class="body">
+                                <h3 class="text-xl">Gum Treatment</h3>
+                                <p>Deep cleaning and personalised care for gum disease and bleeding gums.</p><a
+                                    class="link-arrow" href="service-details.html?service=gum-treatment">Learn more<svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-10"><a class="btn btn-outline" href="services.html">View all services</a>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid items-center gap-12 lg:grid-cols-2">
+                    <div class="reveal order-2 lg:order-1"><span class="eyebrow">Why choose us</span>
+                        <h2 class="text-3xl md:text-4xl">Changing lives through exceptional dental care</h2>
+                        <ul class="mt-8 space-y-6">
+                            <li class="feature-row flex gap-4"><span class="icon-badge feature-icon"><svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M13 2 3 14h9l-1 8 10-12h-9z"></path>
+                                    </svg></span>
+                                <div>
+                                    <h3 class="text-lg">Modern technology</h3>
+                                    <p class="mt-1">Digital X-rays and 3D scans mean precise diagnosis and fewer repeat
+                                        visits.</p>
+                                </div>
+                            </li>
+                            <li class="feature-row flex gap-4"><span class="icon-badge feature-icon"><svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z">
+                                        </path>
+                                    </svg></span>
+                                <div>
+                                    <h3 class="text-lg">Personal, gentle care</h3>
+                                    <p class="mt-1">We explain every option, move at your pace and never pressure you.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="feature-row flex gap-4"><span class="icon-badge feature-icon"><svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg></span>
+                                <div>
+                                    <h3 class="text-lg">Results that last</h3>
+                                    <p class="mt-1">Quality materials and careful planning help your treatment stand the
+                                        test of time.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reveal order-1 lg:order-2"><img alt="Illustration of a tooth with a checkmark"
+                            class="rounded-3xl w-full object-cover shadow-card aspect-[5/4]" decoding="async"
+                            height="720" loading="lazy"
+                            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                            width="900" /></div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-2 rounded-3xl bg-brand-soft p-4 reveal">
+                    <div class="stat"><strong><span data-count="20" data-suffix="+">20+</span></strong><span
+                            class="block mt-2 text-sm font-semibold text-ink">Years of experience</span></div>
+                    <div class="stat"><strong><span data-count="15000" data-suffix="+">15,000+</span></strong><span
+                            class="block mt-2 text-sm font-semibold text-ink">Happy patients</span></div>
+                    <div class="stat"><strong><span data-count="4" data-suffix="">4</span></strong><span
+                            class="block mt-2 text-sm font-semibold text-ink">Specialist dentists</span></div>
+                    <div class="stat"><strong><span data-count="98" data-suffix="%">98%</span></strong><span
+                            class="block mt-2 text-sm font-semibold text-ink">Patient satisfaction</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-mist">
+            <div class="container">
+                <div class="section-head reveal"><span class="eyebrow">Meet the team</span>
+                    <h2>Our featured doctors</h2>
+                    <p>Specialists who listen first, explain clearly and treat gently.</p>
+                </div>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 reveal">
+                    <div>
+                        <article class="card doctor-card"><a aria-hidden="true" class="media block"
+                                href="doctor-details.html?doctor=dr-aarav-mehta" tabindex="-1"><img alt=""
+                                    decoding="async" height="760" loading="lazy"
+                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                    width="640" /></a>
+                            <div class="body">
+                                <h3 class="text-lg">Dr. Aarav Mehta</h3>
+                                <p class="text-brand font-semibold text-sm">Founder and Implant Dentist</p>
+                                <p class="text-sm mt-2 flex-1">BDS, MDS (Prosthodontics)</p><a
+                                    class="link-arrow mt-4 text-sm"
+                                    href="doctor-details.html?doctor=dr-aarav-mehta">View profile<svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card doctor-card"><a aria-hidden="true" class="media block"
+                                href="doctor-details.html?doctor=dr-sophie-laurent" tabindex="-1"><img alt=""
+                                    decoding="async" height="760" loading="lazy"
+                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                    width="640" /></a>
+                            <div class="body">
+                                <h3 class="text-lg">Dr. Sophie Laurent</h3>
+                                <p class="text-brand font-semibold text-sm">Orthodontist</p>
+                                <p class="text-sm mt-2 flex-1">BDS, MDS (Orthodontics)</p><a
+                                    class="link-arrow mt-4 text-sm"
+                                    href="doctor-details.html?doctor=dr-sophie-laurent">View profile<svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card doctor-card"><a aria-hidden="true" class="media block"
+                                href="doctor-details.html?doctor=dr-daniel-okafor" tabindex="-1"><img alt=""
+                                    decoding="async" height="760" loading="lazy"
+                                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                    width="640" /></a>
+                            <div class="body">
+                                <h3 class="text-lg">Dr. Daniel Okafor</h3>
+                                <p class="text-brand font-semibold text-sm">Endodontist and Restorative Dentist</p>
+                                <p class="text-sm mt-2 flex-1">BDS, MDS (Endodontics)</p><a
+                                    class="link-arrow mt-4 text-sm"
+                                    href="doctor-details.html?doctor=dr-daniel-okafor">View profile<svg
+                                        aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card doctor-card"><a aria-hidden="true" class="media block"
+                                href="doctor-details.html?doctor=dr-priya-nair" tabindex="-1"><img alt=""
+                                    decoding="async" height="760" loading="lazy"
+                                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                    width="640" /></a>
+                            <div class="body">
+                                <h3 class="text-lg">Dr. Priya Nair</h3>
+                                <p class="text-brand font-semibold text-sm">Pediatric and Family Dentist</p>
+                                <p class="text-sm mt-2 flex-1">BDS, MDS (Pediatric Dentistry)</p><a
+                                    class="link-arrow mt-4 text-sm" href="doctor-details.html?doctor=dr-priya-nair">View
+                                    profile<svg aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-10"><a class="btn btn-outline" href="doctors.html">Meet all doctors</a></div>
+            </div>
+        </section>
+        <section class="cta-band section">
+            <div class="container relative z-10 text-center max-w-3xl reveal">
+                <h2 class="text-3xl md:text-4xl">Book your visit in under a minute</h2>
+                <p class="mt-4 text-lg">Pick a doctor, a service and a time that suits you. Our team will confirm your
+                    request by phone.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3"><a class="btn btn-light"
+                        href="appointment.html"><svg aria-hidden="true" class="icon" focusable="false"
+                            viewbox="0 0 24 24">
+                            <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                            <path d="M16 2v4M8 2v4M3 10h18"></path>
+                        </svg>Book Appointment</a><a class="btn btn-ghost-light" href="tel:+61355500148"><svg
+                            aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                            <path
+                                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z">
+                            </path>
+                        </svg>+61 3 5550 0148</a></div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-head reveal"><span class="eyebrow">Take a look inside</span>
+                    <h2>Our clinic and facilities</h2>
+                    <p>Calm, bright spaces equipped with modern technology. Select a photo to enlarge it.</p>
+                </div>
+                <div class="grid gap-4 grid-cols-2 lg:grid-cols-3 reveal"><a class="gallery-item"
+                        data-caption="Bright, welcoming reception" data-lightbox=""
+                        href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=85"><img
+                            alt="Bright, welcoming reception" decoding="async" height="700" loading="lazy"
+                            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            width="900" /><span class="cap">Bright, welcoming reception</span></a><a
+                        class="gallery-item" data-caption="Private treatment room" data-lightbox=""
+                        href="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=900&amp;q=85"><img
+                            alt="Private treatment room" decoding="async" height="700" loading="lazy"
+                            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            width="900" /><span class="cap">Private treatment room</span></a><a class="gallery-item"
+                        data-caption="Digital X-ray suite" data-lightbox=""
+                        href="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=900&amp;q=85"><img
+                            alt="Digital X-ray suite" decoding="async" height="700" loading="lazy"
+                            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            width="900" /><span class="cap">Digital X-ray suite</span></a><a class="gallery-item"
+                        data-caption="Sterilisation station" data-lightbox=""
+                        href="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=900&amp;q=85"><img
+                            alt="Sterilisation station" decoding="async" height="700" loading="lazy"
+                            src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            width="900" /><span class="cap">Sterilisation station</span></a><a class="gallery-item"
+                        data-caption="Calm waiting lounge" data-lightbox=""
+                        href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=85"><img
+                            alt="Calm waiting lounge" decoding="async" height="700" loading="lazy"
+                            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            width="900" /><span class="cap">Calm waiting lounge</span></a><a class="gallery-item"
+                        data-caption="Teeth whitening results" data-lightbox=""
+                        href="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=900&amp;q=85"><img
+                            alt="Teeth whitening results" decoding="async" height="700" loading="lazy"
+                            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            width="900" /><span class="cap">Teeth whitening results</span></a></div>
+                <div class="text-center mt-10"><a class="btn btn-outline" href="gallery.html">Open full gallery</a>
+                </div>
+            </div>
+        </section>
+        <section class="section section-mist" id="testimonials">
+            <div class="container">
+                <div class="section-head reveal"><span class="eyebrow">Patient stories</span>
+                    <h2>What our patients say</h2>
+                </div>
+                <div aria-label="Patient testimonials" aria-roledescription="carousel" class="slider reveal"
+                    data-slider="">
+                    <div class="slider-viewport">
+                        <div class="slider-track">
+                            <div class="slide">
+                                <article class="card testimonial"><svg aria-hidden="true"
+                                        class="icon text-brand w-8 h-8" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M3 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2H4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5zM15 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2h-4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5z">
+                                        </path>
+                                    </svg>
+                                    <blockquote>My implant feels completely natural. Dr. Mehta explained every stage and
+                                        I was never rushed or in discomfort.</blockquote>
+                                    <div class="flex items-center gap-3"><img alt=""
+                                            class="w-12 h-12 rounded-full object-cover" decoding="async" height="200"
+                                            loading="lazy"
+                                            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec?auto=format&amp;fit=crop&amp;w=200&amp;q=80"
+                                            width="200" />
+                                        <div>
+                                            <p class="font-bold text-ink font-display leading-tight">Marcus Reid</p>
+                                            <p class="text-sm">Dental implant patient</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div aria-label="5 out of 5 stars" class="stars" role="img"><svg
+                                                    aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slide">
+                                <article class="card testimonial"><svg aria-hidden="true"
+                                        class="icon text-brand w-8 h-8" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M3 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2H4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5zM15 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2h-4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5z">
+                                        </path>
+                                    </svg>
+                                    <blockquote>The team made my aligner treatment easy. Appointments ran on time and I
+                                        loved seeing the plan on screen.</blockquote>
+                                    <div class="flex items-center gap-3"><img alt=""
+                                            class="w-12 h-12 rounded-full object-cover" decoding="async" height="200"
+                                            loading="lazy"
+                                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=200&amp;q=80"
+                                            width="200" />
+                                        <div>
+                                            <p class="font-bold text-ink font-display leading-tight">Elena Rossi</p>
+                                            <p class="text-sm">Clear aligner patient</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div aria-label="5 out of 5 stars" class="stars" role="img"><svg
+                                                    aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slide">
+                                <article class="card testimonial"><svg aria-hidden="true"
+                                        class="icon text-brand w-8 h-8" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M3 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2H4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5zM15 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2h-4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5z">
+                                        </path>
+                                    </svg>
+                                    <blockquote>I was nervous about a root canal but Dr. Okafor kept me comfortable the
+                                        whole time. I would happily go back.</blockquote>
+                                    <div class="flex items-center gap-3"><img alt=""
+                                            class="w-12 h-12 rounded-full object-cover" decoding="async" height="200"
+                                            loading="lazy"
+                                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=200&amp;q=80"
+                                            width="200" />
+                                        <div>
+                                            <p class="font-bold text-ink font-display leading-tight">Tom Whitfield</p>
+                                            <p class="text-sm">Root canal patient</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div aria-label="5 out of 5 stars" class="stars" role="img"><svg
+                                                    aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slide">
+                                <article class="card testimonial"><svg aria-hidden="true"
+                                        class="icon text-brand w-8 h-8" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M3 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2H4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5zM15 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2h-4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5z">
+                                        </path>
+                                    </svg>
+                                    <blockquote>My son actually asks when his next visit is. Dr. Nair is wonderful with
+                                        children and so patient with parents too.</blockquote>
+                                    <div class="flex items-center gap-3"><img alt=""
+                                            class="w-12 h-12 rounded-full object-cover" decoding="async" height="200"
+                                            loading="lazy"
+                                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=200&amp;q=80"
+                                            width="200" />
+                                        <div>
+                                            <p class="font-bold text-ink font-display leading-tight">Ayesha Khan</p>
+                                            <p class="text-sm">Parent</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div aria-label="5 out of 5 stars" class="stars" role="img"><svg
+                                                    aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slide">
+                                <article class="card testimonial"><svg aria-hidden="true"
+                                        class="icon text-brand w-8 h-8" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M3 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2H4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5zM15 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2h-4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5z">
+                                        </path>
+                                    </svg>
+                                    <blockquote>Clear pricing, friendly reception and a brighter smile in an hour.
+                                        Exactly what I wanted before my wedding.</blockquote>
+                                    <div class="flex items-center gap-3"><img alt=""
+                                            class="w-12 h-12 rounded-full object-cover" decoding="async" height="200"
+                                            loading="lazy"
+                                            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec?auto=format&amp;fit=crop&amp;w=200&amp;q=80"
+                                            width="200" />
+                                        <div>
+                                            <p class="font-bold text-ink font-display leading-tight">Daniel Brooks</p>
+                                            <p class="text-sm">Whitening patient</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div aria-label="5 out of 5 stars" class="stars" role="img"><svg
+                                                    aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slide">
+                                <article class="card testimonial"><svg aria-hidden="true"
+                                        class="icon text-brand w-8 h-8" focusable="false" viewbox="0 0 24 24">
+                                        <path
+                                            d="M3 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2H4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5zM15 21c3 0 7-1 7-8V5c0-1.2-.8-2-2-2h-4c-1.2 0-2 .8-2 2v6c0 1.2.8 2 2 2h4c0 4-2 5-5 5z">
+                                        </path>
+                                    </svg>
+                                    <blockquote>Spotless clinic and a team that takes the time to explain things.
+                                        Finally a dentist I don't dread visiting.</blockquote>
+                                    <div class="flex items-center gap-3"><img alt=""
+                                            class="w-12 h-12 rounded-full object-cover" decoding="async" height="200"
+                                            loading="lazy"
+                                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=200&amp;q=80"
+                                            width="200" />
+                                        <div>
+                                            <p class="font-bold text-ink font-display leading-tight">Linh Tran</p>
+                                            <p class="text-sm">Check-up patient</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div aria-label="5 out of 5 stars" class="stars" role="img"><svg
+                                                    aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg><svg aria-hidden="true" class="icon icon-fill" focusable="false"
+                                                    viewbox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls"><button aria-label="Previous testimonials" class="slider-btn"
+                            data-slider-prev="" type="button"><svg aria-hidden="true" class="icon" focusable="false"
+                                viewbox="0 0 24 24">
+                                <path d="m15 18-6-6 6-6"></path>
+                            </svg></button>
+                        <div aria-label="Choose testimonial" class="dots"></div><button aria-label="Next testimonials"
+                            class="slider-btn" data-slider-next="" type="button"><svg aria-hidden="true" class="icon"
+                                focusable="false" viewbox="0 0 24 24">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg></button><button aria-label="Pause automatic sliding" aria-pressed="false"
+                            class="slider-btn" data-slider-toggle="" type="button"><svg aria-hidden="true" class="icon"
+                                focusable="false" viewbox="0 0 24 24">
+                                <path d="M6 4h4v16H6zM14 4h4v16h-4z"></path>
+                            </svg></button>
+                    </div>
+                    <p aria-live="polite" class="sr-only" data-slider-live=""></p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-head reveal"><span class="eyebrow">Latest articles</span>
+                    <h2>Dental health blog</h2>
+                    <p>Practical advice from our dentists on caring for your teeth and gums.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 reveal">
+                    <div>
+                        <article class="card blog-card">
+                            <div class="media"><a aria-hidden="true" href="blog-details.html?post=brushing-technique"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a>
+                                <div class="date">28<small>Sep</small></div>
+                            </div>
+                            <div class="body">
+                                <div class="meta"><span><svg aria-hidden="true" class="icon" focusable="false"
+                                            viewbox="0 0 24 24">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>Dr. Sophie Laurent</span><span><svg aria-hidden="true" class="icon"
+                                            focusable="false" viewbox="0 0 24 24">
+                                            <path
+                                                d="M12 3c-1.5-1-4-1-5 1.2-1 2.3.2 4.2.5 6.3.3 2.3.5 6 1.5 9.5.3 1 1.7 1 2-.5.3-1.5.5-3 1-3s.7 1.5 1 3c.3 1.5 1.7 1.5 2 .5 1-3.5 1.2-7.2 1.5-9.5.3-2.1 1.5-4 .5-6.3C16 2 13.5 2 12 3z">
+                                            </path>
+                                        </svg>Prevention</span></div>
+                                <h3><a href="blog-details.html?post=brushing-technique">How to Brush Properly: A
+                                        Two-Minute Routine</a></h3>
+                                <p class="text-sm flex-1">Small changes to angle, pressure and timing make a big
+                                    difference to plaque removal.</p><a class="link-arrow mt-4 text-sm"
+                                    href="blog-details.html?post=brushing-technique">Read article<svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card blog-card">
+                            <div class="media"><a aria-hidden="true" href="blog-details.html?post=flossing-guide"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a>
+                                <div class="date">15<small>Sep</small></div>
+                            </div>
+                            <div class="body">
+                                <div class="meta"><span><svg aria-hidden="true" class="icon" focusable="false"
+                                            viewbox="0 0 24 24">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>Dr. Priya Nair</span><span><svg aria-hidden="true" class="icon"
+                                            focusable="false" viewbox="0 0 24 24">
+                                            <path
+                                                d="M12 3c-1.5-1-4-1-5 1.2-1 2.3.2 4.2.5 6.3.3 2.3.5 6 1.5 9.5.3 1 1.7 1 2-.5.3-1.5.5-3 1-3s.7 1.5 1 3c.3 1.5 1.7 1.5 2 .5 1-3.5 1.2-7.2 1.5-9.5.3-2.1 1.5-4 .5-6.3C16 2 13.5 2 12 3z">
+                                            </path>
+                                        </svg>Prevention</span></div>
+                                <h3><a href="blog-details.html?post=flossing-guide">Flossing Made Simple: Why and
+                                        How</a></h3>
+                                <p class="text-sm flex-1">Cleaning between teeth removes plaque that a brush cannot
+                                    reach.</p><a class="link-arrow mt-4 text-sm"
+                                    href="blog-details.html?post=flossing-guide">Read article<svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="card blog-card">
+                            <div class="media"><a aria-hidden="true" href="blog-details.html?post=sugar-and-teeth"
+                                    tabindex="-1"><img alt="" class="card-img" decoding="async" height="520"
+                                        loading="lazy"
+                                        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                                        width="800" /></a>
+                                <div class="date">2<small>Sep</small></div>
+                            </div>
+                            <div class="body">
+                                <div class="meta"><span><svg aria-hidden="true" class="icon" focusable="false"
+                                            viewbox="0 0 24 24">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>Dr. Daniel Okafor</span><span><svg aria-hidden="true" class="icon"
+                                            focusable="false" viewbox="0 0 24 24">
+                                            <path
+                                                d="M12 3c-1.5-1-4-1-5 1.2-1 2.3.2 4.2.5 6.3.3 2.3.5 6 1.5 9.5.3 1 1.7 1 2-.5.3-1.5.5-3 1-3s.7 1.5 1 3c.3 1.5 1.7 1.5 2 .5 1-3.5 1.2-7.2 1.5-9.5.3-2.1 1.5-4 .5-6.3C16 2 13.5 2 12 3z">
+                                            </path>
+                                        </svg>Nutrition</span></div>
+                                <h3><a href="blog-details.html?post=sugar-and-teeth">Sugar, Snacks and Your Teeth</a>
+                                </h3>
+                                <p class="text-sm flex-1">It is how often you have sugar, not just how much, that
+                                    affects your teeth.</p><a class="link-arrow mt-4 text-sm"
+                                    href="blog-details.html?post=sugar-and-teeth">Read article<svg aria-hidden="true"
+                                        class="icon" focusable="false" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-10"><a class="btn btn-outline" href="blog.html">Read more articles</a></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid gap-8 lg:grid-cols-5">
+                    <div class="lg:col-span-2 space-y-4 reveal"><span class="eyebrow">Find us</span>
+                        <h2 class="text-3xl md:text-4xl mb-4">Visit or contact the clinic</h2>
+                        <div class="card p-5 flex gap-4 items-start"><span class="icon-badge"><svg aria-hidden="true"
+                                    class="icon" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg></span>
+                            <div>
+                                <h3 class="text-base">Address</h3>
+                                <div class="text-sm mt-1">110 Lorance Road, Mount Waverley VIC 3149, Australia</div>
+                            </div>
+                        </div>
+                        <div class="card p-5 flex gap-4 items-start"><span class="icon-badge"><svg aria-hidden="true"
+                                    class="icon" focusable="false" viewbox="0 0 24 24">
+                                    <path
+                                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z">
+                                    </path>
+                                </svg></span>
+                            <div>
+                                <h3 class="text-base">Phone</h3>
+                                <div class="text-sm mt-1"><a class="text-brand font-semibold"
+                                        href="tel:+61355500148">+61 3 5550 0148</a></div>
+                            </div>
+                        </div>
+                        <div class="card p-5 flex gap-4 items-start"><span class="icon-badge"><svg aria-hidden="true"
+                                    class="icon" focusable="false" viewbox="0 0 24 24">
+                                    <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                                    <path d="m22 7-10 6L2 7"></path>
+                                </svg></span>
+                            <div>
+                                <h3 class="text-base">Email</h3>
+                                <div class="text-sm mt-1"><a class="text-brand font-semibold break-all"
+                                        href="mailto:hello@curemax-dental.example">hello@curemax-dental.example</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 reveal min-h-[22rem]"><iframe allowfullscreen="" class="map-frame"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=110+Lorance+Road,+Mount+Waverley+VIC+3149&amp;output=embed"
+                            title="Map showing the Curemax Dental clinic location"></iframe></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <a class="brand !text-white mb-4" href="index.html"><img alt="" class="h-9 w-auto" height="38"
+                        src="assets/icons/logo.svg" width="32" /><span>Curemax</span></a>
+                <p class="text-sm">Gentle, modern dental care for the whole family. Clear plans, honest advice and a
+                    team that takes time to explain.</p>
+                <div class="flex gap-2 mt-5"><a aria-label="Facebook (opens in a new tab)" class="social"
+                        href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><svg
+                            aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a><a aria-label="Instagram (opens in a new tab)" class="social"
+                        href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><svg
+                            aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                            <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M17.5 6.5h.01"></path>
+                        </svg></a><a aria-label="LinkedIn (opens in a new tab)" class="social"
+                        href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank"><svg
+                            aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect height="12" width="4" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a><a aria-label="YouTube (opens in a new tab)" class="social"
+                        href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank"><svg
+                            aria-hidden="true" class="icon" focusable="false" viewbox="0 0 24 24">
+                            <path
+                                d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49 49 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49 49 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                            </path>
+                            <path d="m10 15 5-3-5-3z"></path>
+                        </svg></a></div>
+            </div>
+            <div>
+                <h3>Quick links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About the Clinic</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Our services</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="service-details.html?service=cosmetic-dentistry">Cosmetic Dentistry</a></li>
+                    <li><a href="service-details.html?service=teeth-whitening">Teeth Whitening</a></li>
+                    <li><a href="service-details.html?service=dental-implants">Dental Implants</a></li>
+                    <li><a href="service-details.html?service=orthodontics">Orthodontics</a></li>
+                    <li><a href="service-details.html?service=root-canal">Root Canal Treatment</a></li>
+                    <li><a href="service-details.html?service=gum-treatment">Gum Treatment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact us</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex gap-3"><svg aria-hidden="true" class="icon mt-1" focusable="false"
+                            viewbox="0 0 24 24">
+                            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg><span>110 Lorance Road, Mount Waverley VIC 3149, Australia</span></li>
+                    <li class="flex gap-3"><svg aria-hidden="true" class="icon mt-1" focusable="false"
+                            viewbox="0 0 24 24">
+                            <path
+                                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z">
+                            </path>
+                        </svg><a href="tel:+61355500148">+61 3 5550 0148</a></li>
+                    <li class="flex gap-3"><svg aria-hidden="true" class="icon mt-1" focusable="false"
+                            viewbox="0 0 24 24">
+                            <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                            <path d="m22 7-10 6L2 7"></path>
+                        </svg><a class="break-all"
+                            href="mailto:hello@curemax-dental.example">hello@curemax-dental.example</a></li>
+                    <li class="flex gap-3"><svg aria-hidden="true" class="icon mt-1" focusable="false"
+                            viewbox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg><span>Mon–Fri 9am–6pm<br />Sat 9am–2pm, Sun closed</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="container py-5 flex flex-wrap items-center justify-between gap-2 text-sm">
+                <p>© <span data-year="">2026</span> Curemax Dental. Demo website with sample content.</p>
+                <p>Sample names, numbers and addresses are placeholders.</p>
+            </div>
+        </div>
+    </footer>
+    <button aria-label="Back to top" class="to-top" id="to-top" type="button"><svg aria-hidden="true" class="icon"
+            focusable="false" viewbox="0 0 24 24">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg></button>
+    <script defer="" src="js/validation.js"></script>
+    <script defer="" src="js/navigation.js"></script>
+    <script defer="" src="js/home-hero-slider.js"></script>
+    <script defer="" src="js/slider.js"></script>
+    <script defer="" src="js/appointment.js"></script>
+    <script defer="" src="js/gallery.js"></script>
+    <script defer="" src="js/main.js"></script>
+</body>
+
+</html>

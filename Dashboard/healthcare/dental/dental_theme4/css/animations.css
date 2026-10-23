@@ -1,0 +1,15 @@
+/* Curemax Dental – animations (all disabled for reduced-motion users) */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.is-visible{opacity:1;transform:none}
+@keyframes float-y{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float-card{animation:float-y 6s ease-in-out infinite}
+.float-card.delay{animation-delay:-3s}
+.service-card:hover .badge .icon,.icon-badge:hover .icon{animation:icon-pop .5s ease}
+@keyframes icon-pop{0%{transform:scale(1)}50%{transform:scale(1.22) rotate(-6deg)}100%{transform:scale(1)}}
+.social:hover .icon,.btn:hover .icon{animation:icon-pop .5s ease}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0ms!important}
+  .js .reveal{opacity:1;transform:none}
+  .service-card:hover,.doctor-card:hover,.blog-card:hover,.btn:hover{transform:none}
+}

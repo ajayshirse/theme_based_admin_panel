@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SmileCraft Orthodontics logo">
+  <rect width="64" height="64" rx="16" fill="#0d9488"/>
+  <path d="M16 26 Q16 16 26 16 Q32 16 32 22 Q32 16 38 16 Q48 16 48 26 Q48 38 42 48 Q40 52 37 48 Q34 42 32 42 Q30 42 27 48 Q24 52 22 48 Q16 38 16 26 Z" fill="#ffffff"/>
+  <path d="M20 28 H44" stroke="#0d9488" stroke-width="3" stroke-linecap="round"/>
+  <rect x="25" y="25" width="6" height="6" rx="1.5" fill="#0d9488"/>
+  <rect x="33" y="25" width="6" height="6" rx="1.5" fill="#0d9488"/>
+</svg>

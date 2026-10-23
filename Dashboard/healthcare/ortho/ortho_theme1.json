@@ -1,0 +1,833 @@
+{
+  "themeId": "ortho_theme1",
+  "label": "SmileCraft Orthodontics — Teal Single-Page Theme",
+  "industry": "healthcare",
+  "subIndustry": "ortho",
+  "type": "single-page",
+  "themeType": "teal-single-page",
+  "description": "A single-page orthodontic clinic theme with teal palette, treatment cards, doctor profiles, process steps, testimonials and a WhatsApp/email appointment request form.",
+  "previewUrl": "/healthcare/ortho/ortho_theme1/index.html",
+  "pages": [
+    {
+      "id": "single",
+      "label": "Single Page",
+      "description": "One-page layout: Hero, About, Treatments, Why Us, Doctors, Process, Testimonials, Appointment, Contact, Footer",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            {
+              "name": "brandName",
+              "label": "Brand Name — Part 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Smile"
+            },
+            {
+              "name": "brandSuffix",
+              "label": "Brand Name — Part 2 (colored)",
+              "type": "text",
+              "placeholder": "Craft"
+            },
+            {
+              "name": "logo",
+              "label": "Logo / Favicon",
+              "type": "image",
+              "hint": "assets/icons/logo.svg"
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Menu Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Home"
+            },
+            {
+              "name": "anchor",
+              "label": "Section Anchor",
+              "type": "text",
+              "required": true,
+              "placeholder": "#home"
+            }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "required": true,
+              "placeholder": "#appointment"
+            }
+          ]
+        },
+        {
+          "id": "heroSection",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Specialist orthodontic care for all ages"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Straighter teeth."
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (highlighted)",
+              "type": "text",
+              "placeholder": "A smile you'll love."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button Text",
+              "type": "text",
+              "placeholder": "Book Free Consultation"
+            },
+            {
+              "name": "primaryButtonLink",
+              "label": "Primary Button Link",
+              "type": "text",
+              "placeholder": "#appointment"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button Text",
+              "type": "text",
+              "placeholder": "Explore Treatments"
+            },
+            {
+              "name": "secondaryButtonLink",
+              "label": "Secondary Button Link",
+              "type": "text",
+              "placeholder": "#treatments"
+            },
+            {
+              "name": "heroImage",
+              "label": "Hero Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1200px wide"
+            }
+          ]
+        },
+        {
+          "id": "heroTrust",
+          "label": "Hero Trust Points",
+          "type": "list",
+          "min": 0,
+          "max": 4,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Digital smile planning"
+            }
+          ]
+        },
+        {
+          "id": "aboutSection",
+          "label": "About Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "About Us"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "An orthodontic clinic built around you"
+            },
+            {
+              "name": "paragraph1",
+              "label": "Paragraph 1",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "paragraph2",
+              "label": "Paragraph 2",
+              "type": "textarea",
+              "rows": 4
+            }
+          ]
+        },
+        {
+          "id": "aboutStats",
+          "label": "About Stats",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "number",
+              "label": "Number",
+              "type": "text",
+              "required": true,
+              "placeholder": "15+"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Years of experience"
+            }
+          ]
+        },
+        {
+          "id": "aboutImages",
+          "label": "About Photos",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "image",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "alt",
+              "label": "Alt Text",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "treatmentsSection",
+          "label": "Treatments Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Our Treatments"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Options for every smile and lifestyle"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "We will recommend the treatment that fits your teeth, your timeline and your budget."
+            }
+          ]
+        },
+        {
+          "id": "treatmentsList",
+          "label": "Treatment Cards",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Braces"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book this treatment"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseSection",
+          "label": "Why Choose Us Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Why Choose Us"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Care you can trust, comfort you'll notice"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseCards",
+          "label": "Why Choose Us Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Experienced Orthodontists"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsSection",
+          "label": "Doctors Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Our Doctors"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Meet your orthodontic specialists"
+            }
+          ]
+        },
+        {
+          "id": "doctorsList",
+          "label": "Doctors",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Aanya Mehta"
+            },
+            {
+              "name": "qualification",
+              "label": "Qualification",
+              "type": "text",
+              "placeholder": "BDS, MDS (Orthodontics)"
+            },
+            {
+              "name": "role",
+              "label": "Role / Experience",
+              "type": "text",
+              "placeholder": "Lead Orthodontist · 15 years experience"
+            },
+            {
+              "name": "bio",
+              "label": "Short Bio",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book a consultation"
+            }
+          ]
+        },
+        {
+          "id": "doctorsNote",
+          "label": "Doctors Photo Note",
+          "type": "single",
+          "fields": [
+            {
+              "name": "text",
+              "label": "Note",
+              "type": "text",
+              "placeholder": "Doctor photos are illustrative stock images."
+            }
+          ]
+        },
+        {
+          "id": "processSection",
+          "label": "Process Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Treatment Process"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Your journey to a new smile"
+            }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps",
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Consultation"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "testimonialsSection",
+          "label": "Testimonials Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Testimonials"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "What our patients say"
+            }
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "stars",
+              "label": "Stars (1-5)",
+              "type": "number",
+              "placeholder": "5"
+            },
+            {
+              "name": "quote",
+              "label": "Review Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Priya S."
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "placeholder": "Braces patient"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "id": "appointmentSection",
+          "label": "Appointment Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Appointment"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Request your consultation"
+            },
+            {
+              "name": "intro",
+              "label": "Intro Text",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "noteTitle",
+              "label": "Info Note Title",
+              "type": "text",
+              "placeholder": "Please note"
+            },
+            {
+              "name": "noteText",
+              "label": "Info Note Text",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "sendWhatsappText",
+              "label": "WhatsApp Button Text",
+              "type": "text",
+              "placeholder": "Send via WhatsApp"
+            },
+            {
+              "name": "sendEmailText",
+              "label": "Email Button Text",
+              "type": "text",
+              "placeholder": "Send via Email"
+            },
+            {
+              "name": "helperText",
+              "label": "Helper Text",
+              "type": "text",
+              "placeholder": "Choose one option to open a pre-filled message."
+            }
+          ]
+        },
+        {
+          "id": "appointmentPoints",
+          "label": "Appointment Assurance Points",
+          "type": "list",
+          "min": 0,
+          "max": 5,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Point",
+              "type": "text",
+              "required": true,
+              "placeholder": "No obligation. Your first consultation is a conversation."
+            }
+          ]
+        },
+        {
+          "id": "treatmentOptions",
+          "label": "Treatment Dropdown Options",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Braces"
+            }
+          ]
+        },
+        {
+          "id": "timeOptions",
+          "label": "Preferred Time Options",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Morning (9 AM - 12 PM)"
+            }
+          ]
+        },
+        {
+          "id": "siteSettings",
+          "label": "Booking Settings",
+          "type": "single",
+          "fields": [
+            {
+              "name": "whatsappNumber",
+              "label": "WhatsApp Number (digits only, with country code)",
+              "type": "text",
+              "required": true,
+              "placeholder": "919665781350",
+              "hint": "Used when the visitor chooses 'Send via WhatsApp' (CONFIG in js/script.js)"
+            },
+            {
+              "name": "bookingEmail",
+              "label": "Booking Email",
+              "type": "email",
+              "placeholder": "bookings@yourclinic.com",
+              "hint": "Leave empty to disable email booking"
+            }
+          ]
+        },
+        {
+          "id": "contactSection",
+          "label": "Contact Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Visit or get in touch"
+            },
+            {
+              "name": "addressLine1",
+              "label": "Address Line 1",
+              "type": "text",
+              "placeholder": "123 Smile Avenue, Suite 4"
+            },
+            {
+              "name": "addressLine2",
+              "label": "Address Line 2",
+              "type": "text",
+              "placeholder": "Your City, State 000000"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true,
+              "placeholder": "+91 9665781350"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@smilecraft.example"
+            }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours",
+          "type": "list",
+          "min": 1,
+          "max": 7,
+          "fields": [
+            {
+              "name": "day",
+              "label": "Day",
+              "type": "text",
+              "required": true,
+              "placeholder": "Monday - Friday"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "required": true,
+              "placeholder": "9:00 AM - 6:00 PM"
+            }
+          ]
+        },
+        {
+          "id": "footerAbout",
+          "label": "Footer About",
+          "type": "single",
+          "fields": [
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "quickLinksTitle",
+              "label": "Quick Links Heading",
+              "type": "text",
+              "placeholder": "Quick Links"
+            },
+            {
+              "name": "clinicDetailsTitle",
+              "label": "Clinic Details Heading",
+              "type": "text",
+              "placeholder": "Clinic Details"
+            },
+            {
+              "name": "clinicAddress",
+              "label": "Clinic Address",
+              "type": "text",
+              "placeholder": "123 Smile Avenue, Suite 4, Your City"
+            },
+            {
+              "name": "clinicHours",
+              "label": "Clinic Hours Line",
+              "type": "text",
+              "placeholder": "Mon - Fri 9 AM - 6 PM, Sat 9 AM - 2 PM"
+            }
+          ]
+        },
+        {
+          "id": "footerLinks",
+          "label": "Footer Quick Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "About"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "#about"
+            }
+          ]
+        },
+        {
+          "id": "footerSocials",
+          "label": "Social Links",
+          "type": "list",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "platform",
+              "label": "Platform",
+              "type": "text",
+              "required": true,
+              "placeholder": "Facebook"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "url"
+            }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom",
+          "type": "single",
+          "fields": [
+            {
+              "name": "copyright",
+              "label": "Copyright Text",
+              "type": "text",
+              "placeholder": "SmileCraft Orthodontics. All rights reserved.",
+              "hint": "Year is added automatically"
+            },
+            {
+              "name": "disclaimer",
+              "label": "Photo Disclaimer",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global": {
+    "colors": {
+      "brand50": "#f0fdfa",
+      "brand100": "#ccfbf1",
+      "brand300": "#5eead4",
+      "brand500": "#14b8a6",
+      "brand600": "#0d9488",
+      "brand700": "#0f766e",
+      "brand900": "#134e4a"
+    },
+    "fonts": {
+      "display": "Poppins",
+      "body": "Inter"
+    }
+  }
+}

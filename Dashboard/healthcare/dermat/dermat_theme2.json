@@ -1,0 +1,834 @@
+{
+  "themeId": "dermat_theme2",
+  "label": "Derma Luxe — Premium Dermatology Theme",
+  "industry": "healthcare",
+  "subIndustry": "dermat",
+  "type": "multi-page",
+  "themeType": "premium-clinical",
+  "description": "A premium dermatology clinic theme with Marcellus typography, navy + gold palette, full-screen hero carousel with side controls, editorial layout, and five-star luxury feel.",
+  "previewUrl": "/healthcare/dermat/dermat_theme2/index.html",
+
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "3-slide hero carousel, intro section, treatments grid, experience timeline, testimonial, CTA.",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            { "name": "logoMark", "label": "Logo Mark (letter)", "type": "text", "required": true, "placeholder": "D" },
+            { "name": "brandName", "label": "Brand Name", "type": "text", "required": true, "placeholder": "Derma" },
+            { "name": "brandSuffix", "label": "Brand Suffix (italic)", "type": "text", "placeholder": "Luxe" }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "label", "label": "Menu Label", "type": "text", "required": true, "placeholder": "Home" },
+            { "name": "url", "label": "Menu URL", "type": "text", "required": true, "placeholder": "index.html" }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Actions",
+          "type": "single",
+          "fields": [
+            { "name": "phoneIconEnabled", "label": "Show Phone Icon", "type": "boolean" },
+            { "name": "buttonText", "label": "CTA Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "buttonLink", "label": "CTA Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "heroCarousel",
+          "label": "Hero Carousel (3 slides)",
+          "type": "carousel",
+          "min": 1,
+          "max": 5,
+          "fields": [
+            { "name": "backgroundImage", "label": "Background Image", "type": "image", "required": true, "hint": "Recommended 2000px wide, dark luxury image" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "required": true, "placeholder": "Advanced Dermatology · Mumbai" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Clinical excellence, <em>quietly delivered</em>." },
+            { "name": "text", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Explore Treatments" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "heroExtras",
+          "label": "Hero Extras",
+          "type": "single",
+          "fields": [
+            { "name": "sideLabel", "label": "Vertical Side Label", "type": "text", "placeholder": "Derma Luxe · Since 2014" },
+            { "name": "infoCardLabel", "label": "Info Card Label", "type": "text", "placeholder": "Signature Program" },
+            { "name": "infoCardTitle", "label": "Info Card Title (HTML: <em>)", "type": "text", "placeholder": "The Derma Luxe <em>Full Glow</em>" },
+            { "name": "infoCardDescription", "label": "Info Card Description", "type": "textarea", "rows": 3 },
+            { "name": "infoCardItems", "label": "Info Card Checklist Items (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "marqueeItems", "label": "Marquee Items (one per line)", "type": "list", "required": true, "rows": 10 }
+          ]
+        },
+        {
+          "id": "intro",
+          "label": "Intro Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "The Derma Luxe Standard" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Where dermatology meets <em>quiet luxury</em>." },
+            { "name": "lead", "label": "Lead Quote", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "paragraphs", "label": "Paragraphs (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "image", "label": "Main Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "10+" },
+            { "name": "badgeLabel", "label": "Badge Label", "type": "text", "placeholder": "Years of Clinical Excellence" },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Read Our Full Story" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "about.html" }
+          ]
+        },
+        {
+          "id": "introStats",
+          "label": "Intro Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "10" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label (HTML: <br>)", "type": "text", "required": true, "placeholder": "Years of<br>Clinical Practice" }
+          ]
+        },
+        {
+          "id": "treatmentsSection",
+          "label": "Treatments Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Treatments" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Advanced dermatology, <em>quietly delivered</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "treatmentsCards",
+          "label": "Treatments Cards",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "number", "label": "Roman Numeral", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Laser Skin Resurfacing" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Discover" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "experienceSection",
+          "label": "Experience Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "The Derma Luxe Experience" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Four quiet steps, <em>carefully taken</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "experienceSteps",
+          "label": "Experience Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Consultation" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "testimonial",
+          "label": "Featured Testimonial",
+          "type": "single",
+          "fields": [
+            { "name": "portraitImage", "label": "Portrait Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Patient Story" },
+            { "name": "starsCount", "label": "Stars Count (1-5)", "type": "number", "placeholder": "5" },
+            { "name": "quote", "label": "Quote (HTML: <em>)", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "authorName", "label": "Author Name", "type": "text", "required": true, "placeholder": "Ananya Kapoor" },
+            { "name": "authorTitle", "label": "Author Title", "type": "text", "placeholder": "Patient since 2021" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "CTA Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Begin" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's design the skin <em>you deserve</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Our Results" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "gallery.html" }
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "type": "single",
+          "fields": [
+            { "name": "description", "label": "Footer Description", "type": "textarea", "rows": 3 },
+            { "name": "newsletterTitle", "label": "Newsletter Heading", "type": "text", "placeholder": "Newsletter" },
+            { "name": "newsletterText", "label": "Newsletter Description", "type": "textarea", "rows": 2 },
+            { "name": "newsletterPlaceholder", "label": "Newsletter Input Placeholder", "type": "text", "placeholder": "your@email.com" }
+          ]
+        },
+        {
+          "id": "footerColumns",
+          "label": "Footer Link Columns",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            { "name": "heading", "label": "Column Heading", "type": "text", "required": true, "placeholder": "Studio" },
+            { "name": "links", "label": "Links (Label | URL per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: About | about.html" }
+          ]
+        },
+        {
+          "id": "socials",
+          "label": "Social Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "platform", "label": "Platform Name (for aria-label)", "type": "text", "required": true, "placeholder": "Instagram" },
+            { "name": "icon", "label": "FontAwesome Icon Class", "type": "text", "required": true, "placeholder": "fa-brands fa-instagram" },
+            { "name": "url", "label": "URL", "type": "text", "required": true, "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom Bar",
+          "type": "single",
+          "fields": [
+            { "name": "copyright", "label": "Copyright Text", "type": "text", "placeholder": "© 2026 Derma Luxe. All rights reserved." },
+            { "name": "tagline", "label": "Tagline Text", "type": "text", "placeholder": "Clinical excellence, quietly delivered" },
+            { "name": "privacyText", "label": "Privacy Link Text", "type": "text", "placeholder": "Privacy" },
+            { "name": "privacyUrl", "label": "Privacy Link URL", "type": "text", "placeholder": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "Page hero with layered visual, story section with signature, values grid, team grid, quote strip, CTA.",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Hero Background Image", "type": "image", "required": true },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "About" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "Our Story · Since 2014" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "The art behind <em>clinical excellence</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "10" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Years of Practice" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "10+" },
+            { "name": "badgeLabel", "label": "Badge Label (HTML: <br>)", "type": "text", "placeholder": "Years of<br>Clinical Excellence" }
+          ]
+        },
+        {
+          "id": "storySection",
+          "label": "Story Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How It Started" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "A studio built on <em>clinical rigour</em>, delivered with calm." },
+            { "name": "lead", "label": "Lead Quote", "type": "textarea", "required": true, "rows": 2 },
+            { "name": "paragraphs", "label": "Paragraphs (one per line)", "type": "list", "required": true, "rows": 10 },
+            { "name": "mainImage", "label": "Story Main Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number (Year)", "type": "text", "placeholder": "2014" },
+            { "name": "badgeLabel", "label": "Badge Label (HTML: <br>)", "type": "text", "placeholder": "The Year<br>We Began" },
+            { "name": "signatureImage", "label": "Signature Founder Image", "type": "image" },
+            { "name": "signatureName", "label": "Signature Name", "type": "text", "placeholder": "Dr. Aarav Mehta" },
+            { "name": "signatureTitle", "label": "Signature Title", "type": "text", "placeholder": "Founder & Lead Dermatologist" }
+          ]
+        },
+        {
+          "id": "valuesSection",
+          "label": "Values Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "What We Believe" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Four principles that shape <em>every decision</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "valuesCards",
+          "label": "Values Cards",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Roman Numeral", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-user-doctor" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Expertise First" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "teamSection",
+          "label": "Team Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "The Team" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "The dermatologists <em>you'll actually meet</em>." },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Come Say Hello" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "teamMembers",
+          "label": "Team Members",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "photo", "label": "Photo", "type": "image", "required": true },
+            { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "Dr. Aarav Mehta" },
+            { "name": "role", "label": "Role", "type": "text", "required": true, "placeholder": "Founder · Lead Dermatologist" },
+            { "name": "instagram", "label": "Instagram URL", "type": "text", "placeholder": "#" },
+            { "name": "linkedin", "label": "LinkedIn URL", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "quoteSection",
+          "label": "Quote Strip",
+          "type": "single",
+          "fields": [
+            { "name": "quote", "label": "Quote (HTML: <em>)", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "author", "label": "Author", "type": "text", "required": true, "placeholder": "Dr. Aarav Mehta, Founder" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "CTA Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Visit Us" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Come meet the team <em>in person</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Treatments" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Treatments",
+      "description": "Page hero, sticky quick nav, six service detail sections, process, FAQ, CTA.",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Hero Background Image", "type": "image", "required": true },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "Treatments" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "Signature Treatments" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Advanced dermatology, <em>quietly delivered</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "06" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Core Treatments" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "06" },
+            { "name": "badgeLabel", "label": "Badge Label (HTML: <br>)", "type": "text", "placeholder": "Signature<br>Treatments" }
+          ]
+        },
+        {
+          "id": "quickNav",
+          "label": "Quick Nav Links",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-wand-magic-sparkles" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Laser Resurfacing" },
+            { "name": "anchor", "label": "Anchor ID", "type": "text", "required": true, "placeholder": "laser" }
+          ]
+        },
+        {
+          "id": "serviceSections",
+          "label": "Service Detail Sections",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "anchorId", "label": "Anchor ID", "type": "text", "required": true, "placeholder": "laser" },
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "required": true, "placeholder": "Laser Skin Resurfacing" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Visible results, <em>minimal downtime</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "reverseLayout", "label": "Reverse Layout", "type": "boolean" },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "metaOneLabel", "label": "Meta 1 Label", "type": "text", "placeholder": "Sessions" },
+            { "name": "metaOneValue", "label": "Meta 1 Value", "type": "text", "placeholder": "3–5 sessions" },
+            { "name": "metaTwoLabel", "label": "Meta 2 Label", "type": "text", "placeholder": "Downtime" },
+            { "name": "metaTwoValue", "label": "Meta 2 Value", "type": "text", "placeholder": "1–2 days" },
+            { "name": "metaThreeLabel", "label": "Meta 3 Label", "type": "text", "placeholder": "Suitable For" },
+            { "name": "metaThreeValue", "label": "Meta 3 Value", "type": "text", "placeholder": "Most skin types" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Book Laser Consultation" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "processHead",
+          "label": "Process Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How It Works" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Your journey, <em>step by step</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Consultation" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "faqSection",
+          "label": "FAQ Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Common Questions" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Things patients <em>often ask</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Ask Us Anything" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "faqItems",
+          "label": "FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "CTA Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Ready to Begin?" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's find the right treatment <em>for your skin</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Our Results" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "gallery.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Results",
+      "description": "Page hero, filter pills, bento gallery grid with lightbox, featured case study, stats band, CTA.",
+      "file": "gallery.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Hero Background Image", "type": "image", "required": true },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "Results" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "Real Patients · Real Results" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Clinical outcomes, <em>quietly achieved</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "3k" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Patients Treated" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "3k+" },
+            { "name": "badgeLabel", "label": "Badge Label (HTML: <br>)", "type": "text", "placeholder": "Transformations<br>Completed" }
+          ]
+        },
+        {
+          "id": "gallerySection",
+          "label": "Gallery Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Selected Work" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Every result was <em>designed, not templated</em>." }
+          ]
+        },
+        {
+          "id": "galleryFilters",
+          "label": "Gallery Filter Categories",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-border-all" },
+            { "name": "label", "label": "Filter Label", "type": "text", "required": true, "placeholder": "All Cases" },
+            { "name": "value", "label": "Filter Value (slug)", "type": "text", "required": true, "placeholder": "all" }
+          ]
+        },
+        {
+          "id": "galleryTiles",
+          "label": "Gallery Tiles",
+          "type": "list",
+          "min": 1,
+          "max": 30,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "category", "label": "Category (filter slug)", "type": "text", "required": true, "placeholder": "laser" },
+            { "name": "categoryLabel", "label": "Category Label", "type": "text", "required": true, "placeholder": "Laser" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Full Facial Resurfacing" },
+            { "name": "description", "label": "Description", "type": "text", "placeholder": "4 sessions · 8 weeks · full-face rejuvenation" },
+            { "name": "size", "label": "Tile Size", "type": "select", "options": ["tile-lg", "tile-md", "tile-sm", "tile-wide"], "required": true }
+          ]
+        },
+        {
+          "id": "featureCase",
+          "label": "Featured Case Study",
+          "type": "single",
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "badgeText", "label": "Badge Text", "type": "text", "placeholder": "Featured Case" },
+            { "name": "resultNumber", "label": "Result Number", "type": "text", "placeholder": "4" },
+            { "name": "resultLabel", "label": "Result Label", "type": "text", "placeholder": "Sessions" },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Case Study" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "A full facial <em>rejuvenation</em> in four sessions." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "metaOneLabel", "label": "Meta 1 Label", "type": "text", "placeholder": "Sessions" },
+            { "name": "metaOneValue", "label": "Meta 1 Value", "type": "text", "placeholder": "4 sessions" },
+            { "name": "metaTwoLabel", "label": "Meta 2 Label", "type": "text", "placeholder": "Duration" },
+            { "name": "metaTwoValue", "label": "Meta 2 Value", "type": "text", "placeholder": "8 weeks" },
+            { "name": "metaThreeLabel", "label": "Meta 3 Label", "type": "text", "placeholder": "Downtime" },
+            { "name": "metaThreeValue", "label": "Meta 3 Value", "type": "text", "placeholder": "Minimal" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Discuss a Similar Case" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "statsBand",
+          "label": "Stats Band",
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "fields": [
+            { "name": "target", "label": "Counter Target", "type": "number", "required": true, "placeholder": "3000" },
+            { "name": "suffix", "label": "Suffix", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Patients Treated" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "CTA Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Your Turn" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's design <em>your results</em> next." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Treatments" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Page hero, quick contact cards, main contact form with side details, map, FAQ, CTA.",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Hero Background Image", "type": "image", "required": true },
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "Contact" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "We Reply Within 24 Hours" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's start with a <em>considered conversation</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "24" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "h" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Response Time" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "24h" },
+            { "name": "badgeLabel", "label": "Badge Label (HTML: <br>)", "type": "text", "placeholder": "Personal<br>Replies" }
+          ]
+        },
+        {
+          "id": "quickContactCards",
+          "label": "Quick Contact Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-phone" },
+            { "name": "title", "label": "Card Title", "type": "text", "required": true, "placeholder": "Call the Clinic" },
+            { "name": "textLine1", "label": "Text Line 1", "type": "text", "placeholder": "Mon – Sat, 9am – 7pm" },
+            { "name": "textLine2", "label": "Text Line 2", "type": "text", "placeholder": "Speak to our front desk directly" },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "contactHead",
+          "label": "Contact Form Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Send a Message" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Tell us what <em>you have in mind</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "contactForm",
+          "label": "Contact Form",
+          "type": "single",
+          "fields": [
+            { "name": "formTitle", "label": "Form Title", "type": "text", "placeholder": "Send an Enquiry" },
+            { "name": "formSubtitle", "label": "Form Subtitle", "type": "text", "placeholder": "All fields are required. Your information stays private." },
+            { "name": "namePlaceholder", "label": "Name Placeholder", "type": "text", "placeholder": "Your name" },
+            { "name": "phonePlaceholder", "label": "Phone Placeholder", "type": "text", "placeholder": "+91 98765 43210" },
+            { "name": "emailPlaceholder", "label": "Email Placeholder", "type": "text", "placeholder": "your@email.com" },
+            { "name": "subjectLabel", "label": "Subject Label", "type": "text", "placeholder": "I'm enquiring about" },
+            { "name": "subjectOptions", "label": "Subject Options (Label | Value per line)", "type": "list", "rows": 10 },
+            { "name": "messagePlaceholder", "label": "Message Placeholder", "type": "textarea", "rows": 2 },
+            { "name": "submitButtonText", "label": "Submit Button Text", "type": "text", "placeholder": "Send Message" },
+            { "name": "formNote", "label": "Note Below Form", "type": "text", "placeholder": "Your details are kept strictly private." }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Opening Hours" },
+            { "name": "hours", "label": "Hours (Label | Value per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: Monday – Friday | 9:00 – 19:00" }
+          ]
+        },
+        {
+          "id": "clinicDetails",
+          "label": "Clinic Details Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Clinic Details" },
+            { "name": "address", "label": "Address", "type": "textarea", "rows": 2 },
+            { "name": "phone", "label": "Phone", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "whatsapp", "label": "WhatsApp", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "email", "label": "Email", "type": "email", "placeholder": "hello@dermaluxe.com" }
+          ]
+        },
+        {
+          "id": "socialsBlock",
+          "label": "Follow Along Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Follow Along" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 },
+            { "name": "socials", "label": "Socials (Platform | Icon Class | URL per line)", "type": "list", "rows": 6 }
+          ]
+        },
+        {
+          "id": "emergency",
+          "label": "Emergency Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Title", "type": "text", "placeholder": "Skin Emergency?" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Call Now" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "mapSection",
+          "label": "Map Section",
+          "type": "single",
+          "fields": [
+            { "name": "mapEmbedUrl", "label": "Google Maps Embed URL", "type": "text", "required": true },
+            { "name": "eyebrow", "label": "Overlay Eyebrow", "type": "text", "placeholder": "The Clinic" },
+            { "name": "cardTitle", "label": "Overlay Card Title", "type": "text", "placeholder": "Find Us Here" },
+            { "name": "cardAddress", "label": "Overlay Card Address", "type": "textarea", "rows": 2 },
+            { "name": "directionsText", "label": "Directions Link Text", "type": "text", "placeholder": "Get Directions" },
+            { "name": "directionsUrl", "label": "Directions URL", "type": "text", "placeholder": "https://maps.google.com" }
+          ]
+        },
+        {
+          "id": "faqSection",
+          "label": "FAQ Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Before Your Visit" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Common questions, <em>answered clearly</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Call the Clinic" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "faqItems",
+          "label": "FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "CTA Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "We're Here" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Prefer to <em>talk it through</em> first?" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Call +91 12345 67890" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "tel:+911234567890" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Treatments" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "global": {
+    "colors": {
+      "navy": "#0A1F44",
+      "navyDeep": "#05122B",
+      "navySoft": "#142B52",
+      "gold": "#C9A961",
+      "goldSoft": "#E3CE9A",
+      "goldDeep": "#A8894A",
+      "ivory": "#F7F3EC",
+      "paper": "#FCFAF5",
+      "cream": "#F1EAD9",
+      "ink": "#0A1F44",
+      "muted": "#6B7690"
+    },
+    "fonts": {
+      "display": "Marcellus",
+      "body": "Manrope"
+    }
+  }
+}

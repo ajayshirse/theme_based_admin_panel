@@ -1,0 +1,2214 @@
+{
+  "themeId": "dental_theme4",
+  "label": "Curemax Dental — Clean Blue Clinic Theme",
+  "industry": "healthcare",
+  "subIndustry": "dental",
+  "type": "multi-page",
+  "themeType": "clean-blue-clinic",
+  "description": "A clean, trustworthy blue dental clinic theme with a hero slider, 8-service directory with detail pages, doctor profiles, filterable gallery with lightbox, blog, validated appointment form and local fonts and SVG illustrations (works offline).",
+  "previewUrl": "/healthcare/dental/dental_theme4/index.html",
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Header, hero slider, about, services, why choose us, doctors, gallery, testimonials, blog, find us and footer",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "topBar",
+          "label": "Top Bar",
+          "type": "single",
+          "fields": [
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@curemax-dental.example"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "placeholder": "Mon–Fri 9am–6pm, Sat 9am–2pm"
+            }
+          ]
+        },
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            {
+              "name": "brandName",
+              "label": "Brand Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Curemax"
+            },
+            {
+              "name": "brandTagline",
+              "label": "Tagline",
+              "type": "text",
+              "placeholder": "Dental Clinic"
+            },
+            {
+              "name": "logo",
+              "label": "Logo",
+              "type": "image",
+              "hint": "assets/icons/logo.svg"
+            },
+            {
+              "name": "favicon",
+              "label": "Favicon",
+              "type": "image",
+              "hint": "assets/icons/favicon.svg"
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Menu Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Home"
+            },
+            {
+              "name": "url",
+              "label": "Menu URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "index.html"
+            }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "required": true,
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "heroSlides",
+          "label": "Hero Slider",
+          "type": "list",
+          "min": 1,
+          "max": 5,
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Gentle, modern dental care"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title — Line 1",
+              "type": "text",
+              "required": true,
+              "placeholder": "Healthy teeth."
+            },
+            {
+              "name": "titleLine2",
+              "label": "Title — Line 2 (highlighted)",
+              "type": "text",
+              "placeholder": "A smile you love."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "primaryButtonLink",
+              "label": "Primary Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button Text",
+              "type": "text",
+              "placeholder": "Explore Services"
+            },
+            {
+              "name": "secondaryButtonLink",
+              "label": "Secondary Button Link",
+              "type": "text",
+              "placeholder": "services.html"
+            },
+            {
+              "name": "image",
+              "label": "Slide Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1200px wide"
+            },
+            {
+              "name": "badgeTitle",
+              "label": "Floating Badge Title",
+              "type": "text",
+              "placeholder": "Comfort-first dentistry"
+            },
+            {
+              "name": "badgeText",
+              "label": "Floating Badge Text",
+              "type": "text",
+              "placeholder": "Advanced technology · Personal care"
+            }
+          ]
+        },
+        {
+          "id": "aboutSection",
+          "label": "Welcome / About Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Who we are"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Welcome to Curemax Dental"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "About the clinic"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "about.html"
+            },
+            {
+              "name": "callLabel",
+              "label": "Call Label",
+              "type": "text",
+              "placeholder": "Call us"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        },
+        {
+          "id": "aboutChecklist",
+          "label": "About Checklist",
+          "type": "list",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Experienced, award-winning dental team"
+            }
+          ]
+        },
+        {
+          "id": "servicesSection",
+          "label": "Services Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "What we do"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our dental services"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "servicesList",
+          "label": "Services Cards",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cosmetic Dentistry"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "service-details.html"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseSection",
+          "label": "Why Choose Us Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Why choose us"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Changing lives through exceptional dental care"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseCards",
+          "label": "Why Choose Us Cards",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Modern technology"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "whyChooseImage",
+          "label": "Why Choose Us Image",
+          "type": "single",
+          "fields": [
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Row",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            {
+              "name": "number",
+              "label": "Number",
+              "type": "text",
+              "required": true,
+              "placeholder": "20+"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Years of experience"
+            }
+          ]
+        },
+        {
+          "id": "doctorsSection",
+          "label": "Doctors Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Meet the team"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our featured doctors"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsList",
+          "label": "Featured Doctors",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Aarav Mehta"
+            },
+            {
+              "name": "role",
+              "label": "Role / Designation",
+              "type": "text",
+              "required": true,
+              "placeholder": "Founder and Implant Dentist"
+            },
+            {
+              "name": "qualification",
+              "label": "Qualification",
+              "type": "text",
+              "placeholder": "BDS, MDS (Prosthodontics)"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 600×750 portrait"
+            },
+            {
+              "name": "link",
+              "label": "Profile Link",
+              "type": "text",
+              "placeholder": "doctor-details.html"
+            }
+          ]
+        },
+        {
+          "id": "appointmentCta",
+          "label": "Appointment CTA",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Book your visit in under a minute"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            },
+            {
+              "name": "image",
+              "label": "Background Image",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "id": "gallerySection",
+          "label": "Gallery Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Take a look inside"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our clinic and facilities"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "galleryPreview",
+          "label": "Gallery Preview Photos",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "image",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "caption",
+              "label": "Caption",
+              "type": "text",
+              "required": true,
+              "placeholder": "Bright, welcoming reception"
+            }
+          ]
+        },
+        {
+          "id": "testimonialsSection",
+          "label": "Testimonials Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Patient stories"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "What our patients say"
+            }
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "quote",
+              "label": "Review Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "name",
+              "label": "Patient Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Marcus Reid"
+            },
+            {
+              "name": "treatment",
+              "label": "Treatment / Label",
+              "type": "text",
+              "placeholder": "Dental implant patient"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "id": "blogSection",
+          "label": "Blog Section Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Latest articles"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dental health blog"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "findUsSection",
+          "label": "Find Us Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Find us"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Visit or contact the clinic"
+            }
+          ]
+        },
+        {
+          "id": "footerAbout",
+          "label": "Footer About",
+          "type": "single",
+          "fields": [
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Gentle, modern dental care for the whole family."
+            }
+          ]
+        },
+        {
+          "id": "footerLinks",
+          "label": "Footer Quick Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "About the Clinic"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "about.html"
+            }
+          ]
+        },
+        {
+          "id": "footerServices",
+          "label": "Footer Services Links",
+          "type": "list",
+          "min": 0,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Teeth Whitening"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "text",
+              "placeholder": "service-details.html"
+            }
+          ]
+        },
+        {
+          "id": "contactDetails",
+          "label": "Contact Details (header, footer, contact page)",
+          "type": "single",
+          "fields": [
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "textarea",
+              "required": true,
+              "rows": 2,
+              "placeholder": "110 Lorance Road, Mount Waverley VIC 3149, Australia"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true,
+              "placeholder": "+61 3 5550 0148"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@curemax-dental.example"
+            },
+            {
+              "name": "hoursWeekday",
+              "label": "Hours — Weekdays",
+              "type": "text",
+              "placeholder": "Mon–Fri 9am–6pm"
+            },
+            {
+              "name": "hoursSaturday",
+              "label": "Hours — Saturday",
+              "type": "text",
+              "placeholder": "Sat 9am–2pm"
+            },
+            {
+              "name": "hoursSunday",
+              "label": "Hours — Sunday",
+              "type": "text",
+              "placeholder": "Sun closed"
+            }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom",
+          "type": "single",
+          "fields": [
+            {
+              "name": "copyright",
+              "label": "Copyright Text",
+              "type": "text",
+              "placeholder": "Curemax Dental. Demo website with sample content."
+            },
+            {
+              "name": "disclaimer",
+              "label": "Disclaimer",
+              "type": "text",
+              "placeholder": "Sample names, numbers and addresses are placeholders."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "Story, values, stats, milestones and doctors",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "About the Clinic"
+            }
+          ]
+        },
+        {
+          "id": "storySection",
+          "label": "Our Story",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Our story"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "A dental clinic built around people"
+            },
+            {
+              "name": "paragraph1",
+              "label": "Paragraph 1",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "paragraph2",
+              "label": "Paragraph 2",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            }
+          ]
+        },
+        {
+          "id": "valuesSection",
+          "label": "Values Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "What guides us"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our values"
+            }
+          ]
+        },
+        {
+          "id": "values",
+          "label": "Values",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Care first"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Row",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            {
+              "name": "number",
+              "label": "Number",
+              "type": "text",
+              "required": true,
+              "placeholder": "20+"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Years of experience"
+            }
+          ]
+        },
+        {
+          "id": "milestonesSection",
+          "label": "Milestones Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Milestones"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "How we have grown"
+            }
+          ]
+        },
+        {
+          "id": "milestones",
+          "label": "Milestones",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "year",
+              "label": "Year",
+              "type": "text",
+              "required": true,
+              "placeholder": "2008"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clinic opens"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "specialistsSection",
+          "label": "Specialists Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Our specialists"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Meet the doctors"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready for a healthier smile?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Book a check-up with a friendly, experienced team. New patients are always welcome."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "description": "Service directory and first-visit steps",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dental Services"
+            }
+          ]
+        },
+        {
+          "id": "servicesIntro",
+          "label": "Services Intro",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "What we do"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Complete dental care under one roof"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "servicesList",
+          "label": "Services",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cosmetic Dentistry"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "service-details.html"
+            }
+          ]
+        },
+        {
+          "id": "processSection",
+          "label": "Process Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "How it works"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Your first visit in four steps"
+            }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps",
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Request a time online or by phone."
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Not sure which treatment you need?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "service-details",
+      "label": "Service Details",
+      "description": "Detailed content for each service",
+      "file": "service-details.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Service Details"
+            }
+          ]
+        },
+        {
+          "id": "serviceDetails",
+          "label": "Service Detail Blocks (one per service)",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "URL Slug",
+              "type": "text",
+              "required": true,
+              "placeholder": "cosmetic-dentistry",
+              "hint": "Lowercase, hyphens only"
+            },
+            {
+              "name": "title",
+              "label": "Service Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Cosmetic Dentistry"
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "overview",
+              "label": "Overview (one paragraph per line)",
+              "type": "list",
+              "required": true,
+              "rows": 4
+            },
+            {
+              "name": "duration",
+              "label": "Typical Treatment Time",
+              "type": "text",
+              "placeholder": "1–3 visits"
+            },
+            {
+              "name": "benefits",
+              "label": "Benefits (one per line)",
+              "type": "list",
+              "rows": 5
+            },
+            {
+              "name": "steps",
+              "label": "Steps (Title | Description per line)",
+              "type": "list",
+              "rows": 6,
+              "hint": "Format: Smile consultation | We talk through what you would like to change"
+            },
+            {
+              "name": "buttonText",
+              "label": "Book Button Text",
+              "type": "text",
+              "placeholder": "Book Cosmetic Dentistry"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready for a healthier smile?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctors",
+      "label": "Doctors",
+      "description": "Doctor directory",
+      "file": "doctors.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our Doctors"
+            }
+          ]
+        },
+        {
+          "id": "doctorsIntro",
+          "label": "Doctors Intro",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Meet the team"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Experienced, caring specialists"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsList",
+          "label": "Doctors",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Aarav Mehta"
+            },
+            {
+              "name": "role",
+              "label": "Role / Designation",
+              "type": "text",
+              "required": true,
+              "placeholder": "Founder and Implant Dentist"
+            },
+            {
+              "name": "qualification",
+              "label": "Qualification",
+              "type": "text",
+              "placeholder": "BDS, MDS (Prosthodontics)"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 600×750 portrait"
+            },
+            {
+              "name": "link",
+              "label": "Profile Link",
+              "type": "text",
+              "placeholder": "doctor-details.html"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Choose the dentist who is right for you"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctor-details",
+      "label": "Doctor Details",
+      "description": "Doctor profile content",
+      "file": "doctor-details.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Doctor Profile"
+            }
+          ]
+        },
+        {
+          "id": "doctorProfiles",
+          "label": "Doctor Profiles (one per doctor)",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "URL Slug",
+              "type": "text",
+              "required": true,
+              "placeholder": "aarav-mehta"
+            },
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Aarav Mehta"
+            },
+            {
+              "name": "role",
+              "label": "Role",
+              "type": "text",
+              "placeholder": "Founder and Implant Dentist"
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "bio",
+              "label": "Biography (one paragraph per line)",
+              "type": "list",
+              "rows": 4
+            },
+            {
+              "name": "experience",
+              "label": "Years of Experience",
+              "type": "text",
+              "placeholder": "18+"
+            },
+            {
+              "name": "consultingDays",
+              "label": "Consulting Days",
+              "type": "text",
+              "placeholder": "Monday, Wednesday, Friday"
+            },
+            {
+              "name": "qualifications",
+              "label": "Qualifications (one per line)",
+              "type": "list",
+              "rows": 4
+            },
+            {
+              "name": "focusAreas",
+              "label": "Areas of Focus (one per line)",
+              "type": "list",
+              "rows": 4
+            },
+            {
+              "name": "buttonText",
+              "label": "Book Button Text",
+              "type": "text",
+              "placeholder": "Book with Dr. Aarav"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready for a healthier smile?"
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery",
+      "description": "Filterable clinic photo gallery",
+      "file": "gallery.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Gallery"
+            }
+          ]
+        },
+        {
+          "id": "galleryIntro",
+          "label": "Gallery Intro",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Inside Curemax"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Clinic and treatment gallery"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "galleryFilters",
+          "label": "Filter Labels",
+          "type": "single",
+          "fields": [
+            {
+              "name": "all",
+              "label": "'All' Label",
+              "type": "text",
+              "placeholder": "All"
+            },
+            {
+              "name": "clinic",
+              "label": "Filter 2 Label",
+              "type": "text",
+              "placeholder": "Clinic"
+            },
+            {
+              "name": "treatments",
+              "label": "Filter 3 Label",
+              "type": "text",
+              "placeholder": "Treatments"
+            },
+            {
+              "name": "team",
+              "label": "Filter 4 Label",
+              "type": "text",
+              "placeholder": "Team and kids"
+            }
+          ]
+        },
+        {
+          "id": "galleryItems",
+          "label": "Gallery Photos",
+          "type": "list",
+          "min": 1,
+          "max": 30,
+          "fields": [
+            {
+              "name": "image",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "caption",
+              "label": "Caption",
+              "type": "text",
+              "required": true,
+              "placeholder": "Private treatment room"
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "select",
+              "options": [
+                "clinic",
+                "treatments",
+                "team"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready for a healthier smile?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Book a check-up with a friendly, experienced team. New patients are always welcome."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "description": "Article listing with category filters",
+      "file": "blog.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dental Health Blog"
+            }
+          ]
+        },
+        {
+          "id": "blogIntro",
+          "label": "Blog Intro",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Latest articles"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Advice from our dentists"
+            }
+          ]
+        },
+        {
+          "id": "blogCategories",
+          "label": "Category Filters",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Category",
+              "type": "text",
+              "required": true,
+              "placeholder": "Prevention"
+            }
+          ]
+        },
+        {
+          "id": "posts",
+          "label": "Articles",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "author",
+              "label": "Author",
+              "type": "text",
+              "placeholder": "Dr. Sophie Laurent"
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "text",
+              "placeholder": "Prevention"
+            },
+            {
+              "name": "date",
+              "label": "Date",
+              "type": "text",
+              "placeholder": "28 Sep 2026"
+            },
+            {
+              "name": "image",
+              "label": "Cover Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "blog-details.html"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready for a healthier smile?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Book a check-up with a friendly, experienced team. New patients are always welcome."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blog-details",
+      "label": "Article Details",
+      "description": "Article content",
+      "file": "blog-details.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Article"
+            }
+          ]
+        },
+        {
+          "id": "articles",
+          "label": "Article Content (one per article)",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "URL Slug",
+              "type": "text",
+              "required": true,
+              "placeholder": "how-to-brush-properly"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Cover Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "author",
+              "label": "Author",
+              "type": "text"
+            },
+            {
+              "name": "category",
+              "label": "Category",
+              "type": "text"
+            },
+            {
+              "name": "date",
+              "label": "Date",
+              "type": "text",
+              "placeholder": "28 Sep 2026"
+            },
+            {
+              "name": "body",
+              "label": "Body (one paragraph per line)",
+              "type": "list",
+              "required": true,
+              "rows": 8
+            }
+          ]
+        },
+        {
+          "id": "articleDisclaimer",
+          "label": "Disclaimer",
+          "type": "single",
+          "fields": [
+            {
+              "name": "text",
+              "label": "Disclaimer Text",
+              "type": "text",
+              "placeholder": "This article is general information and not a substitute for personal dental advice."
+            },
+            {
+              "name": "backLinkText",
+              "label": "Back Link Text",
+              "type": "text",
+              "placeholder": "Back to all articles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appointment",
+      "label": "Appointment",
+      "description": "Appointment form options, hours and emergency card",
+      "file": "appointment.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book an Appointment"
+            }
+          ]
+        },
+        {
+          "id": "formIntro",
+          "label": "Form Intro",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Request your visit"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Choose your doctor, service and preferred time. Our team will contact you to confirm."
+            },
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Request appointment"
+            },
+            {
+              "name": "demoNote",
+              "label": "Form Note",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorOptions",
+          "label": "Doctor Dropdown Options",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Aarav Mehta"
+            }
+          ]
+        },
+        {
+          "id": "serviceOptions",
+          "label": "Service Dropdown Options",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Teeth Whitening"
+            }
+          ]
+        },
+        {
+          "id": "timeSlots",
+          "label": "Time Slot Options",
+          "type": "list",
+          "min": 1,
+          "max": 30,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "9:00 AM"
+            }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours",
+          "type": "list",
+          "min": 1,
+          "max": 7,
+          "fields": [
+            {
+              "name": "day",
+              "label": "Day",
+              "type": "text",
+              "required": true,
+              "placeholder": "Monday – Friday"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "required": true,
+              "placeholder": "9:00 am – 6:00 pm"
+            }
+          ]
+        },
+        {
+          "id": "emergencyCard",
+          "label": "Dental Emergency Card",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Dental emergency?"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+61 3 5550 0148"
+            }
+          ]
+        },
+        {
+          "id": "bringList",
+          "label": "What To Bring",
+          "type": "list",
+          "min": 0,
+          "max": 8,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Photo ID and health fund card"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Contact info, hours and message form",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Contact Us"
+            }
+          ]
+        },
+        {
+          "id": "contactInfo",
+          "label": "Contact Information",
+          "type": "single",
+          "fields": [
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "textarea",
+              "required": true,
+              "rows": 2
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email"
+            },
+            {
+              "name": "mapEmbed",
+              "label": "Map Embed URL",
+              "type": "url"
+            }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours",
+          "type": "list",
+          "min": 1,
+          "max": 7,
+          "fields": [
+            {
+              "name": "day",
+              "label": "Day",
+              "type": "text",
+              "required": true,
+              "placeholder": "Monday – Friday"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "required": true,
+              "placeholder": "9:00 am – 6:00 pm"
+            }
+          ]
+        },
+        {
+          "id": "messageForm",
+          "label": "Message Form",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Form Title",
+              "type": "text",
+              "placeholder": "Send us a message"
+            },
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Send message"
+            },
+            {
+              "name": "demoNote",
+              "label": "Form Note",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global": {
+    "colors": {
+      "brand": "#1e6feb",
+      "brandDark": "#1553b8",
+      "brandSoft": "#e8f1fe",
+      "ink": "#0b2545",
+      "muted": "#52627a",
+      "line": "#e2e8f0",
+      "mist": "#f4f7fb"
+    },
+    "fonts": {
+      "display": "Manrope",
+      "body": "Public Sans"
+    }
+  }
+}

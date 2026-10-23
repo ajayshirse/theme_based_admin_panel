@@ -1,0 +1,736 @@
+{
+  "themeId": "dental_theme2",
+  "label": "Aurea Dental Studio — Luxury Boutique Theme",
+  "industry": "healthcare",
+  "subIndustry": "dental",
+  "type": "multi-page",
+  "themeType": "luxury-boutique",
+  "description": "A boutique luxury dental studio theme with Playfair Display typography, gold accents, asymmetric layouts, horizontal gallery scroll and refined editorial styling.",
+  "previewUrl": "/healthcare/dental/dental_theme2/index.html",
+
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Full-bleed hero with bottom info bar, trust strip, philosophy split, asymmetric services, alternating timeline, testimonial, horizontal gallery scroll and CTA.",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            { "name": "logoMark", "label": "Logo Mark (letter/symbol)", "type": "text", "required": true, "placeholder": "A", "hint": "Single letter or symbol inside the circular mark" },
+            { "name": "brandName", "label": "Brand Name", "type": "text", "required": true, "placeholder": "Aurea" },
+            { "name": "brandSuffix", "label": "Brand Suffix (italic accent)", "type": "text", "placeholder": "." }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "label", "label": "Menu Label", "type": "text", "required": true, "placeholder": "Home" },
+            { "name": "url", "label": "Menu URL", "type": "text", "required": true, "placeholder": "index.html" }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Actions",
+          "type": "single",
+          "fields": [
+            { "name": "phoneIconEnabled", "label": "Show Phone Icon", "type": "boolean" },
+            { "name": "buttonText", "label": "CTA Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "buttonLink", "label": "CTA Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "hero",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Hero Background Image", "type": "image", "required": true, "hint": "Recommended 2000px wide, dark luxury image" },
+            { "name": "sideLabel", "label": "Vertical Side Label", "type": "text", "placeholder": "Est. 2012 · Boutique Studio" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "required": true, "placeholder": "A quiet, considered dental studio" },
+            { "name": "title", "label": "Hero Title (HTML allowed: <br>, <em>, <strong>)", "type": "text", "required": true, "placeholder": "The art of a<br><em>quietly confident</em><br><strong>smile.</strong>" },
+            { "name": "text", "label": "Hero Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Explore Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "heroInfoBar",
+          "label": "Hero Bottom Info Bar",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Big Number/Text", "type": "text", "required": true, "placeholder": "12+" },
+            { "name": "label", "label": "Small Label", "type": "text", "required": true, "placeholder": "Years Practice" },
+            { "name": "text", "label": "Descriptive Text", "type": "text", "required": true, "placeholder": "A single studio, deliberately small." }
+          ]
+        },
+        {
+          "id": "trustStrip",
+          "label": "Trust Strip (Marquee)",
+          "type": "single",
+          "fields": [
+            { "name": "labelEyebrow", "label": "Label Eyebrow", "type": "text", "placeholder": "Signature Care" },
+            { "name": "labelTitle", "label": "Label Title", "type": "text", "placeholder": "What we do, quietly." },
+            { "name": "marqueeItems", "label": "Marquee Items (one per line)", "type": "list", "required": true, "rows": 8, "placeholder": "Digital Smile Design" }
+          ]
+        },
+        {
+          "id": "philosophy",
+          "label": "Philosophy Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Philosophy" },
+            { "name": "title", "label": "Section Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "We believe great dentistry <em>should feel</em> like being well looked after." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "smallImage", "label": "Small Overlap Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "12+" },
+            { "name": "badgeLabel", "label": "Badge Label", "type": "text", "placeholder": "Years of Craft" },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Read Our Full Story" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "about.html" }
+          ]
+        },
+        {
+          "id": "philosophyPoints",
+          "label": "Philosophy Points",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "number", "label": "Roman Numeral/Number", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "title", "label": "Point Title", "type": "text", "required": true, "placeholder": "Unhurried appointments" },
+            { "name": "description", "label": "Point Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "servicesFeature",
+          "label": "Services Feature (Left Sticky)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Services" },
+            { "name": "title", "label": "Section Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Considered dentistry, <em>quietly delivered</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "featureImage", "label": "Feature Image", "type": "image", "required": true }
+          ]
+        },
+        {
+          "id": "servicesList",
+          "label": "Services List (Right)",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "number", "label": "Roman Numeral", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "title", "label": "Service Title", "type": "text", "required": true, "placeholder": "Preventive & General Care" },
+            { "name": "description", "label": "Service Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Discover" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "approach",
+          "label": "Approach Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "The Aurea Approach" },
+            { "name": "title", "label": "Section Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Four quiet steps, <em>carefully taken</em>." },
+            { "name": "subtitle", "label": "Section Subtitle", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "approachSteps",
+          "label": "Approach Timeline Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Step Title", "type": "text", "required": true, "placeholder": "Consultation" },
+            { "name": "description", "label": "Step Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "side", "label": "Side (left/right)", "type": "select", "options": ["left", "right"], "required": true }
+          ]
+        },
+        {
+          "id": "testimonial",
+          "label": "Featured Testimonial",
+          "type": "single",
+          "fields": [
+            { "name": "portraitImage", "label": "Portrait Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Patient Words" },
+            { "name": "starsCount", "label": "Stars Count (1-5)", "type": "number", "placeholder": "5" },
+            { "name": "quote", "label": "Quote (HTML: <em>)", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "authorName", "label": "Author Name", "type": "text", "required": true, "placeholder": "Maya Raghunathan" },
+            { "name": "authorTitle", "label": "Author Title", "type": "text", "placeholder": "Cosmetic Patient · 2024" }
+          ]
+        },
+        {
+          "id": "galleryPreview",
+          "label": "Gallery Preview (Horizontal Scroll)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Selected Work" },
+            { "name": "title", "label": "Section Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Recent transformations from <em>the studio</em>." },
+            { "name": "viewAllText", "label": "View All Link Text", "type": "text", "placeholder": "View Full Gallery" },
+            { "name": "viewAllLink", "label": "View All Link URL", "type": "text", "placeholder": "gallery.html" }
+          ]
+        },
+        {
+          "id": "galleryCards",
+          "label": "Gallery Cards (Horizontal Scroll)",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "category", "label": "Category", "type": "text", "required": true, "placeholder": "Smile Design" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Full ceramic veneers, upper arch" },
+            { "name": "description", "label": "Description", "type": "text", "placeholder": "Six-visit case · Hand-finished porcelain" }
+          ]
+        },
+        {
+          "id": "galleryCta",
+          "label": "Gallery CTA Button",
+          "type": "single",
+          "fields": [
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "View All Transformations" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "gallery.html" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Final CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Begin" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's design the smile <em>you've been imagining</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See the Work" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "gallery.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Consultation" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "type": "single",
+          "fields": [
+            { "name": "description", "label": "Footer Description", "type": "textarea", "rows": 3 },
+            { "name": "newsletterTitle", "label": "Newsletter Heading", "type": "text", "placeholder": "Newsletter" },
+            { "name": "newsletterText", "label": "Newsletter Description", "type": "textarea", "rows": 2 },
+            { "name": "newsletterPlaceholder", "label": "Newsletter Input Placeholder", "type": "text", "placeholder": "your@email.com" }
+          ]
+        },
+        {
+          "id": "footerColumns",
+          "label": "Footer Link Columns",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            { "name": "heading", "label": "Column Heading", "type": "text", "required": true, "placeholder": "Studio" },
+            { "name": "links", "label": "Links (Label | URL per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: About | about.html" }
+          ]
+        },
+        {
+          "id": "socials",
+          "label": "Social Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "platform", "label": "Platform Name (for aria-label)", "type": "text", "required": true, "placeholder": "Instagram" },
+            { "name": "icon", "label": "FontAwesome Icon Class", "type": "text", "required": true, "placeholder": "fa-brands fa-instagram" },
+            { "name": "url", "label": "URL", "type": "text", "required": true, "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom Bar",
+          "type": "single",
+          "fields": [
+            { "name": "copyright", "label": "Copyright Text", "type": "text", "placeholder": "© 2026 Aurea Dental Studio. All rights reserved." },
+            { "name": "creditText", "label": "Credit Line Text", "type": "text", "placeholder": "Site by" },
+            { "name": "creditLinkText", "label": "Credit Link Text", "type": "text", "placeholder": "Aurea" },
+            { "name": "creditLinkUrl", "label": "Credit Link URL", "type": "text", "placeholder": "#" },
+            { "name": "extraLinks", "label": "Extra Links (Privacy · Terms)", "type": "text", "placeholder": "Privacy · Terms" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "Story section, values grid, team, quote strip and CTA.",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Banner Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Story" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "The studio behind the <em>quiet craft</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "story",
+          "label": "Story Section",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "A Quiet Beginning" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "It started with a single chair and a <em>simple conviction</em>." },
+            { "name": "lead", "label": "Lead Quote", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "paragraphs", "label": "Paragraphs (one per line, blank line separates)", "type": "list", "required": true, "rows": 10 }
+          ]
+        },
+        {
+          "id": "valuesHead",
+          "label": "Values Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Principles" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "What we hold onto, <em>every single day</em>." }
+          ]
+        },
+        {
+          "id": "values",
+          "label": "Values Cards",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "number", "label": "Roman Numeral", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Time is the treatment" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "teamHead",
+          "label": "Team Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "The Team" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "The hands behind <em>every case</em>." },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Meet In Person" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "teamMembers",
+          "label": "Team Members",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "photo", "label": "Photo", "type": "image", "required": true },
+            { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "Dr. Amara Sokolova" },
+            { "name": "role", "label": "Role", "type": "text", "required": true, "placeholder": "Founder · Cosmetic & Restorative" },
+            { "name": "instagram", "label": "Instagram URL", "type": "text", "placeholder": "#" },
+            { "name": "linkedin", "label": "LinkedIn URL", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "quoteStrip",
+          "label": "Quote Strip",
+          "type": "single",
+          "fields": [
+            { "name": "quote", "label": "Quote (HTML: <em>)", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "author", "label": "Quote Author", "type": "text", "required": true, "placeholder": "— Dr. Amara Sokolova, Founder" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Visit Us" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Come see the studio <em>for yourself</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Explore Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Consultation" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "description": "Intro, six service detail sections with alternating layouts, approach strip and FAQ.",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Banner Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Services" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Dentistry, delivered <em>with craft</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "intro",
+          "label": "Intro Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Approach" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Every treatment is a <em>considered</em> decision." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "serviceSections",
+          "label": "Service Detail Sections",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "anchorId", "label": "Anchor ID", "type": "text", "required": true, "placeholder": "preventive" },
+            { "name": "number", "label": "Roman Numeral", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "required": true, "placeholder": "Preventive & General" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Small care, done <em>quietly</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "reverseLayout", "label": "Reverse Layout (image on right)", "type": "boolean" },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "metaOneLabel", "label": "Meta 1 Label", "type": "text", "placeholder": "Duration" },
+            { "name": "metaOneValue", "label": "Meta 1 Value", "type": "text", "placeholder": "45 minutes" },
+            { "name": "metaTwoLabel", "label": "Meta 2 Label", "type": "text", "placeholder": "Frequency" },
+            { "name": "metaTwoValue", "label": "Meta 2 Value", "type": "text", "placeholder": "Every 6 months" },
+            { "name": "metaThreeLabel", "label": "Meta 3 Label", "type": "text", "placeholder": "Comfort" },
+            { "name": "metaThreeValue", "label": "Meta 3 Value", "type": "text", "placeholder": "Fully painless" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Book Checkup" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "approachStrip",
+          "label": "Approach Strip",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How We Work" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Four quiet steps, <em>carefully taken</em>." }
+          ]
+        },
+        {
+          "id": "approachSteps",
+          "label": "Approach Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Consultation" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "faqHead",
+          "label": "FAQ Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Common Questions" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Things patients <em>often ask</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Ask Us Anything" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "faqItems",
+          "label": "FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Begin" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Ready to begin <em>your treatment</em>?" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See the Work" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "gallery.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Consultation" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery",
+      "description": "Filterable masonry gallery with lightbox and featured case study.",
+      "file": "gallery.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Banner Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Selected Work" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "A gallery of <em>quiet transformations</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "galleryHead",
+          "label": "Gallery Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Portfolio" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Every smile here was <em>designed, not templated</em>." }
+          ]
+        },
+        {
+          "id": "galleryFilters",
+          "label": "Gallery Filter Categories",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "label", "label": "Filter Label", "type": "text", "required": true, "placeholder": "Cosmetic" },
+            { "name": "value", "label": "Filter Value (slug)", "type": "text", "required": true, "placeholder": "cosmetic" }
+          ]
+        },
+        {
+          "id": "galleryTiles",
+          "label": "Gallery Tiles",
+          "type": "list",
+          "min": 1,
+          "max": 30,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "category", "label": "Category (filter slug)", "type": "text", "required": true, "placeholder": "makeover" },
+            { "name": "categoryLabel", "label": "Category Label", "type": "text", "required": true, "placeholder": "Makeover" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Full Upper Arch Veneers" },
+            { "name": "description", "label": "Description", "type": "text", "placeholder": "Six hand-layered ceramics + whitening · 5 visits" },
+            { "name": "size", "label": "Tile Size", "type": "select", "options": ["tile-lg", "tile-md", "tile-sm", "tile-full"], "required": true }
+          ]
+        },
+        {
+          "id": "featureCase",
+          "label": "Featured Case Study",
+          "type": "single",
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "badgeText", "label": "Badge Text", "type": "text", "placeholder": "Featured Case" },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Case Study" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "A full smile <em>reconsidered</em> in five visits." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "metaOneLabel", "label": "Meta 1 Label", "type": "text", "placeholder": "Visits" },
+            { "name": "metaOneValue", "label": "Meta 1 Value", "type": "text", "placeholder": "5 sessions" },
+            { "name": "metaTwoLabel", "label": "Meta 2 Label", "type": "text", "placeholder": "Duration" },
+            { "name": "metaTwoValue", "label": "Meta 2 Value", "type": "text", "placeholder": "6 weeks" },
+            { "name": "metaThreeLabel", "label": "Meta 3 Label", "type": "text", "placeholder": "Approach" },
+            { "name": "metaThreeValue", "label": "Meta 3 Value", "type": "text", "placeholder": "Fully painless" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Discuss a Similar Case" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Your Turn" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's design <em>your smile</em> next." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book Consultation" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Explore Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Consultation" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Info cards, contact form, side details, emergency block, map and CTA.",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            { "name": "backgroundImage", "label": "Banner Background Image", "type": "image", "required": true },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Get In Touch" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's begin with a <em>conversation</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "infoCards",
+          "label": "Info Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "icon", "label": "FontAwesome Icon Class", "type": "text", "required": true, "placeholder": "fa-solid fa-phone" },
+            { "name": "title", "label": "Card Title", "type": "text", "required": true, "placeholder": "Call Us" },
+            { "name": "textLine1", "label": "Text Line 1", "type": "text", "placeholder": "Mon – Sat, 9am – 7pm" },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "tel:+911234567890" },
+            { "name": "plainText", "label": "Or Plain Text (no link)", "type": "text", "placeholder": "12 Lansdowne Terrace" }
+          ]
+        },
+        {
+          "id": "contactHead",
+          "label": "Contact Form Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Send a Message" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Tell us what <em>you have in mind</em>." }
+          ]
+        },
+        {
+          "id": "contactForm",
+          "label": "Contact Form",
+          "type": "single",
+          "fields": [
+            { "name": "formTitle", "label": "Form Title", "type": "text", "placeholder": "Send an Enquiry" },
+            { "name": "formSubtitle", "label": "Form Subtitle", "type": "textarea", "rows": 2 },
+            { "name": "namePlaceholder", "label": "Name Placeholder", "type": "text", "placeholder": "Your name" },
+            { "name": "phonePlaceholder", "label": "Phone Placeholder", "type": "text", "placeholder": "+91 98765 43210" },
+            { "name": "emailPlaceholder", "label": "Email Placeholder", "type": "text", "placeholder": "your@email.com" },
+            { "name": "subjectLabel", "label": "Subject Label", "type": "text", "placeholder": "I'm enquiring about" },
+            { "name": "subjectOptions", "label": "Subject Options (Label | Value per line)", "type": "list", "rows": 8, "hint": "Format: Book a Consultation | consultation" },
+            { "name": "messagePlaceholder", "label": "Message Placeholder", "type": "textarea", "rows": 2 },
+            { "name": "submitButtonText", "label": "Submit Button Text", "type": "text", "placeholder": "Send Message" },
+            { "name": "formNote", "label": "Note Below Form", "type": "text", "placeholder": "Your details are kept strictly private." }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Opening Hours" },
+            { "name": "hours", "label": "Hours (Label | Value per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: Monday – Friday | 9:00 – 19:00" }
+          ]
+        },
+        {
+          "id": "studioDetails",
+          "label": "Studio Details Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Studio Details" },
+            { "name": "address", "label": "Address", "type": "textarea", "rows": 2 },
+            { "name": "phone", "label": "Phone", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "whatsapp", "label": "WhatsApp", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "email", "label": "Email", "type": "email", "placeholder": "hello@aureastudio.com" }
+          ]
+        },
+        {
+          "id": "socialsBlock",
+          "label": "Follow Us Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Follow Us" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 },
+            { "name": "socials", "label": "Socials (Platform | Icon Class | URL per line)", "type": "list", "rows": 6, "hint": "Format: Instagram | fa-brands fa-instagram | #" }
+          ]
+        },
+        {
+          "id": "emergency",
+          "label": "Emergency Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Title", "type": "text", "placeholder": "Dental Emergency?" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Call Now" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "mapSection",
+          "label": "Map Section",
+          "type": "single",
+          "fields": [
+            { "name": "mapEmbedUrl", "label": "Google Maps Embed URL", "type": "text", "required": true },
+            { "name": "eyebrow", "label": "Overlay Eyebrow", "type": "text", "placeholder": "The Studio" },
+            { "name": "cardTitle", "label": "Overlay Card Title", "type": "text", "placeholder": "Find Us Here" },
+            { "name": "cardAddress", "label": "Overlay Card Address", "type": "textarea", "rows": 2 },
+            { "name": "directionsText", "label": "Directions Link Text", "type": "text", "placeholder": "Get Directions" },
+            { "name": "directionsUrl", "label": "Directions URL", "type": "text", "placeholder": "https://maps.google.com" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "We're Here" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Prefer to talk it <em>through first</em>?" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Call +91 12345 67890" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "tel:+911234567890" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Call" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Now" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "global": {
+    "colors": {
+      "charcoal": "#1A1A1A",
+      "espresso": "#2C1810",
+      "ink": "#0F0F0F",
+      "gold": "#C9A961",
+      "goldSoft": "#E3CE9A",
+      "rose": "#E8B4A0",
+      "cream": "#FAF6F0",
+      "ivory": "#FDFBF7",
+      "stone": "#8B8378"
+    },
+    "fonts": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    }
+  }
+}

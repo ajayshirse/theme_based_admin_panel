@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Templates — ThemeBase</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Tooltip */
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      z-index: 50;
+      pointer-events: none;
+      box-shadow: 0 8px 20px rgba(15,23,42,.15);
+    }
+    .tooltip::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 8px;
+      height: 8px;
+      background: #0f172a;
+    }
+    @media (min-width: 1024px) {
+      body.sidebar-collapsed .tooltip { display: none; }
+      body.sidebar-collapsed .group:hover .tooltip { display: block; }
+      body.sidebar-collapsed #sidebar { width: 72px; }
+      body.sidebar-collapsed .sidebar-text { display: none; }
+      body.sidebar-collapsed .nav-link { justify-content: center; padding-left: 0; padding-right: 0; }
+    }
+  </style>
+</head>
+
+<body data-page="templates" class="bg-slate-50 text-slate-900 min-h-screen font-sans antialiased">
+
+  <!-- Sidebar -->
+  <div id="sidebar-root"></div>
+
+  <!-- Main -->
+  <div id="mainContent" class="lg:ml-64 transition-all duration-300">
+    <div id="header-root"></div>
+
+    <main class="p-5 lg:p-7 max-w-[1600px] mx-auto">
+
+      <!-- Page head -->
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+        <div>
+          <div class="text-indigo-600 text-[11px] font-bold uppercase tracking-[0.14em]">
+            ThemeBase
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold mt-1 tracking-tight">Templates</h1>
+          <p class="text-slate-500 text-sm mt-1">
+            Browse, preview, edit and assign templates to websites.
+          </p>
+        </div>
+        <a href="create.html"
+           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 
+                  text-white font-medium text-sm px-4 py-2.5 rounded-lg transition">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          Create New Template
+        </a>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white rounded-xl border border-slate-200">
+
+        <!-- Toolbar -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3 p-4 border-b border-slate-200">
+          <!-- Search -->
+          <div class="flex items-center h-10 flex-1 max-w-md bg-slate-50 
+                      border border-slate-200 rounded-lg px-3 
+                      focus-within:border-slate-400 transition">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400"></i>
+            <input id="templateSearch" type="text" placeholder="Search templates..."
+              class="w-full bg-transparent outline-none px-2 text-sm text-slate-800 
+                     placeholder-slate-400">
+          </div>
+
+          <!-- Industry filter -->
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-medium text-slate-500">Industry:</label>
+            <select id="industryFilter"
+              class="h-10 bg-white border border-slate-200 rounded-lg px-3 text-sm 
+                     text-slate-700 focus:outline-none focus:border-slate-400 transition">
+              <option value="">All</option>
+              <option value="dental">Dental</option>
+              <option value="ortho">Ortho</option>
+              <option value="pedia">Pedia</option>
+              <option value="eye">Eye Care</option>
+            </select>
+          </div>
+
+          <!-- Total count -->
+          <div class="sm:ml-auto text-sm text-slate-500">
+            Total: <span id="templateCount" class="font-semibold text-slate-800">15</span>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50/60">
+                <th class="text-left font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3 w-16">Preview</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3">Template Name</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3">Industry</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3">Theme</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3">Type</th>
+                <th class="text-left font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3">Status</th>
+                <th class="text-right font-semibold text-slate-500 text-[11px] 
+                           uppercase tracking-wider px-4 py-3 w-40">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="templateTableBody">
+              <!-- Rows injected by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty state (hidden by default) -->
+        <div id="emptyState" class="hidden text-center py-16">
+          <div class="w-12 h-12 rounded-full bg-slate-100 grid place-items-center mx-auto mb-3">
+            <i data-lucide="inbox" class="w-5 h-5 text-slate-400"></i>
+          </div>
+          <div class="font-semibold text-slate-700">No templates found</div>
+          <div class="text-sm text-slate-500 mt-1">Try changing the search or filter.</div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal root -->
+  <div id="modalRoot"></div>
+
+  <script src="js/app.js"></script>
+
+  <script>
+    // =========================================================
+    //  Template data
+    // =========================================================
+    const templates = [
+  { id: 'dental-1', name: 'Dental Theme 1', industry: 'dental', theme: 'Theme-1', type: 'Multipage · Carousel',  status: 'Active', previewUrl: '/healthcare/dental/dental_theme1/index.html' },
+  { id: 'dental-2', name: 'Dental Theme 2', industry: 'dental', theme: 'Theme-2', type: 'Multipage · Single Hero', status: 'Active', previewUrl: '/healthcare/dental/dental_theme2/index.html' },
+  { id: 'dental-3', name: 'Dental Theme 3', industry: 'dental', theme: 'Theme-3', type: 'Single Page',            status: 'Draft',  previewUrl: '/healthcare/dental/dental_theme3/index.html' },
+  { id: 'dental-4', name: 'Dental Theme 4', industry: 'dental', theme: 'Theme-4', type: 'Multipage · Clean Blue',  status: 'Active', previewUrl: '/healthcare/dental/dental_theme4/index.html' },
+  { id: 'dermat-1',  name: 'Dermat Theme 1',  industry: 'dermat',  theme: 'Theme-1', type: 'Multipage · Carousel',   status: 'Active', previewUrl: '/healthcare/dermat/dermat_theme1/index.html' },
+  { id: 'dermat-2',  name: 'Dermat Theme 2',  industry: 'dermat',  theme: 'Theme-2', type: 'Multipage · Single Hero', status: 'Active', previewUrl: '/healthcare/dermat/dermat_theme2/index.html' },
+  { id: 'dermat-3',  name: 'Dermat Theme 3',  industry: 'dermat',  theme: 'Theme-3', type: 'Single Page',             status: 'Draft',  previewUrl: '/healthcare/dermat/dermat_theme3/index.html' },
+  { id: 'pedia-1',  name: 'Pedia Theme 1',  industry: 'pedia',  theme: 'Theme-1', type: 'Multipage · Carousel',   status: 'Active', previewUrl: '/healthcare/pedia/pedia_theme1/index.html' },
+  { id: 'pedia-2',  name: 'Pedia Theme 2',  industry: 'pedia',  theme: 'Theme-2', type: 'Multipage · Single Hero', status: 'Draft',  previewUrl: '/healthcare/pedia/pedia_theme2/index.html' },
+  { id: 'pedia-3',  name: 'Pedia Theme 3',  industry: 'pedia',  theme: 'Theme-3', type: 'Single Page',             status: 'Active', previewUrl: '/healthcare/pedia/pedia_theme3/index.html' },
+  { id: 'eye-1',    name: 'Eye Theme 1',    industry: 'eye',    theme: 'Theme-1', type: 'Single Page',             status: 'Active', previewUrl: '/healthcare/eye/eye_theme1/index.html' },
+  { id: 'eye-2',    name: 'Eye Theme 2',    industry: 'eye',    theme: 'Theme-2', type: 'Multipage · Institute',   status: 'Active', previewUrl: '/healthcare/eye/eye_theme2/index.html' },
+  { id: 'eye-3',    name: 'Eye Theme 3',    industry: 'eye',    theme: 'Theme-3', type: 'Multipage · Editorial',   status: 'Active', previewUrl: '/healthcare/eye/eye_theme3/index.html' },
+  { id: 'ortho-1',  name: 'Ortho Theme 1',  industry: 'ortho',  theme: 'Theme-1', type: 'Single Page',             status: 'Active', previewUrl: '/healthcare/ortho/ortho_theme1/index.html' },
+  { id: 'ortho-2',  name: 'Ortho Theme 2',  industry: 'ortho',  theme: 'Theme-2', type: 'Multipage · Bone & Joint', status: 'Active', previewUrl: '/healthcare/ortho/ortho_theme2/index.html' },
+];
+
+    // Dummy websites (for "Assign To" dropdown)
+    const websites = [
+      { id: 'w1', domain: 'smiledental.com' },
+      { id: 'w2', domain: 'perfectortho.com' },
+      { id: 'w3', domain: 'kidcareclinic.com' },
+    ];
+
+    const industryLabel = { dental: 'Dental', ortho: 'Ortho', pedia: 'Pedia', eye: 'Eye Care' };
+
+    // =========================================================
+    //  Render table rows
+    // =========================================================
+    function renderTable(list) {
+      const tbody = document.getElementById('templateTableBody');
+      const empty = document.getElementById('emptyState');
+      const count = document.getElementById('templateCount');
+
+      count.textContent = list.length;
+
+      if (!list.length) {
+        tbody.innerHTML = '';
+        empty.classList.remove('hidden');
+        return;
+      }
+      empty.classList.add('hidden');
+
+      tbody.innerHTML = list.map(t => `
+        <tr class="border-b border-slate-100 hover:bg-slate-50/60 transition">
+          
+          <!-- Preview thumbnail -->
+          <td class="px-4 py-3">
+            <div class="w-14 h-10 rounded-md bg-slate-100 
+                        grid place-items-center border border-slate-200 cursor-pointer"
+                 data-action="preview" data-id="${t.id}">
+              <i data-lucide="image" class="w-4 h-4 text-slate-400"></i>
+            </div>
+          </td>
+
+          <!-- Name -->
+          <td class="px-4 py-3">
+            <div class="font-semibold text-slate-800">${t.name}</div>
+            <div class="text-xs text-slate-400 mt-0.5">${t.id}</div>
+          </td>
+
+          <!-- Industry -->
+          <td class="px-4 py-3">
+            <span class="inline-flex items-center gap-1.5 text-slate-600">
+              <i data-lucide="building-2" class="w-3.5 h-3.5 text-slate-400"></i>
+              ${industryLabel[t.industry] || t.industry}
+            </span>
+          </td>
+
+          <!-- Theme -->
+          <td class="px-4 py-3 text-slate-600">${t.theme}</td>
+
+          <!-- Type -->
+          <td class="px-4 py-3 text-slate-600">${t.type}</td>
+
+          <!-- Status -->
+          <td class="px-4 py-3">
+            ${statusBadge(t.status)}
+          </td>
+
+          <!-- Actions -->
+<td class="px-4 py-3">
+  <div class="flex items-center justify-end gap-1.5">
+
+    <!-- Preview -->
+    <button data-action="preview" data-id="${t.id}"
+      title="Preview template"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-slate-600 bg-white border border-slate-200 rounded-md
+             hover:bg-slate-100 hover:text-slate-900 hover:border-slate-300 
+             transition">
+      <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Preview
+      </span>
+    </button>
+
+    <!-- Assign To -->
+    <button data-action="assign" data-id="${t.id}"
+      title="Assign to website"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-white bg-slate-900 rounded-md
+             hover:bg-slate-800 transition">
+      <i data-lucide="link" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Assign To
+      </span>
+    </button>
+
+    <!-- Edit -->
+    <button data-action="edit" data-id="${t.id}"
+      title="Edit template"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-slate-600 bg-white border border-slate-200 rounded-md
+             hover:bg-slate-100 hover:text-slate-900 hover:border-slate-300 
+             transition">
+      <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Edit
+      </span>
+    </button>
+
+    <!-- Delete -->
+    <button data-action="delete" data-id="${t.id}"
+      title="Delete template"
+      class="relative group/btn w-8 h-8 inline-flex items-center justify-center
+             text-rose-600 bg-white border border-rose-200 rounded-md
+             hover:bg-rose-50 hover:border-rose-300 transition">
+      <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 
+                   px-2 py-1 rounded-md bg-slate-900 text-white text-[11px] font-medium
+                   whitespace-nowrap opacity-0 group-hover/btn:opacity-100 
+                   transition-opacity z-50">
+        Delete
+      </span>
+    </button>
+
+  </div>
+</td>
+
+        </tr>
+      `).join('');
+
+      // Refresh lucide icons
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function statusBadge(status) {
+      if (status === 'Active') {
+        return `<span class="inline-flex items-center gap-1.5 px-2 py-1 
+                       text-[11px] font-semibold text-emerald-700 
+                       bg-emerald-50 border border-emerald-100 rounded-full">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Active
+                </span>`;
+      }
+      return `<span class="inline-flex items-center gap-1.5 px-2 py-1 
+                     text-[11px] font-semibold text-amber-700 
+                     bg-amber-50 border border-amber-100 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Draft
+              </span>`;
+    }
+
+    // =========================================================
+    //  Filters
+    // =========================================================
+    let filtered = [...templates];
+
+    function applyFilters() {
+      const q = document.getElementById('templateSearch').value.toLowerCase().trim();
+      const ind = document.getElementById('industryFilter').value;
+
+      filtered = templates.filter(t => {
+        const matchQ = !q ||
+          t.name.toLowerCase().includes(q) ||
+          t.id.toLowerCase().includes(q) ||
+          t.theme.toLowerCase().includes(q);
+        const matchInd = !ind || t.industry === ind;
+        return matchQ && matchInd;
+      });
+
+      renderTable(filtered);
+    }
+
+    document.getElementById('templateSearch').addEventListener('input', applyFilters);
+    document.getElementById('industryFilter').addEventListener('change', applyFilters);
+
+    // =========================================================
+    //  Action handlers (event delegation)
+    // =========================================================
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action][data-id]');
+      if (!btn) return;
+
+      const { action, id } = btn.dataset;
+      const tpl = templates.find(t => t.id === id);
+      if (!tpl) return;
+
+       if (action === 'preview') handlePreview(tpl); 
+      if (action === 'assign')  openAssignModal(tpl);
+      if (action === 'edit')    handleEdit(tpl);
+      if (action === 'delete')  handleDelete(tpl);
+    });
+
+    
+    // =========================================================
+//  Preview — open in new tab
+// =========================================================
+function handlePreview(tpl) {
+  if (!tpl.previewUrl) {
+    showToast('Preview URL not available');
+    return;
+  }
+  window.open(tpl.previewUrl, '_blank', 'noopener,noreferrer');
+}
+
+    // =========================================================
+    //  Assign To modal
+    // =========================================================
+    function openAssignModal(tpl) {
+      const root = document.getElementById('modalRoot');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm 
+                    grid place-items-center p-4" id="modalBackdrop">
+          <div class="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden">
+            
+            <div class="flex items-center justify-between px-5 h-14 border-b border-slate-200">
+              <div class="font-semibold text-slate-800">Assign Template</div>
+              <button id="closeModal"
+                class="text-slate-500 hover:text-slate-900 hover:bg-slate-100 
+                       p-2 rounded-lg transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <div class="p-5">
+              <div class="text-sm text-slate-600 mb-4">
+                Assign <span class="font-semibold text-slate-800">${tpl.name}</span> to a website:
+              </div>
+
+              <label class="block text-xs font-medium text-slate-500 mb-2">
+                Select Website
+              </label>
+              <select id="assignWebsite"
+                class="w-full h-10 bg-white border border-slate-200 rounded-lg px-3 
+                       text-sm text-slate-700 focus:outline-none focus:border-slate-400 transition">
+                <option value="">-- Choose a website --</option>
+                ${websites.map(w => `<option value="${w.id}">${w.domain}</option>`).join('')}
+              </select>
+
+              <div id="assignError" class="hidden text-xs text-rose-600 mt-2"></div>
+            </div>
+
+            <div class="flex items-center justify-end gap-2 px-5 py-4 bg-slate-50 border-t border-slate-200">
+              <button id="cancelAssign"
+                class="px-4 py-2 text-sm font-medium text-slate-700 bg-white 
+                       border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+                Cancel
+              </button>
+              <button id="confirmAssign"
+                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium 
+                       text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition">
+                <i data-lucide="check" class="w-4 h-4"></i>
+                Assign
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+
+      const close = () => { root.innerHTML = ''; };
+      document.getElementById('closeModal').addEventListener('click', close);
+      document.getElementById('cancelAssign').addEventListener('click', close);
+      document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+        if (e.target.id === 'modalBackdrop') close();
+      });
+
+      document.getElementById('confirmAssign').addEventListener('click', () => {
+        const sel = document.getElementById('assignWebsite');
+        const err = document.getElementById('assignError');
+        if (!sel.value) {
+          err.textContent = 'Please select a website.';
+          err.classList.remove('hidden');
+          return;
+        }
+        const site = websites.find(w => w.id === sel.value);
+        close();
+        showToast(`"${tpl.name}" assigned to ${site.domain}`);
+      });
+    }
+
+    // =========================================================
+    //  Edit
+    // =========================================================
+    function handleEdit(tpl) {
+      // For now, navigate to edit page
+      window.location.href = `edit-template.html?id=${tpl.id}`;
+    }
+
+    // =========================================================
+    //  Delete with confirmation
+    // =========================================================
+    function handleDelete(tpl) {
+      const root = document.getElementById('modalRoot');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm 
+                    grid place-items-center p-4" id="modalBackdrop">
+          <div class="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden">
+            
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-full bg-rose-50 grid place-items-center mb-4">
+                <i data-lucide="alert-triangle" class="w-6 h-6 text-rose-600"></i>
+              </div>
+              <div class="font-semibold text-slate-800 text-lg">Delete Template?</div>
+              <div class="text-sm text-slate-500 mt-1">
+                Are you sure you want to delete 
+                <span class="font-semibold text-slate-700">${tpl.name}</span>? 
+                This action cannot be undone.
+              </div>
+            </div>
+
+            <div class="flex items-center justify-end gap-2 px-6 py-4 
+                        bg-slate-50 border-t border-slate-200">
+              <button id="cancelDelete"
+                class="px-4 py-2 text-sm font-medium text-slate-700 bg-white 
+                       border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+                Cancel
+              </button>
+              <button id="confirmDelete"
+                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium 
+                       text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+
+      const close = () => { root.innerHTML = ''; };
+      document.getElementById('cancelDelete').addEventListener('click', close);
+      document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+        if (e.target.id === 'modalBackdrop') close();
+      });
+
+      document.getElementById('confirmDelete').addEventListener('click', () => {
+        const idx = templates.findIndex(t => t.id === tpl.id);
+        if (idx > -1) templates.splice(idx, 1);
+        close();
+        applyFilters();
+        showToast(`"${tpl.name}" deleted`);
+      });
+    }
+
+    // =========================================================
+    //  Toast
+    // =========================================================
+    function showToast(msg) {
+      const t = document.createElement('div');
+      t.className = 'fixed bottom-5 right-5 z-[60] bg-slate-900 text-white text-sm ' +
+                    'font-medium px-4 py-3 rounded-lg shadow-lg flex items-center gap-2';
+      t.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4"></i> ${msg}`;
+      document.body.appendChild(t);
+      if (window.lucide) window.lucide.createIcons();
+      setTimeout(() => t.remove(), 2400);
+    }
+
+    // =========================================================
+    //  Initial render
+    // =========================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      // Wait for layout to init (sidebar/header)
+      setTimeout(() => {
+        applyFilters();
+      }, 100);
+    });
+  </script>
+</body>
+</html>

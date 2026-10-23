@@ -1,0 +1,1633 @@
+{
+  "themeId": "ortho_theme2",
+  "label": "OrthoCare — Bone & Joint Clinic Theme",
+  "industry": "healthcare",
+  "subIndustry": "ortho",
+  "type": "multi-page",
+  "themeType": "bone-joint-clinic",
+  "description": "An orthopaedic bone and joint clinic theme with navy and teal palette, treatment library, searchable doctor directory with profile dialog, patient resources, FAQ and appointment request form.",
+  "previewUrl": "/healthcare/ortho/ortho_theme2/index.html",
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Header, hero, featured services, lead doctor, why choose us, stats, testimonials, FAQ preview, CTA and footer",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            {
+              "name": "brandName",
+              "label": "Brand Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "OrthoCare"
+            },
+            {
+              "name": "brandTagline",
+              "label": "Tagline",
+              "type": "text",
+              "placeholder": "Bone & Joint Clinic"
+            },
+            {
+              "name": "logo",
+              "label": "Logo",
+              "type": "image",
+              "hint": "assets/images/logo.svg"
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Menu Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Home"
+            },
+            {
+              "name": "url",
+              "label": "Menu URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "index.html"
+            }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "required": true,
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "heroSection",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": "Bone & joint clinic"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Move Better. Live Stronger."
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "primaryButtonLink",
+              "label": "Primary Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button Text",
+              "type": "text",
+              "placeholder": "Explore Treatments"
+            },
+            {
+              "name": "secondaryButtonLink",
+              "label": "Secondary Button Link",
+              "type": "text",
+              "placeholder": "treatments.html"
+            },
+            {
+              "name": "heroImage",
+              "label": "Hero Image",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 1200px wide"
+            },
+            {
+              "name": "hoursTitle",
+              "label": "Hours Card Title",
+              "type": "text",
+              "placeholder": "Consultation hours"
+            },
+            {
+              "name": "hoursText",
+              "label": "Hours Card Text",
+              "type": "text",
+              "placeholder": "Mon–Sat, 9:00–18:00"
+            }
+          ]
+        },
+        {
+          "id": "servicesSection",
+          "label": "Featured Services Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Featured services"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "The conditions we see most often."
+            }
+          ]
+        },
+        {
+          "id": "featuredServices",
+          "label": "Featured Services",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "hint": "Full treatment details are edited on the Treatments page",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Knee Pain Treatment"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "link",
+              "label": "Link",
+              "type": "text",
+              "placeholder": "treatments.html"
+            }
+          ]
+        },
+        {
+          "id": "leadDoctor",
+          "label": "Lead Doctor Spotlight",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Heading",
+              "type": "text",
+              "placeholder": "Meet Dr. Anika Sample"
+            },
+            {
+              "name": "meta",
+              "label": "Specialty / Experience",
+              "type": "text",
+              "placeholder": "Joint Replacement · 15+ years"
+            },
+            {
+              "name": "bio",
+              "label": "Biography",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "primaryButtonText",
+              "label": "Primary Button",
+              "type": "text",
+              "placeholder": "Meet all doctors"
+            },
+            {
+              "name": "secondaryButtonText",
+              "label": "Secondary Button",
+              "type": "text",
+              "placeholder": "Book with Anika"
+            },
+            {
+              "name": "note",
+              "label": "Photo Note",
+              "type": "text",
+              "placeholder": "Sample profile with a stock photo."
+            }
+          ]
+        },
+        {
+          "id": "leadDoctorTags",
+          "label": "Lead Doctor Focus Tags",
+          "type": "list",
+          "min": 0,
+          "max": 5,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Tag",
+              "type": "text",
+              "required": true,
+              "placeholder": "Hip and knee replacement"
+            }
+          ]
+        },
+        {
+          "id": "whyChooseSection",
+          "label": "Why Choose Us Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Why choose OrthoCare"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Good orthopaedic care is as much about listening and explaining as it is about treatment."
+            }
+          ]
+        },
+        {
+          "id": "whyChooseCards",
+          "label": "Why Choose Us Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Specialists for each area"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "stats",
+          "label": "Stats Row",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            {
+              "name": "number",
+              "label": "Number",
+              "type": "text",
+              "required": true,
+              "placeholder": "10"
+            },
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Treatment areas"
+            }
+          ]
+        },
+        {
+          "id": "statsNote",
+          "label": "Stats Note",
+          "type": "single",
+          "fields": [
+            {
+              "name": "text",
+              "label": "Note",
+              "type": "text",
+              "placeholder": "Figures describe this sample site and are placeholders."
+            }
+          ]
+        },
+        {
+          "id": "testimonialsSection",
+          "label": "Testimonials Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "What patients say"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Replace with real feedback shared with consent."
+            }
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "quote",
+              "label": "Review Text",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            },
+            {
+              "name": "initials",
+              "label": "Initials",
+              "type": "text",
+              "placeholder": "A.S."
+            },
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Sample patient A"
+            },
+            {
+              "name": "treatment",
+              "label": "Treatment Label",
+              "type": "text",
+              "placeholder": "Knee pain · sample testimonial"
+            }
+          ]
+        },
+        {
+          "id": "faqPreviewSection",
+          "label": "FAQ Preview Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Common questions"
+            }
+          ]
+        },
+        {
+          "id": "faqPreview",
+          "label": "FAQ Preview",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready to talk to a specialist?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Tell us what is bothering you and pick a time that suits you."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        },
+        {
+          "id": "footerAbout",
+          "label": "Footer About",
+          "type": "single",
+          "fields": [
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Care for bones, joints and movement, explained clearly."
+            }
+          ]
+        },
+        {
+          "id": "footerExplore",
+          "label": "Footer Explore Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "About"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "text",
+              "required": true,
+              "placeholder": "about.html"
+            }
+          ]
+        },
+        {
+          "id": "footerTreatments",
+          "label": "Footer Treatment Links",
+          "type": "list",
+          "min": 0,
+          "max": 8,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true,
+              "placeholder": "Knee Pain Treatment"
+            },
+            {
+              "name": "url",
+              "label": "URL",
+              "type": "text",
+              "placeholder": "treatments.html"
+            }
+          ]
+        },
+        {
+          "id": "contactDetails",
+          "label": "Contact Details (footer & contact page)",
+          "type": "single",
+          "fields": [
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "text",
+              "required": true,
+              "placeholder": "123 Placeholder Street, Your City, 000000"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true,
+              "placeholder": "+91 00000 00000"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "placeholder": "hello@orthocare.example"
+            },
+            {
+              "name": "hoursLine",
+              "label": "Hours Line",
+              "type": "text",
+              "placeholder": "Mon–Sat 9:00–18:00 · Sun closed"
+            }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom",
+          "type": "single",
+          "fields": [
+            {
+              "name": "copyright",
+              "label": "Copyright / Disclaimer",
+              "type": "textarea",
+              "rows": 3,
+              "hint": "Year is added automatically"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "Mission, approach, doctors, specialisations and facilities",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "About OrthoCare"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "A clinic built around clear answers and steady recovery."
+            }
+          ]
+        },
+        {
+          "id": "missionSection",
+          "label": "Mission",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Our mission"
+            },
+            {
+              "name": "mission",
+              "label": "Mission Statement",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "story",
+              "label": "Story Paragraph",
+              "type": "textarea",
+              "rows": 4
+            },
+            {
+              "name": "note",
+              "label": "Sample Note",
+              "type": "text"
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "id": "approachSection",
+          "label": "Approach Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our approach to care"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "What every patient can expect, whatever the condition."
+            }
+          ]
+        },
+        {
+          "id": "approachCards",
+          "label": "Approach Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "We listen first"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsSection",
+          "label": "Doctors Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Doctors and qualifications"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Sample profiles. Replace with real doctors, registration numbers and credentials."
+            }
+          ]
+        },
+        {
+          "id": "specialisationsSection",
+          "label": "Specialisations Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Areas of specialisation"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Ten treatment areas, each with its own pathway."
+            }
+          ]
+        },
+        {
+          "id": "specialisations",
+          "label": "Specialisation Chips",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Spine Care"
+            }
+          ]
+        },
+        {
+          "id": "facilitiesSection",
+          "label": "Facilities Heading",
+          "type": "single",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "text",
+              "placeholder": ""
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Modern clinic facilities"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Sample facilities with stock photos."
+            }
+          ]
+        },
+        {
+          "id": "facilities",
+          "label": "Facilities",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Imaging review"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready to talk to a specialist?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Tell us what is bothering you and pick a time that suits you."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctors",
+      "label": "Doctors",
+      "description": "Searchable doctor directory",
+      "file": "doctors.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Our doctors"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Search by name or filter by specialty. Profiles are samples."
+            }
+          ]
+        },
+        {
+          "id": "searchSettings",
+          "label": "Search & Filter Labels",
+          "type": "single",
+          "fields": [
+            {
+              "name": "searchLabel",
+              "label": "Search Label",
+              "type": "text",
+              "placeholder": "Search doctors"
+            },
+            {
+              "name": "specialtyLabel",
+              "label": "Specialty Label",
+              "type": "text",
+              "placeholder": "Specialty"
+            },
+            {
+              "name": "allLabel",
+              "label": "'All' Option",
+              "type": "text",
+              "placeholder": "All specialties"
+            },
+            {
+              "name": "note",
+              "label": "Page Note",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "doctorsList",
+          "label": "Doctors (rendered by assets/js/doctors.js)",
+          "type": "list",
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Doctor ID",
+              "type": "text",
+              "required": true,
+              "placeholder": "anika"
+            },
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Anika Sample"
+            },
+            {
+              "name": "specialty",
+              "label": "Specialty",
+              "type": "text",
+              "required": true,
+              "placeholder": "Joint Replacement"
+            },
+            {
+              "name": "qualification",
+              "label": "Qualification",
+              "type": "text",
+              "placeholder": "MS (Orthopaedics)"
+            },
+            {
+              "name": "experience",
+              "label": "Experience",
+              "type": "text",
+              "placeholder": "15+ years"
+            },
+            {
+              "name": "focus",
+              "label": "Focus Areas (one per line)",
+              "type": "list",
+              "rows": 3
+            },
+            {
+              "name": "languages",
+              "label": "Languages",
+              "type": "text",
+              "placeholder": "English, Hindi"
+            },
+            {
+              "name": "bio",
+              "label": "Biography",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true,
+              "hint": "Recommended 500px wide"
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready to talk to a specialist?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Tell us what is bothering you and pick a time that suits you."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treatments",
+      "label": "Treatments",
+      "description": "Ten treatment areas with what-to-expect",
+      "file": "treatments.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Treatments"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Ten areas of bone, joint and spine care. Open any card to see what to expect."
+            }
+          ]
+        },
+        {
+          "id": "treatmentsList",
+          "label": "Treatments",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Joint Replacement"
+            },
+            {
+              "name": "description",
+              "label": "Short Description",
+              "type": "textarea",
+              "required": true,
+              "rows": 2
+            },
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "expect",
+              "label": "What to Expect (one per line)",
+              "type": "list",
+              "rows": 4
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book for this"
+            }
+          ]
+        },
+        {
+          "id": "treatmentsNote",
+          "label": "Notes",
+          "type": "single",
+          "fields": [
+            {
+              "name": "cardNote",
+              "label": "Card Footnote",
+              "type": "text",
+              "placeholder": "Whether a treatment suits you is decided after an examination by a doctor."
+            },
+            {
+              "name": "pageNote",
+              "label": "Page Footnote",
+              "type": "text",
+              "placeholder": "Descriptions are general information only. Photos are stock images."
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready to talk to a specialist?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Tell us what is bothering you and pick a time that suits you."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "patient-resources",
+      "label": "Patient Resources",
+      "description": "FAQ, preparation, care tips, recovery and checklist",
+      "file": "patient-resources.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Patient resources"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Practical guidance for before, during and after your visit."
+            }
+          ]
+        },
+        {
+          "id": "faqs",
+          "label": "Frequently Asked Questions",
+          "type": "list",
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "textarea",
+              "required": true,
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "prepSteps",
+          "label": "Preparing For Your Appointment",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Step Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Gather your records."
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "prepImage",
+          "label": "Preparation Image",
+          "type": "single",
+          "fields": [
+            {
+              "name": "image",
+              "label": "Image",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "id": "careTips",
+          "label": "General Care Tips (heading | items per line)",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Heading",
+              "type": "text",
+              "required": true,
+              "placeholder": "Joint care"
+            },
+            {
+              "name": "items",
+              "label": "Tips (one per line)",
+              "type": "list",
+              "required": true,
+              "rows": 4
+            }
+          ]
+        },
+        {
+          "id": "recoveryTips",
+          "label": "Recovery & Rehabilitation",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Follow your plan"
+            },
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "textarea",
+              "rows": 2
+            }
+          ]
+        },
+        {
+          "id": "checklist",
+          "label": "Patient Visit Checklist",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true,
+              "placeholder": "Photo ID"
+            }
+          ]
+        },
+        {
+          "id": "disclaimer",
+          "label": "Disclaimer",
+          "type": "single",
+          "fields": [
+            {
+              "name": "text",
+              "label": "Disclaimer",
+              "type": "textarea",
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "Bottom CTA Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Ready to talk to a specialist?"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text",
+              "placeholder": "Tell us what is bothering you and pick a time that suits you."
+            },
+            {
+              "name": "buttonText",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            },
+            {
+              "name": "buttonLink",
+              "label": "Button Link",
+              "type": "text",
+              "placeholder": "appointment.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appointment",
+      "label": "Appointment",
+      "description": "Appointment form options and instructions",
+      "file": "appointment.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Book an appointment"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Send us a request and the clinic will confirm a time with you."
+            }
+          ]
+        },
+        {
+          "id": "doctorOptions",
+          "label": "Preferred Doctor Options",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "Dr. Anika Sample — Joint Replacement"
+            }
+          ]
+        },
+        {
+          "id": "treatmentOptions",
+          "label": "Treatment Options",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "General orthopaedic consultation"
+            }
+          ]
+        },
+        {
+          "id": "timeOptions",
+          "label": "Time Options",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Option",
+              "type": "text",
+              "required": true,
+              "placeholder": "09:00"
+            }
+          ]
+        },
+        {
+          "id": "beforeYouSend",
+          "label": "Before You Send",
+          "type": "list",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Point",
+              "type": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "callCard",
+          "label": "Call Prompt",
+          "type": "single",
+          "fields": [
+            {
+              "name": "text",
+              "label": "Text",
+              "type": "text",
+              "placeholder": "Prefer to talk?"
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "placeholder": "+91 00000 00000"
+            }
+          ]
+        },
+        {
+          "id": "visitChecklist",
+          "label": "Visit Checklist",
+          "type": "list",
+          "min": 0,
+          "max": 12,
+          "fields": [
+            {
+              "name": "text",
+              "label": "Item",
+              "type": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "apiSettings",
+          "label": "Booking Backend (optional)",
+          "type": "single",
+          "fields": [
+            {
+              "name": "apiBase",
+              "label": "API Base URL",
+              "type": "url",
+              "hint": "OrthoCare.config.API_BASE in assets/js/app.js. Leave empty for demo mode."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Message form, clinic details and hours",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageBanner",
+          "label": "Page Banner",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Page Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Contact us"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "placeholder": "Questions before you book? Write to us or visit the clinic."
+            }
+          ]
+        },
+        {
+          "id": "messageForm",
+          "label": "Message Form",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Form Title",
+              "type": "text",
+              "placeholder": "Send a message"
+            },
+            {
+              "name": "submitButtonText",
+              "label": "Submit Button Text",
+              "type": "text",
+              "placeholder": "Send message"
+            }
+          ]
+        },
+        {
+          "id": "clinicDetails",
+          "label": "Clinic Details",
+          "type": "single",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "text",
+              "placeholder": "Clinic details"
+            },
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email"
+            },
+            {
+              "name": "directionsText",
+              "label": "Directions Button Text",
+              "type": "text",
+              "placeholder": "Get directions"
+            },
+            {
+              "name": "directionsLink",
+              "label": "Directions Link",
+              "type": "url",
+              "hint": "Google Maps link"
+            }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours",
+          "type": "list",
+          "min": 1,
+          "max": 7,
+          "fields": [
+            {
+              "name": "day",
+              "label": "Day",
+              "type": "text",
+              "required": true,
+              "placeholder": "Monday – Friday"
+            },
+            {
+              "name": "hours",
+              "label": "Hours",
+              "type": "text",
+              "required": true,
+              "placeholder": "9:00 – 18:00"
+            }
+          ]
+        },
+        {
+          "id": "bookButton",
+          "label": "Book Button",
+          "type": "single",
+          "fields": [
+            {
+              "name": "text",
+              "label": "Button Text",
+              "type": "text",
+              "placeholder": "Book Appointment"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global": {
+    "colors": {
+      "navy": "#0b2545",
+      "navy2": "#13315c",
+      "teal": "#0e7c86",
+      "tealDark": "#0a5f67",
+      "tealSoft": "#dff1f2",
+      "mint": "#c9f2d9",
+      "lime": "#c8f169",
+      "paper": "#faf8f4",
+      "sand": "#f2eee6",
+      "line": "#e2ddd2"
+    },
+    "fonts": {
+      "display": "Manrope",
+      "body": "DM Sans"
+    }
+  }
+}

@@ -1,0 +1,915 @@
+{
+  "themeId": "dental_theme3",
+  "label": "Mint & Moss Dental — Wellness Theme",
+  "industry": "healthcare",
+  "subIndustry": "dental",
+  "type": "multi-page",
+  "themeType": "wellness-natural",
+  "description": "A wellness-focused dental studio theme with organic shapes, Fraunces typography, sage green + mint + terracotta palette, curved dividers, floating leaves, and a warm, gentle editorial feel.",
+  "previewUrl": "/healthcare/dental/dental_theme3/index.html",
+
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Hero with layered visual, trust bar, philosophy split, services grid, why-choose-us, process, testimonial, CTA.",
+      "file": "index.html",
+      "sections": [
+        {
+          "id": "brand",
+          "label": "Brand & Logo",
+          "type": "single",
+          "fields": [
+            { "name": "logoIcon", "label": "Logo Icon (FontAwesome class)", "type": "text", "required": true, "placeholder": "fa-solid fa-leaf" },
+            { "name": "brandName", "label": "Brand Name", "type": "text", "required": true, "placeholder": "Mint & Moss" },
+            { "name": "brandAccent", "label": "Accent Word (italic)", "type": "text", "placeholder": "&" }
+          ]
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation Menu",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "label", "label": "Menu Label", "type": "text", "required": true, "placeholder": "Home" },
+            { "name": "url", "label": "Menu URL", "type": "text", "required": true, "placeholder": "index.html" }
+          ]
+        },
+        {
+          "id": "headerActions",
+          "label": "Header Actions",
+          "type": "single",
+          "fields": [
+            { "name": "phoneIconEnabled", "label": "Show Phone Icon", "type": "boolean" },
+            { "name": "buttonText", "label": "CTA Button Text", "type": "text", "placeholder": "Book Visit" },
+            { "name": "buttonLink", "label": "CTA Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "hero",
+          "label": "Hero Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "required": true, "placeholder": "Now accepting new patients" },
+            { "name": "title", "label": "Title (HTML: <br>, <em>)", "type": "text", "required": true, "placeholder": "Gentle dental care,<br><em class=\"underline-squiggle\">naturally</em> yours." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Explore Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "12" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Years of Care" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeIcon", "label": "Badge Icon (FontAwesome)", "type": "text", "placeholder": "fa-solid fa-star" },
+            { "name": "badgeTitle", "label": "Badge Title", "type": "text", "placeholder": "4.9 / 5" },
+            { "name": "badgeSubtitle", "label": "Badge Subtitle", "type": "text", "placeholder": "620+ reviews" },
+            { "name": "quoteText", "label": "Floating Quote Text", "type": "textarea", "rows": 2, "placeholder": "The gentlest dentist I've ever seen." },
+            { "name": "quoteAuthor", "label": "Quote Author", "type": "text", "placeholder": "— Priya S., Patient" }
+          ]
+        },
+        {
+          "id": "trustBar",
+          "label": "Trust Bar Items",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "General & Preventive" }
+          ]
+        },
+        {
+          "id": "aboutSection",
+          "label": "About Section (Home)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Our Philosophy" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Dentistry that feels <em>like a breath of fresh air</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "cardNumber", "label": "Floating Card Number", "type": "text", "placeholder": "12+" },
+            { "name": "cardLabel", "label": "Floating Card Label", "type": "text", "placeholder": "Years of gentle care" },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Read the full story" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "about.html" }
+          ]
+        },
+        {
+          "id": "aboutFeatures",
+          "label": "About Feature List",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "01." },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Gentle by design" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "servicesSection",
+          "label": "Services Section Header (Home)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "What We Do" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Modern dentistry, <em>warmly delivered</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "servicesGrid",
+          "label": "Services Cards (Home)",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "title", "label": "Service Title", "type": "text", "required": true, "placeholder": "General Dentistry" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Learn more" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "whySection",
+          "label": "Why Choose Us Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Why Mint & Moss" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Four reasons patients <em>keep coming back</em>." },
+            { "name": "image", "label": "Section Image", "type": "image", "required": true },
+            { "name": "badgeNumber", "label": "Badge Number", "type": "text", "placeholder": "98%" },
+            { "name": "badgeLabel", "label": "Badge Label", "type": "text", "placeholder": "Would Recommend" }
+          ]
+        },
+        {
+          "id": "whyItems",
+          "label": "Why Choose Us Items",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Roman Numeral", "type": "text", "required": true, "placeholder": "i." },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Truly anxiety-friendly" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "processSection",
+          "label": "Process Section Header (Home)",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How It Works" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Your visit, <em>step by gentle step</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps (Home)",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Warm Welcome" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "testimonial",
+          "label": "Featured Testimonial",
+          "type": "single",
+          "fields": [
+            { "name": "starsCount", "label": "Stars Count (1-5)", "type": "number", "placeholder": "5" },
+            { "name": "quote", "label": "Quote (HTML: <em>)", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "authorImage", "label": "Author Image", "type": "image", "required": true },
+            { "name": "authorName", "label": "Author Name", "type": "text", "required": true, "placeholder": "Priya Sharma" },
+            { "name": "authorTitle", "label": "Author Title", "type": "text", "placeholder": "Patient since 2022" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Ready When You Are" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Book your first visit — <em>at your own pace</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Patient Stories" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "gallery.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Your Visit" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "type": "single",
+          "fields": [
+            { "name": "description", "label": "Footer Description", "type": "textarea", "rows": 3 },
+            { "name": "newsletterTitle", "label": "Newsletter Heading", "type": "text", "placeholder": "Stay In Touch" },
+            { "name": "newsletterText", "label": "Newsletter Description", "type": "textarea", "rows": 2 },
+            { "name": "newsletterPlaceholder", "label": "Newsletter Input Placeholder", "type": "text", "placeholder": "your@email.com" }
+          ]
+        },
+        {
+          "id": "footerColumns",
+          "label": "Footer Link Columns",
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "fields": [
+            { "name": "heading", "label": "Column Heading", "type": "text", "required": true, "placeholder": "Studio" },
+            { "name": "links", "label": "Links (Label | URL per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: About | about.html" }
+          ]
+        },
+        {
+          "id": "socials",
+          "label": "Social Links",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "platform", "label": "Platform Name (for aria-label)", "type": "text", "required": true, "placeholder": "Instagram" },
+            { "name": "icon", "label": "FontAwesome Icon Class", "type": "text", "required": true, "placeholder": "fa-brands fa-instagram" },
+            { "name": "url", "label": "URL", "type": "text", "required": true, "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "footerBottom",
+          "label": "Footer Bottom Bar",
+          "type": "single",
+          "fields": [
+            { "name": "copyright", "label": "Copyright Text", "type": "text", "placeholder": "© 2026 Mint & Moss Dental Co. All rights reserved." },
+            { "name": "creditText", "label": "Credit Line Text", "type": "text", "placeholder": "Made with care, in Pune" },
+            { "name": "privacyText", "label": "Privacy Link Text", "type": "text", "placeholder": "Privacy" },
+            { "name": "privacyUrl", "label": "Privacy Link URL", "type": "text", "placeholder": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "description": "Page hero with layered visual, story section, values grid, team section, quote strip, CTA.",
+      "file": "about.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "About" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "Our Story · Since 2012" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "The calm <em class=\"underline-squiggle\">behind the care</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Our Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "12" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Years of Care" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeIcon", "label": "Badge Icon (FontAwesome)", "type": "text", "placeholder": "fa-solid fa-heart" },
+            { "name": "badgeTitle", "label": "Badge Title", "type": "text", "placeholder": "Family-Run" },
+            { "name": "badgeSubtitle", "label": "Badge Subtitle", "type": "text", "placeholder": "Independent studio" },
+            { "name": "founderImage", "label": "Founder Quote Image", "type": "image" },
+            { "name": "founderName", "label": "Founder Name", "type": "text", "placeholder": "— Dr. Anika Rao" },
+            { "name": "founderQuote", "label": "Founder Quote", "type": "textarea", "rows": 2, "placeholder": "We never wanted to be the busiest clinic. Only the calmest." }
+          ]
+        },
+        {
+          "id": "storySection",
+          "label": "Story Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How It Started" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "A small studio built on <em>patience, not speed</em>." },
+            { "name": "lead", "label": "Lead Quote", "type": "textarea", "required": true, "rows": 2 },
+            { "name": "paragraphs", "label": "Paragraphs (one per line)", "type": "list", "required": true, "rows": 10 },
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Image", "type": "image", "required": true },
+            { "name": "signatureName", "label": "Signature Name", "type": "text", "placeholder": "Dr. Anika Rao" },
+            { "name": "signatureTitle", "label": "Signature Title", "type": "text", "placeholder": "Founder & Principal Dentist" }
+          ]
+        },
+        {
+          "id": "valuesSection",
+          "label": "Values Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "What We Believe" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Four values that <em>shape every visit</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "valuesCards",
+          "label": "Values Cards",
+          "type": "list",
+          "min": 1,
+          "max": 8,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-heart" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Gentleness, first" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "teamSection",
+          "label": "Team Section",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "The Team" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "The people <em>you'll actually meet</em>." },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Come say hello" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "teamMembers",
+          "label": "Team Members",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "photo", "label": "Photo", "type": "image", "required": true },
+            { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "Dr. Anika Rao" },
+            { "name": "role", "label": "Role", "type": "text", "required": true, "placeholder": "Founder & Principal Dentist" },
+            { "name": "instagram", "label": "Instagram URL", "type": "text", "placeholder": "#" },
+            { "name": "linkedin", "label": "LinkedIn URL", "type": "text", "placeholder": "#" }
+          ]
+        },
+        {
+          "id": "quoteSection",
+          "label": "Quote Strip",
+          "type": "single",
+          "fields": [
+            { "name": "quote", "label": "Quote (HTML: <em>)", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "author", "label": "Author", "type": "text", "required": true, "placeholder": "Dr. Anika Rao, Founder" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Ready When You Are" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Come meet the team — <em>at your own pace</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Your Visit" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "description": "Page hero, sticky quick nav, six service detail sections with alternating layouts, process section, FAQ.",
+      "file": "services.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "Services" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "Six services, one gentle approach" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Modern care, <em class=\"underline-squiggle\">delivered gently</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See All Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "#services-list" }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "6" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Core Services" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeIcon", "label": "Badge Icon (FontAwesome)", "type": "text", "placeholder": "fa-solid fa-shield-heart" },
+            { "name": "badgeTitle", "label": "Badge Title", "type": "text", "placeholder": "Gentle First" },
+            { "name": "badgeSubtitle", "label": "Badge Subtitle", "type": "text", "placeholder": "Every visit, every time" },
+            { "name": "founderImage", "label": "Founder Quote Image", "type": "image" },
+            { "name": "founderName", "label": "Founder Name", "type": "text", "placeholder": "— Dr. Anika Rao" },
+            { "name": "founderQuote", "label": "Founder Quote", "type": "textarea", "rows": 2, "placeholder": "Modern dentistry should feel calm, not clinical." }
+          ]
+        },
+        {
+          "id": "quickNav",
+          "label": "Quick Nav Links",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-tooth" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "General" },
+            { "name": "anchor", "label": "Anchor ID", "type": "text", "required": true, "placeholder": "general" }
+          ]
+        },
+        {
+          "id": "serviceSections",
+          "label": "Service Detail Sections",
+          "type": "list",
+          "min": 1,
+          "max": 12,
+          "fields": [
+            { "name": "anchorId", "label": "Anchor ID", "type": "text", "required": true, "placeholder": "general" },
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "required": true, "placeholder": "General & Preventive" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Small care, taken <em>quietly and consistently</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "reverseLayout", "label": "Reverse Layout", "type": "boolean" },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "metaOneLabel", "label": "Meta 1 Label", "type": "text", "placeholder": "Duration" },
+            { "name": "metaOneValue", "label": "Meta 1 Value", "type": "text", "placeholder": "45 minutes" },
+            { "name": "metaTwoLabel", "label": "Meta 2 Label", "type": "text", "placeholder": "Frequency" },
+            { "name": "metaTwoValue", "label": "Meta 2 Value", "type": "text", "placeholder": "Every 6 months" },
+            { "name": "metaThreeLabel", "label": "Meta 3 Label", "type": "text", "placeholder": "Comfort" },
+            { "name": "metaThreeValue", "label": "Meta 3 Value", "type": "text", "placeholder": "Fully painless" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Book a Checkup" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "processSection",
+          "label": "Process Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "How It Works" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Your visit, <em>step by gentle step</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "processSteps",
+          "label": "Process Steps",
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "fields": [
+            { "name": "number", "label": "Step Number", "type": "text", "required": true, "placeholder": "01" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Warm Welcome" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 2 }
+          ]
+        },
+        {
+          "id": "faqSection",
+          "label": "FAQ Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Common Questions" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Things patients <em>often ask</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Ask us anything" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "faqItems",
+          "label": "FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Not Sure Where to Begin?" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's talk it <em>through together</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See the Work" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "gallery.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Consultation" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery",
+      "description": "Page hero, filter pills, bento gallery grid with lightbox, featured case study, stats band, CTA.",
+      "file": "gallery.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "Gallery" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "Real patients · Real results" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Smiles we've <em class=\"underline-squiggle\">quietly crafted</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Start Your Journey" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Browse Cases" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "#gallery" }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "3k" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Smiles Crafted" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "thumbnailImage", "label": "Floating Thumbnail Image", "type": "image", "required": true },
+            { "name": "badgeIcon", "label": "Badge Icon (FontAwesome)", "type": "text", "placeholder": "fa-solid fa-camera-retro" },
+            { "name": "badgeTitle", "label": "Badge Title", "type": "text", "placeholder": "Real Cases" },
+            { "name": "badgeSubtitle", "label": "Badge Subtitle", "type": "text", "placeholder": "No stock photos" }
+          ]
+        },
+        {
+          "id": "gallerySection",
+          "label": "Gallery Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Selected Work" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Every smile here was <em>designed, not templated</em>." },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Start your case" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "galleryFilters",
+          "label": "Gallery Filter Categories",
+          "type": "list",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-border-all" },
+            { "name": "label", "label": "Filter Label", "type": "text", "required": true, "placeholder": "Cosmetic" },
+            { "name": "value", "label": "Filter Value (slug)", "type": "text", "required": true, "placeholder": "cosmetic" },
+            { "name": "count", "label": "Count (optional, for All)", "type": "text", "placeholder": "9" }
+          ]
+        },
+        {
+          "id": "galleryTiles",
+          "label": "Gallery Tiles",
+          "type": "list",
+          "min": 1,
+          "max": 30,
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "category", "label": "Category (filter slug)", "type": "text", "required": true, "placeholder": "makeover" },
+            { "name": "categoryLabel", "label": "Category Label", "type": "text", "required": true, "placeholder": "Makeover" },
+            { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Complete Upper Arch Veneers" },
+            { "name": "description", "label": "Description", "type": "text", "placeholder": "Six hand-layered ceramics + whitening · 5 visits" },
+            { "name": "size", "label": "Tile Size", "type": "select", "options": ["tile-lg", "tile-md", "tile-sm", "tile-wide"], "required": true }
+          ]
+        },
+        {
+          "id": "featureCase",
+          "label": "Featured Case Study",
+          "type": "single",
+          "fields": [
+            { "name": "image", "label": "Image", "type": "image", "required": true },
+            { "name": "badgeText", "label": "Badge Text", "type": "text", "placeholder": "Featured Case" },
+            { "name": "resultNumber", "label": "Result Number", "type": "text", "placeholder": "5" },
+            { "name": "resultLabel", "label": "Result Label", "type": "text", "placeholder": "Visits" },
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Case Study" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "A full smile <em>reconsidered</em> in five gentle visits." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 4 },
+            { "name": "features", "label": "Feature Bullets (one per line)", "type": "list", "required": true, "rows": 6 },
+            { "name": "metaOneLabel", "label": "Meta 1 Label", "type": "text", "placeholder": "Visits" },
+            { "name": "metaOneValue", "label": "Meta 1 Value", "type": "text", "placeholder": "5 sessions" },
+            { "name": "metaTwoLabel", "label": "Meta 2 Label", "type": "text", "placeholder": "Duration" },
+            { "name": "metaTwoValue", "label": "Meta 2 Value", "type": "text", "placeholder": "6 weeks" },
+            { "name": "metaThreeLabel", "label": "Meta 3 Label", "type": "text", "placeholder": "Comfort" },
+            { "name": "metaThreeValue", "label": "Meta 3 Value", "type": "text", "placeholder": "Fully painless" },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Discuss a Similar Case" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        },
+        {
+          "id": "statsBand",
+          "label": "Stats Band",
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "fields": [
+            { "name": "target", "label": "Counter Target", "type": "number", "required": true, "placeholder": "3000" },
+            { "name": "suffix", "label": "Suffix", "type": "text", "placeholder": "+" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Smiles Crafted" }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Your Turn" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's design <em>your smile</em> next." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Book a Visit" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "contact.html" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Book" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "Consultation" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "description": "Page hero, quick contact cards, main contact form with side details, map, FAQ, CTA.",
+      "file": "contact.html",
+      "sections": [
+        {
+          "id": "pageHero",
+          "label": "Page Hero",
+          "type": "single",
+          "fields": [
+            { "name": "breadcrumbHome", "label": "Breadcrumb Home Label", "type": "text", "placeholder": "Home" },
+            { "name": "breadcrumbCurrent", "label": "Breadcrumb Current Page", "type": "text", "placeholder": "Contact" },
+            { "name": "eyebrow", "label": "Eyebrow Text", "type": "text", "placeholder": "We reply within 24 hours" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Let's start with a <em class=\"underline-squiggle\">gentle conversation</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Send a Message" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "#contact-form" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "Call Us Instead" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "heroStats",
+          "label": "Hero Stats",
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "fields": [
+            { "name": "number", "label": "Number", "type": "text", "required": true, "placeholder": "24" },
+            { "name": "suffix", "label": "Suffix (italic accent)", "type": "text", "placeholder": "h" },
+            { "name": "label", "label": "Label", "type": "text", "required": true, "placeholder": "Response Time" }
+          ]
+        },
+        {
+          "id": "heroImages",
+          "label": "Hero Layered Images",
+          "type": "single",
+          "fields": [
+            { "name": "mainImage", "label": "Main Image", "type": "image", "required": true },
+            { "name": "secondaryImage", "label": "Secondary Overlap Image", "type": "image", "required": true },
+            { "name": "badgeIcon", "label": "Badge Icon (FontAwesome)", "type": "text", "placeholder": "fa-solid fa-comment-dots" },
+            { "name": "badgeTitle", "label": "Badge Title", "type": "text", "placeholder": "Real Replies" },
+            { "name": "badgeSubtitle", "label": "Badge Subtitle", "type": "text", "placeholder": "From a real human" },
+            { "name": "founderImage", "label": "Founder Quote Image", "type": "image" },
+            { "name": "founderName", "label": "Founder Name", "type": "text", "placeholder": "— Dr. Anika Rao" },
+            { "name": "founderQuote", "label": "Founder Quote", "type": "textarea", "rows": 2, "placeholder": "Every message reaches us. We read them all." }
+          ]
+        },
+        {
+          "id": "quickContactCards",
+          "label": "Quick Contact Cards",
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "fields": [
+            { "name": "icon", "label": "Icon (FontAwesome)", "type": "text", "required": true, "placeholder": "fa-solid fa-phone" },
+            { "name": "title", "label": "Card Title", "type": "text", "required": true, "placeholder": "Call the Studio" },
+            { "name": "textLine1", "label": "Text Line 1", "type": "text", "placeholder": "Mon – Sat, 9am – 7pm" },
+            { "name": "textLine2", "label": "Text Line 2", "type": "text", "placeholder": "Speak to a person directly" },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "contactHead",
+          "label": "Contact Form Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Send a Message" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Tell us what <em>you have in mind</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 }
+          ]
+        },
+        {
+          "id": "contactForm",
+          "label": "Contact Form",
+          "type": "single",
+          "fields": [
+            { "name": "formTitle", "label": "Form Title", "type": "text", "placeholder": "Send an Enquiry" },
+            { "name": "formSubtitle", "label": "Form Subtitle", "type": "text", "placeholder": "All fields are required. Your information stays private." },
+            { "name": "namePlaceholder", "label": "Name Placeholder", "type": "text", "placeholder": "Your name" },
+            { "name": "phonePlaceholder", "label": "Phone Placeholder", "type": "text", "placeholder": "+91 98765 43210" },
+            { "name": "emailPlaceholder", "label": "Email Placeholder", "type": "text", "placeholder": "your@email.com" },
+            { "name": "subjectLabel", "label": "Subject Label", "type": "text", "placeholder": "I'm enquiring about" },
+            { "name": "subjectOptions", "label": "Subject Options (Label | Value per line)", "type": "list", "rows": 8 },
+            { "name": "messagePlaceholder", "label": "Message Placeholder", "type": "textarea", "rows": 2 },
+            { "name": "submitButtonText", "label": "Submit Button Text", "type": "text", "placeholder": "Send Message" },
+            { "name": "formNote", "label": "Note Below Form", "type": "text", "placeholder": "Your details are kept strictly private." }
+          ]
+        },
+        {
+          "id": "openingHours",
+          "label": "Opening Hours Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Opening Hours" },
+            { "name": "hours", "label": "Hours (Label | Value per line)", "type": "list", "required": true, "rows": 6, "hint": "Format: Monday – Friday | 9:00 – 19:00" }
+          ]
+        },
+        {
+          "id": "studioDetails",
+          "label": "Studio Details Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Studio Details" },
+            { "name": "address", "label": "Address", "type": "textarea", "rows": 2 },
+            { "name": "phone", "label": "Phone", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "whatsapp", "label": "WhatsApp", "type": "text", "placeholder": "+91 12345 67890" },
+            { "name": "email", "label": "Email", "type": "email", "placeholder": "hello@mintandmoss.com" }
+          ]
+        },
+        {
+          "id": "socialsBlock",
+          "label": "Follow Along Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Block Title", "type": "text", "placeholder": "Follow Along" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 2 },
+            { "name": "socials", "label": "Socials (Platform | Icon Class | URL per line)", "type": "list", "rows": 6 }
+          ]
+        },
+        {
+          "id": "emergency",
+          "label": "Emergency Block",
+          "type": "single",
+          "fields": [
+            { "name": "title", "label": "Title", "type": "text", "placeholder": "Dental Emergency?" },
+            { "name": "description", "label": "Description", "type": "textarea", "required": true, "rows": 3 },
+            { "name": "buttonText", "label": "Button Text", "type": "text", "placeholder": "Call Now" },
+            { "name": "buttonLink", "label": "Button Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "mapSection",
+          "label": "Map Section",
+          "type": "single",
+          "fields": [
+            { "name": "mapEmbedUrl", "label": "Google Maps Embed URL", "type": "text", "required": true },
+            { "name": "eyebrow", "label": "Overlay Eyebrow", "type": "text", "placeholder": "The Studio" },
+            { "name": "cardTitle", "label": "Overlay Card Title", "type": "text", "placeholder": "Find Us Here" },
+            { "name": "cardAddress", "label": "Overlay Card Address", "type": "textarea", "rows": 2 },
+            { "name": "directionsText", "label": "Directions Link Text", "type": "text", "placeholder": "Get Directions" },
+            { "name": "directionsUrl", "label": "Directions URL", "type": "text", "placeholder": "https://maps.google.com" }
+          ]
+        },
+        {
+          "id": "faqSection",
+          "label": "FAQ Section Header",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "Before Your Visit" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Common questions, <em>gently answered</em>." },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "linkText", "label": "Link Text", "type": "text", "placeholder": "Call the studio" },
+            { "name": "linkUrl", "label": "Link URL", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        },
+        {
+          "id": "faqItems",
+          "label": "FAQ Items",
+          "type": "list",
+          "min": 1,
+          "max": 20,
+          "fields": [
+            { "name": "question", "label": "Question", "type": "text", "required": true },
+            { "name": "answer", "label": "Answer", "type": "textarea", "required": true, "rows": 3 }
+          ]
+        },
+        {
+          "id": "ctaBanner",
+          "label": "CTA Banner",
+          "type": "single",
+          "fields": [
+            { "name": "eyebrow", "label": "Eyebrow", "type": "text", "placeholder": "We're Here" },
+            { "name": "title", "label": "Title (HTML: <em>)", "type": "text", "required": true, "placeholder": "Prefer to <em>talk it through</em> first?" },
+            { "name": "description", "label": "Description", "type": "textarea", "rows": 3 },
+            { "name": "primaryButtonText", "label": "Primary Button Text", "type": "text", "placeholder": "Call +91 12345 67890" },
+            { "name": "primaryButtonLink", "label": "Primary Button Link", "type": "text", "placeholder": "tel:+911234567890" },
+            { "name": "secondaryButtonText", "label": "Secondary Button Text", "type": "text", "placeholder": "See Services" },
+            { "name": "secondaryButtonLink", "label": "Secondary Button Link", "type": "text", "placeholder": "services.html" },
+            { "name": "badgeFirstLine", "label": "Badge First Line", "type": "text", "placeholder": "Call" },
+            { "name": "badgeSecondLine", "label": "Badge Second Line", "type": "text", "placeholder": "the Studio" },
+            { "name": "badgeLink", "label": "Badge Link", "type": "text", "placeholder": "tel:+911234567890" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "global": {
+    "colors": {
+      "moss": "#2F4A3C",
+      "mossDeep": "#1F3329",
+      "mossLight": "#3D5E4C",
+      "sage": "#8FA68E",
+      "mint": "#D4E8DC",
+      "mintSoft": "#E8F2EC",
+      "mintGlow": "#F0F7F2",
+      "terracotta": "#D89B7C",
+      "terracottaSoft": "#F0C7AE",
+      "cream": "#F8F5EE",
+      "ivory": "#FDFCF8",
+      "ink": "#1F2A24",
+      "muted": "#7A8B7F"
+    },
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Sora"
+    }
+  }
+}

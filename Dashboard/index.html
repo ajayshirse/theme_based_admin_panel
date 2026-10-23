@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — ThemeBase</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Panel slide animation */
+    .auth-panel {
+      transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .form-container {
+      position: relative;
+      min-height: 560px;
+    }
+
+    /* Both forms absolute */
+    .auth-form {
+      position: absolute;
+      inset: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .auth-form.hidden-form {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(20px);
+    }
+
+    .auth-form.active-form {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+      z-index: 10;
+    }
+
+    /* Floating shapes */
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    @keyframes float-slower {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(-8deg); }
+    }
+    .float-shape-1 { animation: float-slow 8s ease-in-out infinite; }
+    .float-shape-2 { animation: float-slower 12s ease-in-out infinite; }
+    .float-shape-3 { animation: float-slow 10s ease-in-out infinite reverse; }
+
+    /* FIX 1: Desktop — signup form lives in the LEFT column
+       (the dark panel is on the right while signing up) */
+    @media (min-width: 1024px) {
+      #signupForm {
+        left: -100%;
+        right: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 min-h-screen font-sans antialiased overflow-hidden">
+
+  <div class="min-h-screen flex items-center justify-center p-4 lg:p-8">
+
+    <!-- Main Card (FIX 3: min-h-[700px] so the signup form is not clipped) -->
+    <div class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden 
+                grid lg:grid-cols-2 min-h-[700px] relative">
+
+      <!-- ============================================
+           LEFT PANEL (Dark overlay — animates)
+           FIX 2: hidden on mobile, visible from lg up
+      ============================================ -->
+      <div id="panelOverlay"
+        class="auth-panel hidden lg:block absolute top-0 bottom-0 left-0 lg:w-1/2 z-20
+               bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
+               text-white overflow-hidden
+               lg:translate-x-0">
+
+        <!-- Decorative shapes -->
+        <div class="float-shape-1 absolute top-10 right-10 w-40 h-40 
+                    bg-indigo-500/20 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="float-shape-2 absolute bottom-20 left-10 w-56 h-56 
+                    bg-violet-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="float-shape-3 absolute top-1/2 left-1/3 w-32 h-32 
+                    bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 h-full flex flex-col items-center justify-center 
+                    text-center px-8 lg:px-14 py-14">
+
+          <!-- Logo -->
+          <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur 
+                      border border-white/20 grid place-items-center mb-8">
+            <i data-lucide="layers" class="w-8 h-8 text-white"></i>
+          </div>
+
+          <h2 id="panelHeading" class="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
+            Welcome Back
+          </h2>
+          <p id="panelSubtext" class="text-white/70 text-sm lg:text-base max-w-xs mb-10 leading-relaxed">
+            Sign in to manage your themes, listings, and domains — all from one dashboard.
+          </p>
+
+          <!-- Toggle button -->
+          <button id="toggleBtn"
+            class="px-8 py-3 rounded-xl border-2 border-white/30 
+                   text-white font-semibold text-sm tracking-wide
+                   hover:bg-white hover:text-slate-900 
+                   transition-all duration-300 group">
+            <span id="toggleBtnText" class="inline-flex items-center gap-2">
+              Create Account
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </span>
+          </button>
+
+          <!-- Trust badges -->
+          <div class="mt-12 flex items-center gap-6 text-white/40 text-xs">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+              <span>Secure</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+              <span>Fast</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+              <span>Reliable</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================
+           RIGHT PANEL (Forms)
+      ============================================ -->
+      <div class="relative lg:col-start-2 lg:col-end-3">
+
+        <!-- LOGIN FORM -->
+        <div id="loginForm" class="auth-form active-form w-full max-w-sm mx-auto">
+
+          <!-- Mobile logo -->
+          <div class="lg:hidden flex items-center gap-2.5 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 grid place-items-center">
+            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+            </div>
+            <div class="font-bold text-slate-900 text-lg tracking-tight">ThemeBase</div>
+          </div>
+
+          <div class="mb-8">
+            <h1 class="text-2xl lg:text-3xl font-bold tracking-tight text-slate-900 mb-2">
+              Sign in
+            </h1>
+            <p class="text-slate-500 text-sm">
+              Enter your credentials to access your account.
+            </p>
+          </div>
+
+          <form id="loginFormEl" class="space-y-5">
+
+            <!-- Email -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-2 tracking-wide">
+                EMAIL ADDRESS
+              </label>
+              <div class="relative">
+                <i data-lucide="mail" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="email" id="loginEmail" required
+                  placeholder="you@example.com"
+                  class="w-full h-11 pl-10 pr-4 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 bg-slate-50
+                         focus:outline-none focus:border-slate-400 focus:bg-white
+                         transition">
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="block text-xs font-semibold text-slate-600 tracking-wide">
+                  PASSWORD
+                </label>
+                <a href="forgot-password.html"
+                   class="text-xs text-indigo-600 hover:text-indigo-700 font-medium">
+                  Forgot?
+                </a>
+              </div>
+              <div class="relative">
+                <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="password" id="loginPassword" required
+                  placeholder="Enter your password"
+                  class="w-full h-11 pl-10 pr-10 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 bg-slate-50
+                         focus:outline-none focus:border-slate-400 focus:bg-white
+                         transition">
+                <button type="button" id="toggleLoginPass"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700">
+                  <i data-lucide="eye" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Remember -->
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="rememberMe"
+                class="w-4 h-4 rounded border-slate-300 accent-slate-900 cursor-pointer">
+              <label for="rememberMe" class="text-sm text-slate-600 cursor-pointer">
+                Keep me signed in
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+              class="w-full h-11 bg-slate-900 hover:bg-slate-800 
+                     text-white font-semibold text-sm rounded-lg 
+                     transition inline-flex items-center justify-center gap-2">
+              Sign In
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+          </form>
+
+          <!-- Divider -->
+          <div class="my-6 flex items-center gap-3">
+            <div class="flex-1 h-px bg-slate-200"></div>
+            <span class="text-xs text-slate-400 font-medium">OR</span>
+            <div class="flex-1 h-px bg-slate-200"></div>
+          </div>
+
+          <!-- Google -->
+          <button type="button"
+            class="w-full h-11 border border-slate-200 rounded-lg 
+                   text-sm font-medium text-slate-700 bg-white
+                   hover:bg-slate-50 transition inline-flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Continue with Google
+          </button>
+
+          <!-- Mobile toggle -->
+          <p class="lg:hidden text-center text-sm text-slate-500 mt-8">
+            Don't have an account?
+            <button onclick="toggleAuth()"
+              class="text-indigo-600 hover:text-indigo-700 font-semibold ml-1">
+              Create one
+            </button>
+          </p>
+
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div id="signupForm" class="auth-form hidden-form w-full max-w-sm mx-auto">
+
+          <!-- Mobile logo -->
+          <div class="lg:hidden flex items-center gap-2.5 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 grid place-items-center">
+              <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+            </div>
+            <div class="font-bold text-slate-900 text-lg tracking-tight">ThemeBase</div>
+          </div>
+
+          <div class="mb-8">
+            <h1 class="text-2xl lg:text-3xl font-bold tracking-tight text-slate-900 mb-2">
+              Create account
+            </h1>
+            <p class="text-slate-500 text-sm">
+              Get started with ThemeBase in seconds.
+            </p>
+          </div>
+
+          <form id="signupFormEl" class="space-y-5">
+
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-2 tracking-wide">
+                FULL NAME
+              </label>
+              <div class="relative">
+                <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="text" id="signupName" required
+                  placeholder="Your full name"
+                  class="w-full h-11 pl-10 pr-4 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 bg-slate-50
+                         focus:outline-none focus:border-slate-400 focus:bg-white
+                         transition">
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-2 tracking-wide">
+                EMAIL ADDRESS
+              </label>
+              <div class="relative">
+                <i data-lucide="mail" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="email" id="signupEmail" required
+                  placeholder="you@example.com"
+                  class="w-full h-11 pl-10 pr-4 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 bg-slate-50
+                         focus:outline-none focus:border-slate-400 focus:bg-white
+                         transition">
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-2 tracking-wide">
+                PASSWORD
+              </label>
+              <div class="relative">
+                <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="password" id="signupPassword" required minlength="8"
+                  placeholder="Min 8 characters"
+                  class="w-full h-11 pl-10 pr-10 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 bg-slate-50
+                         focus:outline-none focus:border-slate-400 focus:bg-white
+                         transition">
+                <button type="button" id="toggleSignupPass"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700">
+                  <i data-lucide="eye" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-2 tracking-wide">
+                CONFIRM PASSWORD
+              </label>
+              <div class="relative">
+                <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="password" id="signupConfirm" required minlength="8"
+                  placeholder="Re-enter password"
+                  class="w-full h-11 pl-10 pr-4 rounded-lg border border-slate-200 
+                         text-sm text-slate-800 bg-slate-50
+                         focus:outline-none focus:border-slate-400 focus:bg-white
+                         transition">
+              </div>
+            </div>
+
+            <!-- Terms -->
+            <div class="flex items-start gap-2">
+              <input type="checkbox" id="agreeTerms" required
+                class="mt-0.5 w-4 h-4 rounded border-slate-300 accent-slate-900 cursor-pointer">
+              <label for="agreeTerms" class="text-xs text-slate-600 leading-relaxed cursor-pointer">
+                I agree to the 
+                <a href="#" class="text-indigo-600 hover:text-indigo-700 font-medium">Terms</a>
+                and 
+                <a href="#" class="text-indigo-600 hover:text-indigo-700 font-medium">Privacy Policy</a>
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+              class="w-full h-11 bg-slate-900 hover:bg-slate-800 
+                     text-white font-semibold text-sm rounded-lg 
+                     transition inline-flex items-center justify-center gap-2">
+              Create Account
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+          </form>
+
+          <!-- Mobile toggle -->
+          <p class="lg:hidden text-center text-sm text-slate-500 mt-8">
+            Already have an account?
+            <button onclick="toggleAuth()" 
+              class="text-indigo-600 hover:text-indigo-700 font-semibold ml-1">
+              Sign in
+            </button>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Toast container -->
+  <div id="toastRoot" class="fixed bottom-5 right-5 z-[60] space-y-2"></div>
+
+  <script>
+    lucide.createIcons();
+
+    // ============================================================
+    //  STATE
+    // ============================================================
+    let isSignup = false;
+
+    const panelOverlay = document.getElementById('panelOverlay');
+    const panelHeading = document.getElementById('panelHeading');
+    const panelSubtext = document.getElementById('panelSubtext');
+    const toggleBtnText = document.getElementById('toggleBtnText');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+
+    // ============================================================
+    //  TOGGLE HANDLER
+    // ============================================================
+    function toggleAuth() {
+  isSignup = !isSignup;
+
+  if (isSignup) {
+    // Slide panel right
+    panelOverlay.classList.remove('lg:translate-x-0');
+    panelOverlay.classList.add('lg:translate-x-full');
+
+    // Update panel content
+    panelHeading.textContent = 'Welcome!';
+    panelSubtext.textContent = 'Create your account and start building beautiful websites in minutes.';
+    toggleBtnText.innerHTML = `Sign In <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>`;
+
+    // Swap forms
+    loginForm.classList.remove('active-form');
+    loginForm.classList.add('hidden-form');
+
+    signupForm.classList.remove('hidden-form');
+    signupForm.classList.add('active-form');
+  } else {
+    // Slide panel left
+    panelOverlay.classList.remove('lg:translate-x-full');
+    panelOverlay.classList.add('lg:translate-x-0');
+
+    // Update panel content
+    panelHeading.textContent = 'Welcome Back';
+    panelSubtext.textContent = 'Sign in to manage your themes, listings, and domains — all from one dashboard.';
+    toggleBtnText.innerHTML = `Create Account <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>`;
+
+    // Swap forms
+    signupForm.classList.remove('active-form');
+    signupForm.classList.add('hidden-form');
+
+    loginForm.classList.remove('hidden-form');
+    loginForm.classList.add('active-form');
+  }
+
+  lucide.createIcons();
+}
+
+    document.getElementById('toggleBtn').addEventListener('click', toggleAuth);
+
+    // ============================================================
+    //  PASSWORD VISIBILITY
+    // ============================================================
+    function setupPassToggle(btnId, inputId) {
+      const btn = document.getElementById(btnId);
+      const input = document.getElementById(inputId);
+      if (!btn || !input) return;
+
+      btn.addEventListener('click', () => {
+        const isPass = input.type === 'password';
+        input.type = isPass ? 'text' : 'password';
+        btn.innerHTML = `<i data-lucide="${isPass ? 'eye-off' : 'eye'}" class="w-4 h-4"></i>`;
+        lucide.createIcons();
+      });
+    }
+
+    setupPassToggle('toggleLoginPass', 'loginPassword');
+    setupPassToggle('toggleSignupPass', 'signupPassword');
+
+    // ============================================================
+    //  LOGIN SUBMIT
+    // ============================================================
+    document.getElementById('loginFormEl').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value;
+
+  if (!email || !password) {
+    showToast('Please fill in all fields', 'error');
+    return;
+  }
+
+  // Simulate API call (replace with real endpoint)
+  console.log('Login:', { email, password });
+
+  // ✅ Redirect to dashboard after login
+  showToast('Signed in successfully');
+  setTimeout(() => {
+    window.location.href = '/dashboard.html';   // ✅ NEW
+  }, 800);
+});
+
+    // ============================================================
+    //  SIGNUP SUBMIT
+    // ============================================================
+    document.getElementById('signupFormEl').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('signupName').value.trim();
+      const email = document.getElementById('signupEmail').value.trim();
+      const password = document.getElementById('signupPassword').value;
+      const confirm = document.getElementById('signupConfirm').value;
+
+      if (!name || !email || !password || !confirm) {
+        showToast('Please fill in all fields', 'error');
+        return;
+      }
+      if (password.length < 8) {
+        showToast('Password must be at least 8 characters', 'error');
+        return;
+      }
+      if (password !== confirm) {
+        showToast('Passwords do not match', 'error');
+        return;
+      }
+
+      // Simulate API call (replace with real endpoint)
+      console.log('Signup:', { name, email, password });
+
+      showToast('Account created successfully');
+
+      // Auto-switch to login
+      setTimeout(() => {
+        toggleAuth();
+        document.getElementById('signupFormEl').reset();
+      }, 900);
+    });
+
+    // ============================================================
+    //  TOAST
+    // ============================================================
+    function showToast(message, type = 'success') {
+      const root = document.getElementById('toastRoot');
+      const t = document.createElement('div');
+
+      const bg = type === 'error' ? 'bg-rose-600' : 'bg-slate-900';
+      const icon = type === 'error' ? 'alert-circle' : 'check-circle-2';
+
+      t.className = `${bg} text-white text-sm font-medium px-4 py-3 rounded-lg 
+                     shadow-lg flex items-center gap-2 transition-all duration-300 
+                     opacity-0 translate-y-2`;
+      t.innerHTML = `<i data-lucide="${icon}" class="w-4 h-4"></i> ${message}`;
+
+      root.appendChild(t);
+      lucide.createIcons();
+
+      requestAnimationFrame(() => {
+        t.classList.remove('opacity-0', 'translate-y-2');
+      });
+
+      setTimeout(() => {
+        t.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => t.remove(), 300);
+      }, 2600);
+    }
+
+    // ============================================================
+    //  KEYBOARD SHORTCUT (optional)
+    // ============================================================
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        // nothing yet, placeholder
+      }
+    });
+  </script>
+
+</body>
+</html>
